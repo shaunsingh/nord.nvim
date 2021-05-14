@@ -155,7 +155,7 @@ theme.loadEditor = function ()
 
         -- Dashboard
         DashboardShortCut =                     { fg = nord.blue },
-        DashboardHeader =                       { fg = nord.red },
+        DashboardHeader =                       { fg = nord.fg },
         DashboardCenter =                       { fg = nord.cyan },
         DashboardFooter =                       { fg = nord.green, style = "italic" },
 
