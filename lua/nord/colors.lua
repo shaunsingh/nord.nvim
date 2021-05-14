@@ -8,8 +8,8 @@ local nord = {
 	yellow =        '#B48EAD',
 	paleblue =      '#5E81AC',
 	cyan =          '#779fbe',
-	blue =          '#cad2e1',
-	purple =        '#81A1C1',
+	blue =          '#81A1C1',
+	purple =        '#cad2e1',
 	orange =        '#D08770',
 	pink =          '#EBCB8B',
 
