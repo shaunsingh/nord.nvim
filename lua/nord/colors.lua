@@ -1,7 +1,7 @@
 local nord = {
 
 	white =         '#ECEFF4',
-	gray =          '#4C566A',
+	gray =          '#E5E9F0',
 	black =         '#3B4252',
 	red =           '#BF616A',
 	green =         '#A3BE8C',
@@ -11,7 +11,7 @@ local nord = {
 	blue =          '#5E81AC',
 	purple =        '#B48EAD',
 	orange =        '#D08770',
-	pink =          '#8FBCBB',
+	pink =          '#81A1C1',
 
 	bg =            '#2E3440',
 	bg_alt =        '#50546c',
