@@ -1,14 +1,8 @@
-# Neovim Theme Template (norddraft)
+# Nord Draft theme 
 
 ## Usage 
 
-This repository serves as a template for a lua-based neovim theme, based off of Marko Cerovac's [Material.nvim](https://github.com/marko-cerovac/material.nvim)
-
-In order to create your theme, do the following:
-
-1. Add the colors you would like under `/lua/themename/color.lua`
-2. Rename all instances of `themename` to the name you would like to have 
-3. Use your colorscheme by setting `colorscheme themename` (themename being the name of your colorscheme)
+This repository is a draft for a neovim lua-based nord theme. 
 
 ## 🌠 Features
 The theme already has the syntax highlighting for the following plugins configured: 
@@ -39,7 +33,7 @@ A lualine theme is also auto-generated based on the colors of the theme, and can
 require('lualine').setup {
    options = {
     -- ... your lualine config
-    theme = 'themename' --change this to your themename
+    theme = 'nord' 
     -- ... your lualine config
    }
 }
@@ -51,27 +45,28 @@ require('lualine').setup {
 
 ## ⚙️ Configuration
 
+
 The templete also exposes the following options to the user:  
 
 | Option                              | Default     | Description                                                                                                                                                     |
 | ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| themename_italic_comments            | `false`     | Make comments italic                                                                                                                                            |
-| themename_italic_keywords            | `false`     | Make keywords italic                                                                                                                                            |
-| themename_italic_functions           | `false`     | Make functions italic                                                                                                                                           |
-| themename_italic_variables           | `false`     | Make variables and identifiers italic                                                                                                                           |
-| themename_contrast                   | `true`      | Make sidebars and popup menus like nvim-tree and telescope have a different background                                                                                       |
-| themename_borders                    | `false`     | Enable the border between verticaly split windows visable
-| themename_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
+| nord_italic_comments            | `false`     | Make comments italic                                                                                                                                            |
+| nord_italic_keywords            | `false`     | Make keywords italic                                                                                                                                            |
+| nord_italic_functions           | `false`     | Make functions italic                                                                                                                                           |
+| nord_italic_variables           | `false`     | Make variables and identifiers italic                                                                                                                           |
+| nord_contrast                   | `true`      | Make sidebars and popup menus like nvim-tree and telescope have a different background                                                                                       |
+| nord_borders                    | `false`     | Enable the border between verticaly split windows visable
+| nord_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
 
 ```lua
 -- Example config in lua
-vim.g.themename_italic_comments = true
-vim.g.themename_italic_keywords = true
-vim.g.themename_italic_functions = true
-vim.g.themename_italic_variables = false
-vim.g.themename_contrast = true
-vim.g.themename_borders = false
-vim.g.themename_disable_background = false
+vim.g.nord_italic_comments = true
+vim.g.nord_italic_keywords = true
+vim.g.nord_italic_functions = true
+vim.g.nord_italic_variables = false
+vim.g.nord_contrast = true
+vim.g.nord_borders = false
+vim.g.nord_disable_background = false
 
 -- Load the colorscheme
 require('nord').set()
@@ -79,15 +74,15 @@ require('nord').set()
 
 ```vim
 " Example config in Vim-Script
-let g:themename_italic_comments = true
-let g:themename_italic_keywords = true
-let g:themename_italic_functions = true
-let g:themename_italic_variables = false
-let g:themename_contrast = true
-let g:themename_borders = false 
-let g:themename_disable_background = false
+let g:nord_italic_comments = true
+let g:nord_italic_keywords = true
+let g:nord_italic_functions = true
+let g:nord_italic_variables = false
+let g:nord_contrast = true
+let g:nord_borders = false 
+let g:nord_disable_background = false
 
 -- Load the colorsheme
-colorscheme themename
+colorscheme nord
 ```
 
