@@ -438,17 +438,10 @@ theme.loadPlugins = function()
         -- Indent Blankline
         IndentBlanklineChar =                   { fg = nord.highlight },
         IndentBlanklineContextChar =            { fg = nord.disabled },
+		
+	--nvim-tree
+	plugins.NvimTreeNormal =                        { fg = nord.fg, bg = nord.bg_alt }
     }
-
-    -- Options:
-
-    -- Disable nvim-tree background
-        if vim.g.nord_disable_background == true then
-            plugins.NvimTreeNormal =                        { fg = nord.fg, bg = nord.none }
-        else
-            plugins.NvimTreeNormal =                        { fg = nord.fg, bg = nord.sidebar }
-        end
-
     return plugins
 
 end
