@@ -1,48 +1,49 @@
-local nord = {
+local moonlight = {
+	-- Common colors
 
-	white =         '#ECEFF4',
-	gray =          '#88C0D0',
-	black =         '#3B4252',
-	red =           '#BF616A',
-	green =         '#A3BE8C',
-	yellow =        '#EBCB8B',
-	paleblue =      '#8FBCBB',
-	cyan =          '#E5E9F0',
-	blue =          '#5E81AC',
-	purple =        '#81A1C1',
-	orange =        '#D08770',
-	pink =          '#B48EAD',
+	white =			'#EEFFFF',
+	gray =  		'#a1abe0',
+	black = 		'#000000',
+	red =   		'#ff757f',
+	green = 		'#2df4c0',
+	yellow =		'#ffc777',
+	paleblue =  	'#d6e7f0',
+	cyan =		    '#b994f1',
+	blue =  	    '#04d1f9',
+	purple =		'#b4a4f4',
+	orange =		'#f67f81',
+	pink =  		'#ecb2f0',
 
-	bg =            '#2E3440',
-	bg_alt =        '#50546c',
-	fg =            '#D8DEE9',
-	text =          '',
-	comments =      '#607087',
-	selection =     '#81A1C1"',
-	contrast =      '#434C5E"',
-	active =        '#5E81AC"',
-	border =        '#414863',
-	line_numbers =  '#616E88',
-	highlight =     '#88C0D0"',
-	disabled =      '#515772',
-	cursor =        '#E5E9F0"',
-	accent =        '#81A1C1',
+	bg =			'#212337',
+	bg_alt =		'#1B1E2B',
+	fg =			'#e4f3fa',
+	text =			'#757dac',
+	comments =		'#7486d6',
+	selection = 	'#403c64',
+	contrast =		'#1b1c2b',
+	active =		'#414863',
+	border =		'#414863',
+	line_numbers =	'#403c64',
+	highlight =	    '#a1abe0',
+	disabled =		'#515772',
+	cursor =		'#5cb4fc',
+	accent =		'#c0c6d2',
 
-	error =         '#BF616A',
-	link =          '#A3BE8C',
+	error =			'#FF5370',
+	link =			'#80CBC4',
 
-	none =          'NONE'
+	none =			'NONE'
 }
 
 -- Optional colors
 
 -- Enable contrast sidebars, floating windows and popup menus
-if vim.g.nord_contrast == false then
-    nord.sidebar = nord.bg
-    nord.float = nord.bg
+if vim.g.moonlight_contrast == false then
+    moonlight.sidebar = moonlight.bg
+    moonlight.float = moonlight.bg
 else
-    nord.sidebar = nord.bg_alt
-    nord.float = nord.bg_alt
+    moonlight.sidebar = moonlight.bg_alt
+    moonlight.float = moonlight.bg_alt
 end
 
-return nord
+return moonlight
