@@ -1,12 +1,12 @@
 local nord = {
 
 	white =         '#ECEFF4',
-	gray =          '#5E81AC',
+	gray =          '#cad2e1',
 	black =         '#3B4252',
 	red =           '#BF616A',
 	green =         '#A3BE8C',
 	yellow =        '#B48EAD',
-	paleblue =      '#cad2e1',
+	paleblue =      '#5E81AC',
 	cyan =          '#779fbe',
 	blue =          '#88C0D0',
 	purple =        '#81A1C1',
