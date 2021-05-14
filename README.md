@@ -1,6 +1,4 @@
-# Neovim Theme Template 
-
-
+# Neovim Theme Template (norddraft)
 
 ## Usage 
 
@@ -11,17 +9,6 @@ In order to create your theme, do the following:
 1. Add the colors you would like under `/lua/themename/color.lua`
 2. Rename all instances of `themename` to the name you would like to have 
 3. Use your colorscheme by setting `colorscheme themename` (themename being the name of your colorscheme)
-
-## Examples of themes based on this repo
-
-[Moonlight](https://github.com/shaunsingh/moonlight.nvim): 
-![preview github](https://user-images.githubusercontent.com/71196912/118175481-27755c80-b3fe-11eb-9d70-85a9f936c33d.png)
-
-
-[Material.nvim](https://github.com/marko-cerovac/material.nvim): 
-<img width="948" alt="image" src="https://user-images.githubusercontent.com/71196912/118197385-d7f25900-b41c-11eb-8f27-8f5613151bdb.png">
-<img width="951" alt="image" src="https://user-images.githubusercontent.com/71196912/118197394-df196700-b41c-11eb-970a-32866a2a85b8.png">
-
 
 ## 🌠 Features
 The theme already has the syntax highlighting for the following plugins configured: 
