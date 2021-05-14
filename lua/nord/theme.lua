@@ -153,9 +153,9 @@ theme.loadEditor = function ()
         healthSuccess =         { fg = nord.green },
         healthWarning =         { fg = nord.yellow },
 
-        -- Dashboard
+        -- dashboard
         DashboardShortCut =                     { fg = nord.blue },
-        DashboardHeader =                       { fg = nord.fg },
+        DashboardHeader =                       { fg = nord.purple },
         DashboardCenter =                       { fg = nord.cyan },
         DashboardFooter =                       { fg = nord.green, style = "italic" },
 
