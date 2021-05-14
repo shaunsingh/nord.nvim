@@ -26,7 +26,7 @@ local nord = {
 	highlight =     '#88C0D0"',
 	disabled =      '#515772',
 	cursor =        '#E5E9F0"',
-	accent =        '##81A1C1',
+	accent =        '#81A1C1',
 
 	error =         '#BF616A',
 	link =          '#A3BE8C',
