@@ -7,7 +7,7 @@ local nord = {
 	green =         '#A3BE8C',
 	yellow =        '#EBCB8B',
 	paleblue =      '#c1c9d6',
-	cyan =          '#515772',
+	cyan =          '#D8DEE9',
 	blue =          '#5E81AC',
 	purple =        '#81A1C1',
 	orange =        '#D08770',
@@ -26,7 +26,7 @@ local nord = {
 	highlight =     '#c1c9d6',
 	disabled =      '#515772',
 	cursor =        '#E5E9F0',
-	accent =        '#81A1C1',
+	accent =        '#c1c9d6',
 
 	error =         '#BF616A',
 	link =          '#A3BE8C',
