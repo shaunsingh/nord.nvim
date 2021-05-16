@@ -76,14 +76,12 @@ require('lualine').setup {
 
 ## ⚙️ Configuration
 
-
-The templete also exposes the following options to the user:  
-
 | Option                              | Default     | Description                                                                                                                                                     |
-| ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |                                                                                                                       |
+| ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | nord_contrast                   | `true`      | Make sidebars and popup menus like nvim-tree and telescope have a different background                                                                                       |
 | nord_borders                    | `false`     | Enable the border between verticaly split windows visable
 | nord_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
+
 
 ```lua
 -- Example config in lua
