@@ -55,7 +55,7 @@ theme.loadSyntax = function ()
 	syntax.Keyword =		{fg = nord.purple} -- normal for, do, while, etc.
 	syntax.Repeat =			{fg = nord.purple} -- normal any other keyword
 	syntax.Function =		{fg = nord.cyan}
-	Identifier =			{fg = nord.accent}; -- any variable name
+	Identifier =			{fg = nord.cyan}; -- any variable name
 
     return syntax
 
@@ -184,7 +184,7 @@ theme.loadTreeSitter = function ()
         TSAnnotation =              { fg = nord.orange },    -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
         TSCharacter=                { fg = nord.orange },    -- For characters.
         TSConstructor =             { fg = nord.purple }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-        TSConstant =                { fg = nord.accent },    -- For constants
+        TSConstant =                { fg = nord.cyan },    -- For constants
         TSFloat =                   { fg = nord.yellow },    -- For floats
         TSNamespace =               { fg = nord.yellow },    -- For identifiers referring to modules and namespaces.
         TSNumber =                  { fg = nord.orange },    -- For all number
@@ -242,8 +242,8 @@ theme.loadTreeSitter = function ()
     treesitter.TSFunction =                { fg = nord.cyan }    -- For fuction (calls and definitions).
     treesitter.TSMethod =                  { fg = nord.cyan }    -- For method calls and definitions.
     treesitter.TSFuncBuiltin =             { fg = nord.cyan }
-    treesitter.TSVariable =                { fg = nord.accent } -- Any variable name that does not have another highlight.
-    treesitter.TSVariableBuiltin =         { fg = nord.accent }
+    treesitter.TSVariable =                { fg = nord.cyan } -- Any variable name that does not have another highlight.
+    treesitter.TSVariableBuiltin =         { fg = nord.cyan }
 	
     return treesitter
 
