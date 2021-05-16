@@ -6,32 +6,32 @@ theme.loadSyntax = function ()
     -- Syntax highlight groups
 
 	local syntax = {
-		Type =						{ fg = nord.purple }, -- int, long, char, etc.
-		StorageClass =				{ fg = nord.cyan }, -- static, register, volatile, etc.
+		Type =						{ fg = nord.yellow }, -- int, long, char, etc.
+		StorageClass =					{ fg = nord.cyan }, -- static, register, volatile, etc.
 		Structure =					{ fg = nord.puple }, -- struct, union, enum, etc.
-		Constant =					{ fg = nord.yellow }, -- any constant
+		Constant =					{ fg = nord.accent }, -- any constant
 		String =					{ fg = nord.green, bg = nord.none, style= 'italic' }, -- Any string
-		Character =					{ fg = nord.orange }, -- any character constant: 'c', '\n'
-		Number =					{ fg = nord.orange }, -- a number constant: 5
-		Boolean =					{ fg = nord.orange }, -- a boolean constant: TRUE, false
-		Float =						{ fg = nord.orange }, -- a floating point constant: 2.3e10
-		Statement =					{ fg = nord.pink }, -- any statement
+		Character =					{ fg = nord.white }, -- any character constant: 'c', '\n'
+		Number =					{ fg = nord.yellow }, -- a number constant: 5
+		Boolean =					{ fg = nord.yellow }, -- a boolean constant: TRUE, false
+		Float =						{ fg = nord.yellow }, -- a floating point constant: 2.3e10
+		Statement =					{ fg = nord.purple }, -- any statement
 		Label =						{ fg = nord.purple }, -- case, default, etc.
-		Operator =					{ fg = nord.cyan }, -- sizeof", "+", "*", etc.
+		Operator =					{ fg = nord.paleblue }, -- sizeof", "+", "*", etc.
 		Exception =					{ fg = nord.cyan }, -- try, catch, throw
 		PreProc =					{ fg = nord.purple }, -- generic Preprocessor
 		Include =					{ fg = nord.blue }, -- preprocessor #include
 		Define =					{ fg = nord.pink }, -- preprocessor #define
 		Macro =						{ fg = nord.cyan }, -- same as Define
-		Typedef =					{ fg = nord.red }, -- A typedef
-		PreCondit =					{ fg = nord.cyan }, -- preprocessor #if, #else, #endif, etc.
-		Special =					{ fg = nord.red }, -- any special symbol
-		SpecialChar =				{ fg = nord.pink }, -- special character in a constant
-		Tag =						{ fg = nord.red }, -- you can use CTRL-] on this
+		Typedef =					{ fg = nord.cyan }, -- A typedef
+		PreCondit =					{ fg = nord.red }, -- preprocessor #if, #else, #endif, etc.
+		Special =					{ fg = nord.orange }, -- any special symbol
+		SpecialChar =					{ fg = nord.orange }, -- special character in a constant
+		Tag =						{ fg = nord.purple }, -- you can use CTRL-] on this
 		Delimiter =					{ fg = nord.cyan }, -- character that needs attention like , or .
-		SpecialComment =			{ fg = nord.gray }, -- special things inside a comment
+		SpecialComment =				{ fg = nord.gray }, -- special things inside a comment
 		Debug =						{ fg = nord.red }, -- debugging statements
-		Underlined =				{ fg = nord.link, bg = nord.none, style = 'underline' }, -- text that stands out, HTML links
+		Underlined =					{ fg = nord.link, bg = nord.none, style = 'underline' }, -- text that stands out, HTML links
 		Ignore =					{ fg = nord.disabled }, -- left blank, hidden
 		Error =						{ fg = nord.error, bg = nord.none, style = 'bold,underline' }, -- any erroneous construct
 		Todo =						{ fg = nord.yellow, bg = nord.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
