@@ -9,7 +9,7 @@ theme.loadSyntax = function ()
 		Type =						{ fg = nord.yellow }, -- int, long, char, etc.
 		StorageClass =					{ fg = nord.cyan }, -- static, register, volatile, etc.
 		Structure =					{ fg = nord.purple }, -- struct, union, enum, etc.
-		Constant =					{ fg = nord.accent }, -- any constant
+		Constant =					{ fg = nord.blue }, -- any constant
 		String =					{ fg = nord.green, bg = nord.none, style= 'italic' }, -- Any string
 		Character =					{ fg = nord.white }, -- any character constant: 'c', '\n'
 		Number =					{ fg = nord.yellow }, -- a number constant: 5
@@ -184,7 +184,7 @@ theme.loadTreeSitter = function ()
         TSAnnotation =              { fg = nord.orange },    -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
         TSCharacter=                { fg = nord.orange },    -- For characters.
         TSConstructor =             { fg = nord.purple }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-        TSConstant =                { fg = nord.accent },    -- For constants
+        TSConstant =                { fg = nord.blue },    -- For constants
         TSFloat =                   { fg = nord.yellow },    -- For floats
         TSNamespace =               { fg = nord.yellow },    -- For identifiers referring to modules and namespaces.
         TSNumber =                  { fg = nord.orange },    -- For all number
