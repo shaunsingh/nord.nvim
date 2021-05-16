@@ -6,35 +6,35 @@ theme.loadSyntax = function ()
     -- Syntax highlight groups
 
 	local syntax = {
-		Type =						{ fg = nord.yellow }, -- int, long, char, etc.
-		StorageClass =				{ fg = nord.cyan }, -- static, register, volatile, etc.
-		Structure =					{ fg = nord.purple }, -- struct, union, enum, etc.
-		Constant =					{ fg = nord.pink }, -- any constant
-		String =					{ fg = nord.green, bg = nord.none, style= 'italic' }, -- Any string
-		Character =					{ fg = nord.white }, -- any character constant: 'c', '\n'
-		Number =					{ fg = nord.yellow }, -- a number constant: 5
-		Boolean =					{ fg = nord.cursor }, -- a boolean constant: TRUE, false
-		Float =						{ fg = nord.yellow }, -- a floating point constant: 2.3e10
-		Statement =					{ fg = nord.orange }, -- any statement
-		Label =						{ fg = nord.pink }, -- case, default, etc.
-		Operator =					{ fg = nord.paleblue }, -- sizeof", "+", "*", etc.
-		Exception =					{ fg = nord.cyan }, -- try, catch, throw
-		PreProc =					{ fg = nord.purple }, -- generic Preprocessor
-		Include =					{ fg = nord.blue }, -- preprocessor #include
-		Define =					{ fg = nord.pink }, -- preprocessor #define
+		Type =						{ fg = nord.nord9_gui}, -- int, long, char, etc.
+		StorageClass =				{ fg = nord.nord9_gui}, -- static, register, volatile, etc.
+		Structure =					{ fg = nord.nord9_gui}, -- struct, union, enum, etc.
+		Constant =					{ fg = nord.nord4_gui}, -- any constant
+		String =					{ fg = nord.nord14_gui, bg = nord.none, style= 'italic' }, -- Any string
+		Character =					{ fg = nord.nord14_gui}, -- any character constant: 'c', '\n'
+		Number =					{ fg = nord.nord15_gui }, -- a number constant: 5
+		Boolean =					{ fg = nord.nord9_gui}, -- a boolean constant: TRUE, false
+		Float =						{ fg = nord.nord15_gui}, -- a floating point constant: 2.3e10
+		Statement =					{ fg = nord.nord9_gui}, -- any statement
+		Label =						{ fg = nord.nord9_gui }, -- case, default, etc.
+		Operator =					{ fg = nord.nord9_gui }, -- sizeof", "+", "*", etc.
+		Exception =					{ fg = nord.nord9_gui}, -- try, catch, throw
+		PreProc =					{ fg = nord.nord9_gui}, -- generic Preprocessor
+		Include =					{ fg = nord.nord9_gui}, -- preprocessor #include
+		Define =					{ fg = nord.nord9_gui}, -- preprocessor #define
 		Macro =						{ fg = nord.cyan }, -- same as Define
 		Typedef =					{ fg = nord.cyan }, -- A typedef
 		PreCondit =					{ fg = nord.pink }, -- preprocessor #if, #else, #endif, etc.
-		Special =					{ fg = nord.orange }, -- any special symbol
-		SpecialChar =					{ fg = nord.pink }, -- special character in a constant
-		Tag =						{ fg = nord.purple }, -- you can use CTRL-] on this
-		Delimiter =					{ fg = nord.pink }, -- character that needs attention like , or .
-		SpecialComment =				{ fg = nord.gray }, -- special things inside a comment
+		Special =					{ fg = nord.nord4_gui}, -- any special symbol
+		SpecialChar =					{ fg = nord.nord13_gui}, -- special character in a constant
+		Tag =						{ fg = nord.nord4_gui}, -- you can use CTRL-] on this
+		Delimiter =					{ fg = nord.nord6_gui }, -- character that needs attention like , or .
+		SpecialComment =				{ fg = nord.nord8_gui}, -- special things inside a comment
 		Debug =						{ fg = nord.red }, -- debugging statements
 		Underlined =					{ fg = nord.link, bg = nord.none, style = 'underline' }, -- text that stands out, HTML links
 		Ignore =					{ fg = nord.disabled }, -- left blank, hidden
 		Error =						{ fg = nord.error, bg = nord.none, style = 'bold,underline' }, -- any erroneous construct
-		Todo =						{ fg = nord.yellow, bg = nord.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+		Todo =						{ fg = nord.nord13_gui, bg = nord.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
         htmlLink = { fg = nord.link, style = "underline" },
         htmlH1 = { fg = nord.cyan, style = "bold" },
@@ -50,12 +50,12 @@ theme.loadSyntax = function ()
         markdownH3Delimiter = { fg = nord.green },
 	}
 
-	syntax.Comment =		{fg = nord.comments}
-	syntax.Conditional =		{fg = nord.purple} -- normal if, then, else, endif, switch, etc.
-	syntax.Keyword =		{fg = nord.purple} -- normal for, do, while, etc.
-	syntax.Repeat =			{fg = nord.purple} -- normal any other keyword
-	syntax.Function =		{fg = nord.cyan}
-	Identifier =			{fg = nord.accent}; -- any variable name
+	syntax.Comment =		{fg = nord.nord3_gui_bright}
+	syntax.Conditional =	{fg = nord.nord9_gui} -- normal if, then, else, endif, switch, etc.
+	syntax.Keyword =		{fg = nord.nord9_gui} -- normal for, do, while, etc.
+	syntax.Repeat =			{fg = nord.nord9_gui} -- normal any other keyword
+	syntax.Function =		{fg = nord.nord8_gui}
+	Identifier =			{fg = nord.nord4_gui}; -- any variable name
 
     return syntax
 
