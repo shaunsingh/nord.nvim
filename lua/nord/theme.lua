@@ -7,7 +7,7 @@ theme.loadSyntax = function ()
 
 	local syntax = {
 		Type =						{ fg = nord.yellow }, -- int, long, char, etc.
-		StorageClass =					{ fg = nord.cyan }, -- static, register, volatile, etc.
+		StorageClass =				{ fg = nord.cyan }, -- static, register, volatile, etc.
 		Structure =					{ fg = nord.purple }, -- struct, union, enum, etc.
 		Constant =					{ fg = nord.pink }, -- any constant
 		String =					{ fg = nord.green, bg = nord.none, style= 'italic' }, -- Any string
@@ -49,7 +49,7 @@ theme.loadSyntax = function ()
         markdownH2Delimiter = { fg = nord.red },
         markdownH3Delimiter = { fg = nord.green },
 	}
-	
+
 	syntax.Comment =		{fg = nord.comments}
 	syntax.Conditional =		{fg = nord.purple} -- normal if, then, else, endif, switch, etc.
 	syntax.Keyword =		{fg = nord.purple} -- normal for, do, while, etc.
@@ -66,61 +66,61 @@ theme.loadEditor = function ()
     -- Editor highlight groups
 
 	local editor = {
-		NormalFloat =				{ fg = nord.fg, bg = nord.float }, -- normal text and background color
-		ColorColumn =				{ fg = nord.none, bg = nord.active }, --  used for the columns set with 'colorcolumn'
+		NormalFloat =			{ fg = nord.fg, bg = nord.float }, -- normal text and background color
+		ColorColumn =			{ fg = nord.nord1_gui, bg = nord.active }, --  used for the columns set with 'colorcolumn'
 		Conceal =				{ fg = nord.disabled }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-		Cursor =				{ fg = nord.cursor, bg = nord.none, style = 'reverse' }, -- the character under the cursor
+		Cursor =				{ fg = nord.nord4_gui, bg = nord.none, style = 'reverse' }, -- the character under the cursor
 		CursorIM =				{ fg = nord.cursor, bg = nord.none, style = 'reverse' }, -- like Cursor, but used when in IME mode
 		Directory =				{ fg = nord.blue, bg = nord.none }, -- directory names (and other special names in listings)
 		DiffAdd =				{ fg = nord.green, bg = nord.none, style = 'reverse' }, -- diff mode: Added line
-		DiffChange =				{ fg = nord.orange, bg = nord.none, style = 'reverse' }, --  diff mode: Changed line
-		DiffDelete =				{ fg = nord.red, bg = nord.none, style = 'reverse' }, -- diff mode: Deleted line
+		DiffChange =			{ fg = nord.orange, bg = nord.none, style = 'reverse' }, --  diff mode: Changed line
+		DiffDelete =			{ fg = nord.red, bg = nord.none, style = 'reverse' }, -- diff mode: Deleted line
 		DiffText =				{ fg = nord.yellow, bg = nord.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
-		EndOfBuffer =				{ fg = nord.disabled },
+		EndOfBuffer =			{ fg = nord.disabled },
 		ErrorMsg =				{ fg = nord.none },
 		Folded =				{ fg = nord.disabled, nord.none, style = 'italic' },
-		FoldColumn =				{ fg = nord.blue },
+		FoldColumn =			{ fg = nord.blue },
 		IncSearch =				{ fg = nord.highlight, bg = nord.white, style = 'reverse' },
 		LineNr =				{ fg = nord.line_numbers },
-		CursorLineNr =				{ fg = nord.accent },
-		MatchParen =				{ fg = nord.yellow, bg = nord.none, style = 'bold' },
+		CursorLineNr =			{ fg = nord.accent },
+		MatchParen =			{ fg = nord.yellow, bg = nord.none, style = 'bold' },
 		ModeMsg =				{ fg = nord.accent },
 		MoreMsg =				{ fg = nord.accent },
 		NonText =				{ fg = nord.disabled },
 		Pmenu =					{ fg = nord.text, bg = nord.contrast },
 		PmenuSel =				{ fg = nord.accent, bg = nord.active },
 		PmenuSbar =				{ fg = nord.text, bg = nord.contrast },
-		PmenuThumb =				{ fg = nord.fg, bg = nord.accent },
+		PmenuThumb =			{ fg = nord.fg, bg = nord.accent },
 		Question =				{ fg = nord.green },
-		QuickFixLine =				{ fg = nord.highlight, nord.white, style = 'reverse' },
+		QuickFixLine =			{ fg = nord.highlight, nord.white, style = 'reverse' },
 		qfLineNr =				{ fg = nord.highlight, nord.white, style = 'reverse' },
 		Search =				{ fg = nord.highlight, bg = nord.white, style = 'reverse' },
-		SpecialKey =				{ fg = nord.purple },
+		SpecialKey =			{ fg = nord.purple },
 		SpellBad =				{ fg = nord.red, bg = nord.none, style = 'italic,undercurl' },
 		SpellCap =				{ fg = nord.blue, bg = nord.none, style = 'italic,undercurl' },
-		SpellLocal =				{ fg = nord.cyan, bg = nord.none, style = 'italic,undercurl' },
+		SpellLocal =			{ fg = nord.cyan, bg = nord.none, style = 'italic,undercurl' },
 		SpellRare =				{ fg = nord.purple, bg = nord.none, style = 'italic,undercurl' },
-		StatusLine =				{ fg = nord.fg, bg = nord.contrast },
-		StatusLineNC =  			{ fg = nord.text, bg = nord.disabled },
-		StatusLineTerm =			{ fg = nord.fg, bg = nord.contrast },
-		StatusLineTermNC =			{ fg = nord.text, bg = nord.disabled },
-		TabLineFill =				{ fg = nord.fg },
-		TablineSel =				{ fg = nord.bg, bg = nord.accent },
+		StatusLine =			{ fg = nord.fg, bg = nord.contrast },
+		StatusLineNC =  		{ fg = nord.text, bg = nord.disabled },
+		StatusLineTerm =		{ fg = nord.fg, bg = nord.contrast },
+		StatusLineTermNC =		{ fg = nord.text, bg = nord.disabled },
+		TabLineFill =			{ fg = nord.fg },
+		TablineSel =			{ fg = nord.bg, bg = nord.accent },
 		Tabline =				{ fg = nord.fg },
 		Title =					{ fg = nord.green, bg = nord.none, style = 'bold' },
 		Visual =				{ fg = nord.none, bg = nord.selection },
 		VisualNOS =				{ fg = nord.none, bg = nord.selection },
-		WarningMsg =				{ fg = nord.yellow },
+		WarningMsg =			{ fg = nord.yellow },
 		WildMenu =				{ fg = nord.orange, bg = nord.none, style = 'bold' },
-		CursorColumn =				{ fg = nord.none, bg = nord.active },
-		CursorLine =				{ fg = nord.none, bg = nord.none },
-		ToolbarLine =				{ fg = nord.fg, bg = nord.bg_alt },
-		ToolbarButton =				{ fg = nord.fg, bg = nord.none, style = 'bold' },
-		NormalMode =				{ fg = nord.accent, bg = nord.none, style = 'reverse' },
-		InsertMode =				{ fg = nord.green, bg = nord.none, style = 'reverse' },
-		ReplacelMode =				{ fg = nord.red, bg = nord.none, style = 'reverse' },
-		VisualMode =				{ fg = nord.purple, bg = nord.none, style = 'reverse' },
-		CommandMode =				{ fg = nord.gray, bg = nord.none, style = 'reverse' },
+		CursorColumn =			{ fg = nord.none, bg = nord.active },
+		CursorLine =			{ fg = nord.none, bg = nord.none },
+		ToolbarLine =			{ fg = nord.fg, bg = nord.bg_alt },
+		ToolbarButton =			{ fg = nord.fg, bg = nord.none, style = 'bold' },
+		NormalMode =			{ fg = nord.accent, bg = nord.none, style = 'reverse' },
+		InsertMode =			{ fg = nord.green, bg = nord.none, style = 'reverse' },
+		ReplacelMode =			{ fg = nord.red, bg = nord.none, style = 'reverse' },
+		VisualMode =			{ fg = nord.purple, bg = nord.none, style = 'reverse' },
+		CommandMode =			{ fg = nord.gray, bg = nord.none, style = 'reverse' },
 		Warnings =				{ fg = nord.yellow },
 
         healthError =           { fg = nord.error },
@@ -182,17 +182,16 @@ theme.loadTreeSitter = function ()
 
     local treesitter = {
         TSAnnotation =              { fg = nord.orange },    -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
-        TSCharacter=                { fg = nord.orange },    -- For characters.
+        TSCharacter=                { fg = nord.nord14_gui },    -- For characters.
         TSConstructor =             { fg = nord.purple }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
         TSConstant =                { fg = nord.pink },    -- For constants
-        TSFloat =                   { fg = nord.yellow },    -- For floats
-        TSNamespace =               { fg = nord.yellow },    -- For identifiers referring to modules and namespaces.
-        TSNumber =                  { fg = nord.orange },    -- For all number
-        TSString =                  { fg = nord.green },    -- For strings.
-		
+        TSFloat =                   { fg = nord.nord15_gui },    -- For floats
+        TSNumber =                  { fg = nord.nord15_gui },    -- For all number
+        TSString =                  { fg = nord.nord14_gui },    -- For strings.
+
 	--TSAnnotation =              { fg = nord.red },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
         TSAttribute =               { fg = nord.yellow },    -- (unstable) TODO: docs
-        TSBoolean=                  { fg = nord.orange },    -- For booleans.
+        TSBoolean=                  { fg = nord.nord9_gui },    -- For booleans.
         --TSCharacter=                { fg = nord.orange },    -- For characters.
         --TSConstructor =             { fg = nord.purple }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
         --TSConstant =                { fg = nord.yellow },    -- For constants
@@ -203,12 +202,12 @@ theme.loadTreeSitter = function ()
         TSField =                   { fg = nord.gray }, -- For fields.
         --TSFloat =                   { fg = nord.red },    -- For floats.
         TSFuncMacro =               { fg = nord.blue },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-        TSInclude =                 { fg = nord.cyan },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-        TSLabel =                   { fg = nord.red }, -- For labels: `label:` in C and `:label:` in Lua.
-        TSNamespace =               { fg = nord.yellow },    -- For identifiers referring to modules and namespaces.
+        TSInclude =                 { fg = nord.nord9_gui },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+        TSLabel =                   { fg = nord.nord15_gui }, -- For labels: `label:` in C and `:label:` in Lua.
+        TSNamespace =               { fg = nord.nord4_gui},    -- For identifiers referring to modules and namespaces.
         --TSNone =                    { },    -- TODO: docs
         --TSNumber =                  { fg = nord.orange },    -- For all numbers
-        TSOperator =                { fg = nord.cyan }, -- For any operator: `+`, but also `->` and `*` in C.
+        TSOperator =                { fg = nord.nord9_gui }, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter =               { fg = nord.paleblue }, -- For parameters of a function.
         TSParameterReference=       { fg = nord.paleblue },    -- For references to parameters of a function.
         TSProperty =                { fg = nord.paleblue }, -- Same as `TSField`.
@@ -219,9 +218,9 @@ theme.loadTreeSitter = function ()
         TSStringRegex =             { fg = nord.blue }, -- For regexes.
         TSStringEscape =            { fg = nord.disabled }, -- For escape characters within a string.
         TSSymbol =                  { fg = nord.yellow },    -- For identifiers referring to symbols or atoms.
-        TSType =                    { fg = nord.purple },    -- For types.
-        TSTypeBuiltin =             { fg = nord.purple },    -- For builtin types.
-        TSTag =                     { fg = nord.red },    -- Tags like html tag names.
+        TSType =                    { fg = nord.nord9_gui},    -- For types.
+        TSTypeBuiltin =             { fg = nord.nord9_gui},    -- For builtin types.
+        TSTag =                     { fg = nord.nord4_gui },    -- Tags like html tag names.
         TSTagDelimiter =            { fg = nord.yellow },    -- Tag delimiter like `<` `>` `/`
         TSText =                    { fg = nord.text },    -- For strings considered text in a markup language.
         TSTextReference =           { fg = nord.yellow }, -- FIXME
@@ -231,20 +230,20 @@ theme.loadTreeSitter = function ()
         TSTitle =                   { fg = nord.paleblue, bg = nord.none, style = 'bold' },    -- Text that is part of a title.
         TSLiteral =                 { fg = nord.fg },    -- Literal text.
         TSURI =                     { fg = nord.link },    -- Any URI like a link or email.        TSAnnotation =              { fg = nord.red },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-        
+
     }
-	
-    treesitter.TSComment=                  { fg = nord.comments }
-    treesitter.TSConditional =             { fg = nord.cyan }    -- For keywords related to conditionnals.
+
+    treesitter.TSComment=                  { fg = nord.nord3_gui_bright }
+    treesitter.TSConditional =             { fg = nord.nord9_gui }   -- For keywords related to conditionnals.
     treesitter.TSKeyword =                 { fg = nord.purple } -- For keywords that don't fall in previous categories.
     treesitter.TSRepeat =                  { fg = nord.purple }    -- For keywords related to loops.
-    treesitter.TSKeywordFunction =         { fg = nord.cyan }
-    treesitter.TSFunction =                { fg = nord.blue }    -- For fuction (calls and definitions).
+    treesitter.TSKeywordFunction =         { fg = nord.nord8_gui }
+    treesitter.TSFunction =                { fg = nord.nord8_gui }    -- For fuction (calls and definitions).
     treesitter.TSMethod =                  { fg = nord.blue }    -- For method calls and definitions.
     treesitter.TSFuncBuiltin =             { fg = nord.cyan }
     treesitter.TSVariable =                { fg = nord.accent }-- Any variable name that does not have another highlight.
     treesitter.TSVariableBuiltin =         { fg = nord.accent }
-	
+
     return treesitter
 
 end
@@ -394,7 +393,7 @@ theme.loadPlugins = function()
         -- Indent Blankline
         IndentBlanklineChar =                   { fg = nord.highlight },
         IndentBlanklineContextChar =            { fg = nord.disabled },
-		
+
 
     }
     -- Options:
