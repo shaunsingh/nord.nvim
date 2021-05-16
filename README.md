@@ -2,6 +2,8 @@
 
 ## Neovim theme based off of the [Nord Color Palette.](https://www.nordtheme.com/docs/colors-and-palettes)
 
+![nord-mountains-night-5k-gn-3840x2160](https://user-images.githubusercontent.com/71196912/118406380-d78ad580-b649-11eb-945c-5988fa717f39.jpg)
+
 ## Features
 
 Nord.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
