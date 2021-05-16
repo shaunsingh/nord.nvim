@@ -52,10 +52,10 @@ theme.loadSyntax = function ()
 	
 	syntax.Comment =		{fg = nord.comments}
 	syntax.Conditional =		{fg = nord.purple} -- normal if, then, else, endif, switch, etc.
-	syntax.Keyword =			{fg = nord.purple} -- normal for, do, while, etc.
-	syntax.Repeat =				{fg = nord.purple} -- normal any other keyword
-	syntax.Function =		{fg = nord.blue}
-	Identifier =				{fg = nord.gray}; -- any variable name
+	syntax.Keyword =		{fg = nord.purple} -- normal for, do, while, etc.
+	syntax.Repeat =			{fg = nord.purple} -- normal any other keyword
+	syntax.Function =		{fg = nord.cyan}
+	Identifier =			{fg = nord.accent}; -- any variable name
 
     return syntax
 
@@ -225,15 +225,15 @@ theme.loadTreeSitter = function ()
     }
 	
     treesitter.TSComment=                  { fg = nord.comments }
-    treesitter.TSConditional =             { fg = nord.purple }    -- For keywords related to conditionnals.
+    treesitter.TSConditional =             { fg = nord.cyan }    -- For keywords related to conditionnals.
     treesitter.TSKeyword =                 { fg = nord.purple } -- For keywords that don't fall in previous categories.
     treesitter.TSRepeat =                  { fg = nord.purple }    -- For keywords related to loops.
-    treesitter.TSKeywordFunction =         { fg = nord.purple }
-    treesitter.TSFunction =                { fg = nord.blue }    -- For fuction (calls and definitions).
-    treesitter.TSMethod =                  { fg = nord.blue }    -- For method calls and definitions.
+    treesitter.TSKeywordFunction =         { fg = nord.cyan }
+    treesitter.TSFunction =                { fg = nord.cyan }    -- For fuction (calls and definitions).
+    treesitter.TSMethod =                  { fg = nord.cyan }    -- For method calls and definitions.
     treesitter.TSFuncBuiltin =             { fg = nord.cyan }
-    treesitter.TSVariable =                { fg = nord.gray } -- Any variable name that does not have another highlight.
-    treesitter.TSVariableBuiltin =         { fg = nord.gray }
+    treesitter.TSVariable =                { fg = nord.accent } -- Any variable name that does not have another highlight.
+    treesitter.TSVariableBuiltin =         { fg = nord.accent }
 	
     return treesitter
 
