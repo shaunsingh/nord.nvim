@@ -16,7 +16,7 @@ theme.loadSyntax = function ()
 		Boolean =					{ fg = nord.cursor }, -- a boolean constant: TRUE, false
 		Float =						{ fg = nord.yellow }, -- a floating point constant: 2.3e10
 		Statement =					{ fg = nord.orange }, -- any statement
-		Label =						{ fg = nord.orange }, -- case, default, etc.
+		Label =						{ fg = nord.pink }, -- case, default, etc.
 		Operator =					{ fg = nord.paleblue }, -- sizeof", "+", "*", etc.
 		Exception =					{ fg = nord.cyan }, -- try, catch, throw
 		PreProc =					{ fg = nord.purple }, -- generic Preprocessor
@@ -24,7 +24,7 @@ theme.loadSyntax = function ()
 		Define =					{ fg = nord.pink }, -- preprocessor #define
 		Macro =						{ fg = nord.cyan }, -- same as Define
 		Typedef =					{ fg = nord.cyan }, -- A typedef
-		PreCondit =					{ fg = nord.red }, -- preprocessor #if, #else, #endif, etc.
+		PreCondit =					{ fg = nord.pink }, -- preprocessor #if, #else, #endif, etc.
 		Special =					{ fg = nord.orange }, -- any special symbol
 		SpecialChar =					{ fg = nord.pink }, -- special character in a constant
 		Tag =						{ fg = nord.purple }, -- you can use CTRL-] on this
