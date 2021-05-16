@@ -8,7 +8,7 @@ theme.loadSyntax = function ()
 	local syntax = {
 		Type =						{ fg = nord.yellow }, -- int, long, char, etc.
 		StorageClass =					{ fg = nord.cyan }, -- static, register, volatile, etc.
-		Structure =					{ fg = nord.puple }, -- struct, union, enum, etc.
+		Structure =					{ fg = nord.purple }, -- struct, union, enum, etc.
 		Constant =					{ fg = nord.accent }, -- any constant
 		String =					{ fg = nord.green, bg = nord.none, style= 'italic' }, -- Any string
 		Character =					{ fg = nord.white }, -- any character constant: 'c', '\n'
@@ -207,25 +207,25 @@ theme.loadTreeSitter = function ()
     -- TreeSitter highlight groups
 
     local treesitter = {
-        TSAnnotation =              { fg = nord.red },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-        TSAttribute =               { fg = nord.yellow },    -- (unstable) TODO: docs
+        TSAnnotation =              { fg = nord.orange },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+        TSAttribute =               { fg = nord.accent },    -- (unstable) TODO: docs
         TSBoolean=                  { fg = nord.orange },    -- For booleans.
         TSCharacter=                { fg = nord.orange },    -- For characters.
         TSConstructor =             { fg = nord.purple }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-        TSConstant =                { fg = nord.yellow },    -- For constants
+        TSConstant =                { fg = nord.accent },    -- For constants
         TSConstBuiltin =            { fg = nord.blue },    -- For constant that are built in the language: `nil` in Lua.
         TSConstMacro =              { fg = nord.blue },    -- For constants that are defined by macros: `NULL` in C.
         TSError =                   { fg = nord.error },    -- For syntax/parser errors.
         TSException =               { fg = nord.yellow },    -- For exception related keywords.
-        TSField =                   { fg = nord.gray }, -- For fields.
-        TSFloat =                   { fg = nord.red },    -- For floats.
-        TSFuncMacro =               { fg = nord.blue },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+        TSField =                   { fg = nord.accent }, -- For fields.
+        TSFloat =                   { fg = nord.yellow },    -- For floats.
+        TSFuncMacro =               { fg = nord.purple },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         TSInclude =                 { fg = nord.cyan },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
         TSLabel =                   { fg = nord.red }, -- For labels: `label:` in C and `:label:` in Lua.
         TSNamespace =               { fg = nord.yellow },    -- For identifiers referring to modules and namespaces.
         --TSNone =                    { },    -- TODO: docs
         TSNumber =                  { fg = nord.orange },    -- For all numbers
-        TSOperator =                { fg = nord.cyan }, -- For any operator: `+`, but also `->` and `*` in C.
+        TSOperator =                { fg = nord.purple }, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter =               { fg = nord.paleblue }, -- For parameters of a function.
         TSParameterReference=       { fg = nord.paleblue },    -- For references to parameters of a function.
         TSProperty =                { fg = nord.paleblue }, -- Same as `TSField`.
@@ -233,12 +233,12 @@ theme.loadTreeSitter = function ()
         TSPunctBracket =            { fg = nord.cyan }, -- For brackets and parens.
         TSPunctSpecial =            { fg = nord.cyan }, -- For special punctutation that does not fall in the catagories before.
         TSString =                  { fg = nord.green },    -- For strings.
-        TSStringRegex =             { fg = nord.blue }, -- For regexes.
+        TSStringRegex =             { fg = nord.green }, -- For regexes.
         TSStringEscape =            { fg = nord.disabled }, -- For escape characters within a string.
         TSSymbol =                  { fg = nord.yellow },    -- For identifiers referring to symbols or atoms.
         TSType =                    { fg = nord.purple },    -- For types.
         TSTypeBuiltin =             { fg = nord.purple },    -- For builtin types.
-        TSTag =                     { fg = nord.red },    -- Tags like html tag names.
+        TSTag =                     { fg = nord.purple },    -- Tags like html tag names.
         TSTagDelimiter =            { fg = nord.yellow },    -- Tag delimiter like `<` `>` `/`
         TSText =                    { fg = nord.text },    -- For strings considered text in a markup language.
         TSTextReference =           { fg = nord.yellow }, -- FIXME
