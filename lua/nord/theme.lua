@@ -50,39 +50,6 @@ theme.loadSyntax = function ()
         markdownH3Delimiter = { fg = nord.green },
 	}
 
-	-- Options:
-
-	-- Italic comments
-	if vim.g.nord_italic_comments == true then
-		syntax.Comment =		{fg = nord.comments, bg = nord.none, style = 'italic'} -- italic comments
-	else
-		syntax.Comment =		{fg = nord.comments} -- normal comments
-	end
-
-	-- Italic Keywords
-	if vim.g.nord_italic_keywords == true then
-		syntax.Conditional =		{fg = nord.purple, bg = nord.none, style = 'italic'} -- italic if, then, else, endif, switch, etc.
-		syntax.Keyword =			{fg = nord.purple, bg = nord.none, style = 'italic'} -- italic for, do, while, etc.
-		syntax.Repeat =				{fg = nord.purple, bg = nord.none, style = 'italic'} -- italic any other keyword
-	else
-		syntax.Conditional =		{fg = nord.purple} -- normal if, then, else, endif, switch, etc.
-		syntax.Keyword =			{fg = nord.purple} -- normal for, do, while, etc.
-		syntax.Repeat =				{fg = nord.purple} -- normal any other keyword
-	end
-
-	-- Italic Function names
-	if vim.g.nord_italic_functions == true then
-		syntax.Function =		{fg = nord.blue, bg = nord.none, style = 'italic'} -- italic funtion names
-	else
-		syntax.Function =		{fg = nord.blue} -- normal function names
-	end
-
-	if vim.g.nord_italic_variables == true then
-		Identifier =				{fg = nord.gray, bg = nord.none, style = 'italic'}; -- any variable name
-    else
-		Identifier =				{fg = nord.gray}; -- any variable name
-    end
-
     return syntax
 
 end
@@ -249,46 +216,6 @@ theme.loadTreeSitter = function ()
         TSLiteral =                 { fg = nord.fg },    -- Literal text.
         TSURI =                     { fg = nord.link },    -- Any URI like a link or email.
     }
-
-    -- Options:
-
-    -- Italic comments
-    if vim.g.nord_italic_comments == true then
-        treesitter.TSComment=                  { fg = nord.comments , bg = nord.none, style = 'italic' }    -- For comment blocks.
-    else
-        treesitter.TSComment=                  { fg = nord.comments }    -- For comment blocks.
-    end
-
-    if vim.g.nord_italic_keywords == true then
-        treesitter.TSConditional =             { fg = nord.purple, style = 'italic' }    -- For keywords related to conditionnals.
-        treesitter.TSKeyword =                 { fg = nord.purple, style = 'italic' } -- For keywords that don't fall in previous categories.
-        treesitter.TSRepeat =                  { fg = nord.purple, style = 'italic' }    -- For keywords related to loops.
-        treesitter.TSKeywordFunction =         { fg = nord.purple, style = 'italic' } -- For keywords used to define a fuction.
-    else
-        treesitter.TSConditional =             { fg = nord.purple }    -- For keywords related to conditionnals.
-        treesitter.TSKeyword =                 { fg = nord.purple } -- For keywords that don't fall in previous categories.
-        treesitter.TSRepeat =                  { fg = nord.purple }    -- For keywords related to loops.
-        treesitter.TSKeywordFunction =         { fg = nord.purple } -- For keywords used to define a fuction.
-    end
-
-    if vim.g.nord_italic_functions == true then
-        treesitter.TSFunction =                { fg = nord.blue, style = 'italic' }    -- For fuction (calls and definitions).
-        treesitter.TSMethod =                  { fg = nord.blue, style = 'italic' }    -- For method calls and definitions.
-        treesitter.TSFuncBuiltin =             { fg = nord.cyan, style = 'italic' }    -- For builtin functions: `table.insert` in Lua.
-    else
-        treesitter.TSFunction =                { fg = nord.blue }    -- For fuction (calls and definitions).
-        treesitter.TSMethod =                  { fg = nord.blue }    -- For method calls and definitions.
-        treesitter.TSFuncBuiltin =             { fg = nord.cyan }    -- For builtin functions: `table.insert` in Lua.
-    end
-
-    if vim.g.nord_italic_variables == true then
-        treesitter.TSVariable =                { fg = nord.gray, style = 'italic' } -- Any variable name that does not have another highlight.
-        treesitter.TSVariableBuiltin =         { fg = nord.gray, style = 'italic' } -- Variable names that are defined by the languages, like `this` or `self`.
-    else
-        treesitter.TSVariable =                { fg = nord.gray } -- Any variable name that does not have another highlight.
-        treesitter.TSVariableBuiltin =         { fg = nord.gray } -- Variable names that are defined by the languages, like `this` or `self`.
-    end
-
     return treesitter
 
 end
