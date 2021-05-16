@@ -92,61 +92,61 @@ theme.loadEditor = function ()
     -- Editor highlight groups
 
 	local editor = {
-		NormalFloat =			{ fg = nord.fg, bg = nord.float }, -- normal text and background color
-		ColorColumn =			{ fg = nord.none, bg = nord.active }, --  used for the columns set with 'colorcolumn'
+		NormalFloat =				{ fg = nord.fg, bg = nord.float }, -- normal text and background color
+		ColorColumn =				{ fg = nord.none, bg = nord.active }, --  used for the columns set with 'colorcolumn'
 		Conceal =				{ fg = nord.disabled }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 		Cursor =				{ fg = nord.cursor, bg = nord.none, style = 'reverse' }, -- the character under the cursor
 		CursorIM =				{ fg = nord.cursor, bg = nord.none, style = 'reverse' }, -- like Cursor, but used when in IME mode
 		Directory =				{ fg = nord.blue, bg = nord.none }, -- directory names (and other special names in listings)
 		DiffAdd =				{ fg = nord.green, bg = nord.none, style = 'reverse' }, -- diff mode: Added line
-		DiffChange =			{ fg = nord.orange, bg = nord.none, style = 'reverse' }, --  diff mode: Changed line
-		DiffDelete =			{ fg = nord.red, bg = nord.none, style = 'reverse' }, -- diff mode: Deleted line
+		DiffChange =				{ fg = nord.orange, bg = nord.none, style = 'reverse' }, --  diff mode: Changed line
+		DiffDelete =				{ fg = nord.red, bg = nord.none, style = 'reverse' }, -- diff mode: Deleted line
 		DiffText =				{ fg = nord.yellow, bg = nord.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
-		EndOfBuffer =			{ fg = nord.disabled },
+		EndOfBuffer =				{ fg = nord.disabled },
 		ErrorMsg =				{ fg = nord.none },
 		Folded =				{ fg = nord.disabled, nord.none, style = 'italic' },
-		FoldColumn =			{ fg = nord.blue },
+		FoldColumn =				{ fg = nord.blue },
 		IncSearch =				{ fg = nord.highlight, bg = nord.white, style = 'reverse' },
 		LineNr =				{ fg = nord.line_numbers },
-		CursorLineNr =			{ fg = nord.accent },
-		MatchParen =			{ fg = nord.yellow, bg = nord.none, style = 'bold' },
+		CursorLineNr =				{ fg = nord.accent },
+		MatchParen =				{ fg = nord.yellow, bg = nord.none, style = 'bold' },
 		ModeMsg =				{ fg = nord.accent },
 		MoreMsg =				{ fg = nord.accent },
 		NonText =				{ fg = nord.disabled },
 		Pmenu =					{ fg = nord.text, bg = nord.contrast },
 		PmenuSel =				{ fg = nord.accent, bg = nord.active },
 		PmenuSbar =				{ fg = nord.text, bg = nord.contrast },
-		PmenuThumb =			{ fg = nord.fg, bg = nord.accent },
+		PmenuThumb =				{ fg = nord.fg, bg = nord.accent },
 		Question =				{ fg = nord.green },
-		QuickFixLine =			{ fg = nord.highlight, nord.white, style = 'reverse' },
+		QuickFixLine =				{ fg = nord.highlight, nord.white, style = 'reverse' },
 		qfLineNr =				{ fg = nord.highlight, nord.white, style = 'reverse' },
 		Search =				{ fg = nord.highlight, bg = nord.white, style = 'reverse' },
-		SpecialKey =			{ fg = nord.purple },
+		SpecialKey =				{ fg = nord.purple },
 		SpellBad =				{ fg = nord.red, bg = nord.none, style = 'italic,undercurl' },
 		SpellCap =				{ fg = nord.blue, bg = nord.none, style = 'italic,undercurl' },
-		SpellLocal =			{ fg = nord.cyan, bg = nord.none, style = 'italic,undercurl' },
+		SpellLocal =				{ fg = nord.cyan, bg = nord.none, style = 'italic,undercurl' },
 		SpellRare =				{ fg = nord.purple, bg = nord.none, style = 'italic,undercurl' },
-		StatusLine =			{ fg = nord.fg, bg = nord.contrast },
-		StatusLineNC =  		{ fg = nord.text, bg = nord.disabled },
-		StatusLineTerm =		{ fg = nord.fg, bg = nord.contrast },
-		StatusLineTermNC =		{ fg = nord.text, bg = nord.disabled },
-		TabLineFill =			{ fg = nord.fg },
-		TablineSel =			{ fg = nord.bg, bg = nord.accent },
+		StatusLine =				{ fg = nord.fg, bg = nord.contrast },
+		StatusLineNC =  			{ fg = nord.text, bg = nord.disabled },
+		StatusLineTerm =			{ fg = nord.fg, bg = nord.contrast },
+		StatusLineTermNC =			{ fg = nord.text, bg = nord.disabled },
+		TabLineFill =				{ fg = nord.fg },
+		TablineSel =				{ fg = nord.bg, bg = nord.accent },
 		Tabline =				{ fg = nord.fg },
 		Title =					{ fg = nord.green, bg = nord.none, style = 'bold' },
 		Visual =				{ fg = nord.none, bg = nord.selection },
 		VisualNOS =				{ fg = nord.none, bg = nord.selection },
-		WarningMsg =			{ fg = nord.yellow },
+		WarningMsg =				{ fg = nord.yellow },
 		WildMenu =				{ fg = nord.orange, bg = nord.none, style = 'bold' },
-		CursorColumn =			{ fg = nord.none, bg = nord.active },
-		CursorLine =			{ fg = nord.none, bg = nord.none },
-		ToolbarLine =			{ fg = nord.fg, bg = nord.bg_alt },
-		ToolbarButton =			{ fg = nord.fg, bg = nord.none, style = 'bold' },
-		NormalMode =			{ fg = nord.accent, bg = nord.none, style = 'reverse' },
-		InsertMode =			{ fg = nord.green, bg = nord.none, style = 'reverse' },
-		ReplacelMode =			{ fg = nord.red, bg = nord.none, style = 'reverse' },
-		VisualMode =			{ fg = nord.purple, bg = nord.none, style = 'reverse' },
-		CommandMode =			{ fg = nord.gray, bg = nord.none, style = 'reverse' },
+		CursorColumn =				{ fg = nord.none, bg = nord.active },
+		CursorLine =				{ fg = nord.none, bg = nord.none },
+		ToolbarLine =				{ fg = nord.fg, bg = nord.bg_alt },
+		ToolbarButton =				{ fg = nord.fg, bg = nord.none, style = 'bold' },
+		NormalMode =				{ fg = nord.accent, bg = nord.none, style = 'reverse' },
+		InsertMode =				{ fg = nord.green, bg = nord.none, style = 'reverse' },
+		ReplacelMode =				{ fg = nord.red, bg = nord.none, style = 'reverse' },
+		VisualMode =				{ fg = nord.purple, bg = nord.none, style = 'reverse' },
+		CommandMode =				{ fg = nord.gray, bg = nord.none, style = 'reverse' },
 		Warnings =				{ fg = nord.yellow },
 
         healthError =           { fg = nord.error },
