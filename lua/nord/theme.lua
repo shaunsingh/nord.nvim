@@ -239,11 +239,11 @@ theme.loadTreeSitter = function ()
     treesitter.TSKeyword =                 { fg = nord.purple } -- For keywords that don't fall in previous categories.
     treesitter.TSRepeat =                  { fg = nord.purple }    -- For keywords related to loops.
     treesitter.TSKeywordFunction =         { fg = nord.cyan }
-    treesitter.TSFunction =                { fg = nord.cyan }    -- For fuction (calls and definitions).
-    treesitter.TSMethod =                  { fg = nord.cyan }    -- For method calls and definitions.
+    treesitter.TSFunction =                { fg = nord.pink }    -- For fuction (calls and definitions).
+    treesitter.TSMethod =                  { fg = nord.pink }    -- For method calls and definitions.
     treesitter.TSFuncBuiltin =             { fg = nord.cyan }
-    treesitter.TSVariable =                { fg = nord.pink } -- Any variable name that does not have another highlight.
-    treesitter.TSVariableBuiltin =         { fg = nord.pink }
+    treesitter.TSVariable =                { fg = nord.purple } -- Any variable name that does not have another highlight.
+    treesitter.TSVariableBuiltin =         { fg = nord.purple }
 	
     return treesitter
 
