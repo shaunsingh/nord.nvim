@@ -55,12 +55,12 @@ local nord = {
 -- Optional colors
 
 -- Enable contrast sidebars, floating windows and popup menus
-if vim.g.nord_contrast == false then
-    nord.sidebar = nord.bg
-    nord.float = nord.bg
-else
+if vim.g.nord_contrast == true then
     nord.sidebar = nord.bg_alt
     nord.float = nord.bg_alt
+else
+    nord.sidebar = nord.bg
+    nord.float = nord.bg
 end
 
 return nord
