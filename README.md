@@ -1,11 +1,11 @@
-# Nord Draft theme 
+# shaunsingh/nord.nvim 
 
-## Usage 
+## Neovim theme based off of the [Nord Color Palette.](https://www.nordtheme.com/docs/colors-and-palettes)
 
-This repository is a draft for a neovim lua-based nord theme. 
+## Features
 
-## 🌠 Features
-The theme already has the syntax highlighting for the following plugins configured: 
+Nord.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
+added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 + Supported plugins:
     + [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -27,21 +27,50 @@ The theme already has the syntax highlighting for the following plugins configur
     + [Neogit](https://github.com/TimUntersberger/neogit)
     + [vim-sneak](https://github.com/justinmk/vim-sneak)
 
-A lualine theme is also auto-generated based on the colors of the theme, and can be used through the following command: 
++ Ability to change background on sidebar-like windows like Nvim-Tree, Packer, terminal etc.
 
-```
-require('lualine').setup {
-   options = {
-    -- ... your lualine config
-    theme = 'nord' 
-    -- ... your lualine config
-   }
-}
-```
 
 ## ⚡️ Requirements
 
 + Neovim >= 0.5.0
+
+## 🌙 Installation
+
+Install via your favourite package manager:
+```vim
+" If you are using Vim-Plug
+Plug 'shaunsingh/nord.nvim'
+```
+
+```lua
+-- If you are using Packer
+use 'shaunsingh/nord.nvim'
+```
+
+## 🌓 Usage
+
+Enable the colorscheme:
+```vim 
+"Vim-Script:
+colorscheme nord
+```
+
+```lua
+--Lua:
+require('nord').set()
+```
+
+To enable the `moonlight` theme for `Lualine`, simply specify it in your lualine settings:
+
+```lua
+require('lualine').setup {
+  options = {
+    -- ... your lualine config
+    theme = 'nord'
+    -- ... your lualine config
+  }
+}
+```
 
 ## ⚙️ Configuration
 
@@ -49,21 +78,13 @@ require('lualine').setup {
 The templete also exposes the following options to the user:  
 
 | Option                              | Default     | Description                                                                                                                                                     |
-| ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| nord_italic_comments            | `false`     | Make comments italic                                                                                                                                            |
-| nord_italic_keywords            | `false`     | Make keywords italic                                                                                                                                            |
-| nord_italic_functions           | `false`     | Make functions italic                                                                                                                                           |
-| nord_italic_variables           | `false`     | Make variables and identifiers italic                                                                                                                           |
+| ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |                                                                                                                       |
 | nord_contrast                   | `true`      | Make sidebars and popup menus like nvim-tree and telescope have a different background                                                                                       |
 | nord_borders                    | `false`     | Enable the border between verticaly split windows visable
 | nord_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
 
 ```lua
 -- Example config in lua
-vim.g.nord_italic_comments = true
-vim.g.nord_italic_keywords = true
-vim.g.nord_italic_functions = true
-vim.g.nord_italic_variables = false
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
 vim.g.nord_disable_background = false
@@ -74,10 +95,6 @@ require('nord').set()
 
 ```vim
 " Example config in Vim-Script
-let g:nord_italic_comments = true
-let g:nord_italic_keywords = true
-let g:nord_italic_functions = true
-let g:nord_italic_variables = false
 let g:nord_contrast = true
 let g:nord_borders = false 
 let g:nord_disable_background = false
