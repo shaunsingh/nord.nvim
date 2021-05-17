@@ -80,7 +80,7 @@ theme.loadEditor = function ()
 		ErrorMsg =				{ fg = nord.none },
 		Folded =				{ fg = nord.disabled, nord.none, style = 'italic' },
 		FoldColumn =			{ fg = nord.blue },
-		IncSearch =				{ fg = nord.highlight, bg = nord.white, style = 'reverse' },
+		IncSearch =				{ fg = nord.highlight, bg = nord.none, style = 'reverse' },
 		LineNr =				{ fg = nord.line_numbers },
 		CursorLineNr =			{ fg = nord.accent },
 		MatchParen =			{ fg = nord.yellow, bg = nord.none, style = 'bold' },
