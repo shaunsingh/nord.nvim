@@ -384,7 +384,7 @@ theme.loadPlugins = function()
 
         -- BufferLine
         BufferLineIndicatorSelected =           { fg = nord.accent },
-        BufferLineFill =                        { bg = nord.bg_alt },
+        BufferLineFill =                        { bg = nord.bg },
 
         -- Sneak
         Sneak =                                 { fg = nord.bg, bg = nord.accent },
