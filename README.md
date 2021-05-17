@@ -81,6 +81,7 @@ require('lualine').setup {
 | nord_contrast                   | `false`      | Make sidebars and popup menus like nvim-tree and telescope have a different background                                                                                       |
 | nord_borders                    | `false`     | Enable the border between verticaly split windows visable
 | nord_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
+| nord_cursorline_transparent     | `false`     | Set the cursorline transparent/visible
 
 
 ```lua
