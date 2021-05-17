@@ -105,7 +105,7 @@ theme.loadEditor = function ()
 		StatusLineTerm =		{ fg = nord.fg, bg = nord.contrast },
 		StatusLineTermNC =		{ fg = nord.text, bg = nord.disabled },
 		TabLineFill =			{ fg = nord.fg },
-		TablineSel =			{ fg = nord.bg, bg = nord.accent },
+		TablineSel =			{ fg = nord.accent, bg = nord.bg },
 		Tabline =				{ fg = nord.fg },
 		Title =					{ fg = nord.green, bg = nord.none, style = 'bold' },
 		Visual =				{ fg = nord.none, bg = nord.selection },
