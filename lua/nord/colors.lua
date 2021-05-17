@@ -63,4 +63,10 @@ else
     nord.float = nord.bg
 end
 
+if vim.g.nord_cursorline_transparent == true then
+    nord.cursorlinefg = nord.bg
+else
+    nord.cursorlinefg = nord.nord1_gui
+end
+
 return nord

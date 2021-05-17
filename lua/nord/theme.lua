@@ -113,7 +113,7 @@ theme.loadEditor = function ()
 		WarningMsg =			{ fg = nord.yellow },
 		WildMenu =				{ fg = nord.orange, bg = nord.none, style = 'bold' },
 		CursorColumn =			{ fg = nord.none, bg = nord.active },
-		CursorLine =			{ fg = nord.none, bg = nord.none },
+		CursorLine =			{ fg = nord.none, bg = nord.cursorlinefg },
 		ToolbarLine =			{ fg = nord.fg, bg = nord.bg_alt },
 		ToolbarButton =			{ fg = nord.fg, bg = nord.none, style = 'bold' },
 		NormalMode =			{ fg = nord.accent, bg = nord.none, style = 'reverse' },
