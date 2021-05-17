@@ -104,7 +104,7 @@ theme.loadEditor = function ()
 		StatusLineNC =  		{ fg = nord.text, bg = nord.disabled },
 		StatusLineTerm =		{ fg = nord.fg, bg = nord.contrast },
 		StatusLineTermNC =		{ fg = nord.text, bg = nord.disabled },
-		TabLineFill =			{ fg = nord.fg },
+		TabLineFill =			{ fg = nord.bg },
 		TablineSel =			{ fg = nord.accent, bg = nord.bg },
 		Tabline =				{ fg = nord.fg },
 		Title =					{ fg = nord.green, bg = nord.none, style = 'bold' },
@@ -384,7 +384,7 @@ theme.loadPlugins = function()
 
         -- BufferLine
         BufferLineIndicatorSelected =           { fg = nord.accent },
-        BufferLineFill =                        { bg = nord.bg },
+        BufferLineFill =                        { bg = nord.bg_alt },
 
         -- Sneak
         Sneak =                                 { fg = nord.bg, bg = nord.accent },
