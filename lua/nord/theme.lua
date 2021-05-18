@@ -94,7 +94,7 @@ theme.loadEditor = function ()
 		Question =				{ fg = nord.green },
 		QuickFixLine =			{ fg = nord.highlight, nord.white, style = 'reverse' },
 		qfLineNr =				{ fg = nord.highlight, nord.white, style = 'reverse' },
-		Search =				{ fg = nord.highlight, bg = nord.white, style = 'reverse' },
+		Search =				{ fg = nord.nord1_gui, bg = nord.white, style = 'reverse' },
 		SpecialKey =			{ fg = nord.purple },
 		SpellBad =				{ fg = nord.red, bg = nord.none, style = 'italic,undercurl' },
 		SpellCap =				{ fg = nord.blue, bg = nord.none, style = 'italic,undercurl' },
