@@ -96,9 +96,9 @@ require('nord').set()
 
 ```vim
 " Example config in Vim-Script
-let g:nord_contrast = true
-let g:nord_borders = false 
-let g:nord_disable_background = false
+let g:nord_contrast = 1
+let g:nord_borders = 0
+let g:nord_disable_background = 0
 
 -- Load the colorsheme
 colorscheme nord
