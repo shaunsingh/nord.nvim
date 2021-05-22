@@ -62,7 +62,7 @@ colorscheme nord
 require('nord').set()
 ```
 
-To enable the `moonlight` theme for `Lualine`, simply specify it in your lualine settings:
+To enable the `nord` theme for `Lualine`, simply specify it in your lualine settings:
 
 ```lua
 require('lualine').setup {
