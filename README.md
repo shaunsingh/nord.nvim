@@ -22,7 +22,6 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
     + [NERDTree](https://github.com/preservim/nerdtree)
     + [vim-which-key](https://github.com/liuchengxu/vim-which-key)
     + [Indent-Blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-    + [WhichKey](https://github.com/liuchengxu/vim-which-key)
     + [Dashboard](https://github.com/glepnir/dashboard-nvim)
     + [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
     + [Lualine](https://github.com/hoob3rt/lualine.nvim)
