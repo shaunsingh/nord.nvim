@@ -67,7 +67,7 @@ theme.loadEditor = function ()
 
 	local editor = {
 		NormalFloat =			{ fg = nord.fg, bg = nord.float }, -- normal text and background color
-		ColorColumn =			{ fg = nord.nord1_gui, bg = nord.active }, --  used for the columns set with 'colorcolumn'
+		ColorColumn =			{ fg = nord.nord0_gui, bg = nord.nord1_gui }, --  used for the columns set with 'colorcolumn'
 		Conceal =				{ fg = nord.disabled }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 		Cursor =				{ fg = nord.nord4_gui, bg = nord.none, style = 'reverse' }, -- the character under the cursor
 		CursorIM =				{ fg = nord.cursor, bg = nord.none, style = 'reverse' }, -- like Cursor, but used when in IME mode
