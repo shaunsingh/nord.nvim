@@ -9,22 +9,22 @@ nord.normal = {
 }
 
 nord.insert = {
-	a = {fg = colors.bg, bg = colors.green, gui = 'bold'},
+	a = {fg = colors.bg, bg = colors.nord14_gui, gui = 'bold'},
 	b = {fg = colors.title, bg = colors.active},
 }
 
 nord.visual = {
-	a = {fg = colors.bg, bg = colors.purple, gui = 'bold'},
+	a = {fg = colors.bg, bg = colors.nord9_gui, gui = 'bold'},
 	b = {fg = colors.title, bg = colors.active},
 }
 
 nord.replace = {
-	a = {fg = colors.bg, bg = colors.red, gui = 'bold'},
+	a = {fg = colors.bg, bg = colors.nord11_gui, gui = 'bold'},
 	b = {fg = colors.title, bg = colors.active},
 }
 
 nord.command = {
-	a = {fg = colors.bg, bg = colors.yellow, gui = 'bold'},
+	a = {fg = colors.bg, bg = colors.nord15_gui, gui = 'bold'},
 	b = {fg = colors.title, bg = colors.active},
 }
 

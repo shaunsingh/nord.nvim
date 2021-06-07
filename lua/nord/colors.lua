@@ -1,18 +1,5 @@
 local nord = {
-
-	white =         '#ECEFF4',
-	gray =          '#cad2e1',
-	black =         '#3B4252',
-	red =           '#BF616A',
-	green =         '#A3BE8C',
-	yellow =        '#B48EAD',
-	paleblue =      '#5E81AC',
-	cyan =          '#88C0D0',
-	blue =          '#8FBCBB',
-	purple =        '#81A1C1',
-	orange =        '#D08770',
-	pink =          '#EBCB8B',
-
+    --16 colors
     nord0_gui = "#2E3440"        ,
     nord1_gui = "#3B4252"        ,
     nord2_gui = "#434C5E"        ,
