@@ -391,8 +391,8 @@ theme.loadPlugins = function()
         SneakScope =                            { bg = nord.selection },
 
         -- Indent Blankline
-        IndentBlanklineChar =                   { fg = nord.highlight },
-        IndentBlanklineContextChar =            { fg = nord.disabled },
+        IndentBlanklineChar =                   { fg = nord.nord3_gui },
+        IndentBlanklineContextChar =            { fg = nord.nord3_gui },
 
 
     }
