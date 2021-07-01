@@ -32,6 +32,8 @@ local nord = {
 	disabled =      '#3B4252',
 	cursor =        '#E5E9F0',
 	accent =        '#D8DEE9',
+        gray =          '#4C566A',
+
 
 	error =         '#BF616A',
 	link =          '#A3BE8C',
