@@ -404,6 +404,12 @@ theme.loadPlugins = function()
         else
             plugins.NvimTreeNormal =                        { fg = nord.fg, bg = nord.sidebar }
         end
+	
+	if vim.g.nord_enable_sidebar_background == true then 
+	    plugins.NvimTreeNormal =                        { fg = nord.fg, bg = nord.sidebar }
+        else
+            plugins.NvimTreeNormal =                        { fg = nord.fg, bg = nord.none }
+        end
 
     return plugins
 
