@@ -42,23 +42,17 @@ function util.load()
     vim.o.termguicolors = true
     vim.g.colors_name = "nord"
 
-    -- Load plugins, treesitter and lsp async
+    -- Load plugins and lsp async
     local async
     async = vim.loop.new_async(vim.schedule_wrap(function ()
         nord.loadTerminal()
 
-        -- imort tables for plugins, treesitter and lsp
+        -- imort tables for plugins and lsp
         local plugins = nord.loadPlugins()
-        local treesitter = nord.loadTreeSitter()
         local lsp = nord.loadLSP()
 
         -- loop trough the plugins table and highlight every member
         for group, colors in pairs(plugins) do
-            util.highlight(group, colors)
-        end
-
-        -- loop trough the treesitter table and highlight every member
-        for group, colors in pairs(treesitter) do
             util.highlight(group, colors)
         end
 
@@ -78,6 +72,7 @@ function util.load()
     -- load the most importaint parts of the theme
     local editor = nord.loadEditor()
     local syntax = nord.loadSyntax()
+    local treesitter = nord.loadTreeSitter()
 
     -- load editor highlights
     for group, colors in pairs(editor) do
@@ -86,6 +81,11 @@ function util.load()
 
     -- load syntax highlights
     for group, colors in pairs(syntax) do
+        util.highlight(group, colors)
+    end
+
+    -- loop trough the treesitter table and highlight every member
+    for group, colors in pairs(treesitter) do
         util.highlight(group, colors)
     end
 

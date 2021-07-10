@@ -394,6 +394,13 @@ theme.loadPlugins = function()
         IndentBlanklineChar =                   { fg = nord.nord3_gui },
         IndentBlanklineContextChar =            { fg = nord.nord3_gui },
 
+        -- Illuminate
+		illuminatedWord =						{ bg = nord.highight },
+		illuminatedCurWord =					{ bg = nord.highight },
+
+        DapBreakpoint =                         { fg = nord.nord14_gui},
+        DapStopped =                            { fg = nord.nord15_gui},
+
 
     }
     -- Options:
