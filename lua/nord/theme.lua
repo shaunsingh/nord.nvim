@@ -34,7 +34,7 @@ theme.loadSyntax = function ()
     Ignore =         { fg = nord.disabled }, -- left blank, hidden
     Error =          { fg = nord.error, bg = nord.none, style = 'bold,underline' }, -- any erroneous construct
     Todo =           { fg = nord.nord13_gui, bg = nord.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    Conceal =        { fg = node.none, bg = nord.bg },
+    Conceal =        { fg = nord.none, bg = nord.bg },
 
 
     htmlLink = { fg = nord.link, style = "underline" },
