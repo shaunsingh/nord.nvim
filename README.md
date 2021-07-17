@@ -100,7 +100,7 @@ let g:nord_contrast = v:true
 let g:nord_borders = v:false
 let g:nord_disable_background = v:false
 
--- Load the colorsheme
+-- Load the colorscheme
 colorscheme nord
 ```
 
