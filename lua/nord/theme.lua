@@ -161,18 +161,18 @@ theme.loadTerminal = function ()
 	vim.g.terminal_color_0 = nord.nord1_gui
 	vim.g.terminal_color_1 = nord.nord11_gui
 	vim.g.terminal_color_2 = nord.nord14_gui
-	vim.g.terminal_color_3 = nord.nord15_gui
-	vim.g.terminal_color_4 = nord.nord7_gui
-	vim.g.terminal_color_5 = nord.nord9_gui
+	vim.g.terminal_color_3 = nord.nord13_gui
+	vim.g.terminal_color_4 = nord.nord9_gui
+	vim.g.terminal_color_5 = nord.nord15_gui
 	vim.g.terminal_color_6 = nord.nord8_gui
-	vim.g.terminal_color_7 = nord.nord6_gui
-	vim.g.terminal_color_8 = nord.gray
+	vim.g.terminal_color_7 = nord.nord5_gui
+	vim.g.terminal_color_8 = nord.nord3_gui
 	vim.g.terminal_color_9 = nord.nord11_gui
 	vim.g.terminal_color_10 = nord.nord14_gui
-	vim.g.terminal_color_11 = nord.nord15_gui
-	vim.g.terminal_color_12 = nord.nord7_gui
-	vim.g.terminal_color_13 = nord.nord9_gui
-	vim.g.terminal_color_14 = nord.nord8_gui
+	vim.g.terminal_color_11 = nord.nord13_gui
+	vim.g.terminal_color_12 = nord.nord9_gui
+	vim.g.terminal_color_13 = nord.nord15_gui
+	vim.g.terminal_color_14 = nord.nord7_gui
 	vim.g.terminal_color_15 = nord.nord6_gui
 
 end
@@ -411,8 +411,8 @@ theme.loadPlugins = function()
         else
             plugins.NvimTreeNormal =                        { fg = nord.fg, bg = nord.sidebar }
         end
-	
-	if vim.g.nord_enable_sidebar_background == true then 
+
+	if vim.g.nord_enable_sidebar_background == true then
 	    plugins.NvimTreeNormal =                        { fg = nord.fg, bg = nord.sidebar }
         else
             plugins.NvimTreeNormal =                        { fg = nord.fg, bg = nord.none }
