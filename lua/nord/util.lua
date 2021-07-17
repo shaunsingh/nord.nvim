@@ -14,17 +14,17 @@ util.highlight = function (group, color)
   if color.link then vim.cmd("highlight! link " .. group .. " " .. color.link) end
 end
 
--- Only define Moonlight if it's the active colorshceme
+-- Only define nord if it's the active colorshceme
 function util.onColorScheme()
   if vim.g.colors_name ~= "nord" then
-    vim.cmd [[autocmd! Moonlight]]
-    vim.cmd [[augroup! Moonlight]]
+    vim.cmd [[autocmd! nord]]
+    vim.cmd [[augroup! nord]]
   end
 end
 
 -- Change the background for the terminal, packer and qf windows
 util.contrast = function ()
-  vim.cmd [[augroup Moonlight]]
+  vim.cmd [[augroup nord]]
   vim.cmd [[  autocmd!]]
   vim.cmd [[  autocmd ColorScheme * lua require("nord.util").onColorScheme()]]
   vim.cmd [[  autocmd TermOpen * setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]]

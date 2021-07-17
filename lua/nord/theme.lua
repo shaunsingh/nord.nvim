@@ -21,8 +21,8 @@ theme.loadSyntax = function ()
     PreProc =        { fg = nord.nord9_gui }, -- generic Preprocessor
     Include =        { fg = nord.nord9_gui }, -- preprocessor #include
     Define =         { fg = nord.nord9_gui }, -- preprocessor #define
-    Macro =          { fg = nord.nord8_gui }, -- same as Define
-    Typedef =        { fg = nord.nord8_gui }, -- A typedef
+    Macro =          { fg = nord.nord9_gui }, -- same as Define
+    Typedef =        { fg = nord.nord9_gui }, -- A typedef
     PreCondit =      { fg = nord.nord13_gui }, -- preprocessor #if, #else, #endif, etc.
     Special =        { fg = nord.nord4_gui }, -- any special symbol
     SpecialChar =    { fg = nord.nord13_gui }, -- special character in a constant
@@ -34,6 +34,8 @@ theme.loadSyntax = function ()
     Ignore =         { fg = nord.disabled }, -- left blank, hidden
     Error =          { fg = nord.error, bg = nord.none, style = 'bold,underline' }, -- any erroneous construct
     Todo =           { fg = nord.nord13_gui, bg = nord.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Conceal =        { fg = node.none, bg = nord.bg },
+
 
     htmlLink = { fg = nord.link, style = "underline" },
     htmlH1 =   { fg = nord.nord8_gui, style = "bold" },
