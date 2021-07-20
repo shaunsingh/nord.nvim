@@ -396,8 +396,8 @@ theme.loadPlugins = function()
     IndentBlanklineContextChar = { fg = nord.nord3_gui },
 
     -- Illuminate
-    illuminatedWord =    { bg = nord.highight },
-    illuminatedCurWord = { bg = nord.highight },
+    illuminatedWord =    { bg = nord.cursorlinefg },
+    illuminatedCurWord = { bg = nord.cursorlinefg },
 
     -- nvim-dap
     DapBreakpoint = { fg = nord.nord14_gui},
