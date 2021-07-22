@@ -403,7 +403,14 @@ theme.loadPlugins = function()
     DapBreakpoint = { fg = nord.nord14_gui},
     DapStopped =    { fg = nord.nord15_gui},
 
+    -- Hop
+    HopNextKey =   { fg = nord.accent, style = 'bold' },
+    HopNextKey1 =  { fg = nord.purple, style = 'bold' },
+    HopNextKey2 =  { fg = nord.nord3_gui_bright},
+    HopUnmatched = { fg = nord.comments },
 
+    -- Fern
+    FernBranchText = { fg = nord.nord3_gui_bright},
   }
   -- Options:
 
