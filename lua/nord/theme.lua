@@ -56,7 +56,7 @@ theme.loadSyntax = function ()
   syntax.Keyword =    {fg = nord.nord9_gui} -- normal for, do, while, etc.
   syntax.Repeat =      {fg = nord.nord9_gui} -- normal any other keyword
   syntax.Function =    {fg = nord.nord8_gui}
-  Identifier =      {fg = nord.nord4_gui}; -- any variable name
+  syntax.Identifier =      {fg = nord.nord4_gui}; -- any variable name
 
   return syntax
 
