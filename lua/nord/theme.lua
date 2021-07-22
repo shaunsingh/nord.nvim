@@ -404,8 +404,8 @@ theme.loadPlugins = function()
     DapStopped =    { fg = nord.nord15_gui},
 
     -- Hop
-    HopNextKey =   { fg = nord.nord8_gui, style = 'bold' },
-    HopNextKey1 =  { fg = nord.nord15_gui, style = 'bold' },
+    HopNextKey =   { fg = nord.accent, style = 'bold' },
+    HopNextKey1 =  { fg = nord.nord8_gui, style = 'bold' },
     HopNextKey2 =  { fg = nord.nord3_gui_bright},
     HopUnmatched = { fg = nord.comments },
 
