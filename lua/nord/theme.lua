@@ -190,24 +190,17 @@ theme.loadTreeSitter = function ()
     TSNumber =            { fg = nord.nord15_gui },    -- For all number
     TSString =            { fg = nord.nord14_gui },    -- For strings.
 
-    --TSAnnotation =      { fg = nord.nord11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
     TSAttribute =         { fg = nord.nord15_gui },    -- (unstable) TODO: docs
     TSBoolean=            { fg = nord.nord9_gui },    -- For booleans.
-    --TSCharacter=        { fg = nord.nord12_gui },    -- For characters.
-    --TSConstructor =     { fg = nord.nord9_gui }, -- For constructor calls and definitions: `=                                                                          { }` in Lua, and Java constructors.
-    --TSConstant =        { fg = nord.nord15_gui },    -- For constants
     TSConstBuiltin =      { fg = nord.nord7_gui },    -- For constant that are built in the language: `nil` in Lua.
     TSConstMacro =        { fg = nord.nord7_gui },    -- For constants that are defined by macros: `NULL` in C.
     TSError =             { fg = nord.error },    -- For syntax/parser errors.
     TSException =         { fg = nord.nord15_gui },    -- For exception related keywords.
     TSField =             { fg = nord.gray }, -- For fields.
-    --TSFloat =           { fg = nord.nord11_gui },    -- For floats.
     TSFuncMacro =         { fg = nord.nord7_gui },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     TSInclude =           { fg = nord.nord9_gui },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     TSLabel =             { fg = nord.nord15_gui }, -- For labels: `label:` in C and `:label:` in Lua.
     TSNamespace =         { fg = nord.nord4_gui},    -- For identifiers referring to modules and namespaces.
-    --TSNone =            { },    -- TODO: docs
-    --TSNumber =          { fg = nord.nord12_gui },    -- For all numbers
     TSOperator =          { fg = nord.nord9_gui }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter =         { fg = nord.nord10_gui }, -- For parameters of a function.
     TSParameterReference= { fg = nord.nord10_gui },    -- For references to parameters of a function.
@@ -215,7 +208,6 @@ theme.loadTreeSitter = function ()
     TSPunctDelimiter =    { fg = nord.nord8_gui }, -- For delimiters ie: `.`
     TSPunctBracket =      { fg = nord.nord8_gui }, -- For brackets and parens.
     TSPunctSpecial =      { fg = nord.nord8_gui }, -- For special punctutation that does not fall in the catagories before.
-    --TSString =          { fg = nord.nord14_gui },    -- For strings.
     TSStringRegex =       { fg = nord.nord7_gui }, -- For regexes.
     TSStringEscape =      { fg = nord.disabled }, -- For escape characters within a string.
     TSSymbol =            { fg = nord.nord15_gui },    -- For identifiers referring to symbols or atoms.
