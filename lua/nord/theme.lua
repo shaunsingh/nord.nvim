@@ -398,7 +398,7 @@ theme.loadPlugins = function()
     -- Hop
     HopNextKey =   { fg = nord.accent, style = 'bold' },
     HopNextKey1 =  { fg = nord.nord8_gui, style = 'bold' },
-    HopNextKey2 =  { fg = nord.nord3_gui_bright},
+    HopNextKey2 =  { fg = nord.accent},
     HopUnmatched = { fg = nord.comments },
 
     -- Fern
