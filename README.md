@@ -82,7 +82,8 @@ require('lualine').setup {
 | nord_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
 | nord_cursorline_transparent     | `false`     | Set the cursorline transparent/visible
 | nord_enable_sidebar_background  | `false`     | Re-enables the backgrond of the sidebar if you disabled the background of everything
-
+| nord_italic                     | `true`      | enables/disables italics
+ 
 
 ```lua
 -- Example config in lua
