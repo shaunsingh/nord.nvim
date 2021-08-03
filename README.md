@@ -90,6 +90,7 @@ require('lualine').setup {
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
 vim.g.nord_disable_background = false
+vim.g.nord_italic = false
 
 -- Load the colorscheme
 require('nord').set()
@@ -100,6 +101,7 @@ require('nord').set()
 let g:nord_contrast = v:true
 let g:nord_borders = v:false
 let g:nord_disable_background = v:false
+let g:nord_italic = v:false
 
 -- Load the colorscheme
 colorscheme nord
