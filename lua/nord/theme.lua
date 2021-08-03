@@ -9,7 +9,6 @@ theme.loadSyntax = function ()
     StorageClass =   { fg = nord.nord9_gui }, -- static, register, volatile, etc.
     Structure =      { fg = nord.nord9_gui }, -- struct, union, enum, etc.
     Constant =       { fg = nord.nord4_gui }, -- any constant
-    String =         { fg = nord.nord14_gui, bg = nord.none, style= 'italic' }, -- Any string
     Character =      { fg = nord.nord14_gui }, -- any character constant: 'c', '\n'
     Number =         { fg = nord.nord15_gui }, -- a number constant: 5
     Boolean =        { fg = nord.nord9_gui }, -- a boolean constant: TRUE, false
@@ -51,12 +50,24 @@ theme.loadSyntax = function ()
     markdownH3Delimiter = { fg = nord.nord14_gui },
   }
 
-  syntax.Comment =    {fg = nord.nord3_gui_bright}
-  syntax.Conditional =  {fg = nord.nord9_gui} -- normal if, then, else, endif, switch, etc.
-  syntax.Keyword =    {fg = nord.nord9_gui} -- normal for, do, while, etc.
-  syntax.Repeat =      {fg = nord.nord9_gui} -- normal any other keyword
-  syntax.Function =    {fg = nord.nord8_gui}
-  syntax.Identifier =      {fg = nord.nord9_gui}; -- any variable name
+  	-- Italic comments
+	if vim.g.nord_italic == false then
+		syntax.Conditional =		{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
+		syntax.Keyword =			{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' } -- italic for, do, while, etc.
+		syntax.Repeat =				{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' } -- italic any other keyword
+		syntax.Comment =		{ fg = nord.nord3_gui_bright, bg = nord.none, style = 'italic' } -- italic comments
+		syntax.Function =		{ fg = nord.nord8_gui, bg = nord.none, style = 'italic' } -- italic funtion names
+		syntax.Identifier =		{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' }; -- any variable name
+    syntax.String = { fg = nord.nord14_gui, bg = nord.none, style= 'italic' } -- any string
+	else
+		syntax.Comment =		{fg = nord.nord3_gui_bright} -- normal comments
+		syntax.Conditional =		{ fg = nord.nord9_gui } -- normal if, then, else, endif, switch, etc.
+		syntax.Keyword =			{ fg = nord.nord9_gui } -- normal for, do, while, etc.
+		syntax.Repeat =				{ fg = nord.nord9_gui } -- normal any other keyword
+		syntax.Function =		{ fg = nord.nord8_gui} -- normal function names
+		syntax.Identifier =		{ fg = nord.nord9_gui}; -- any variable name
+    syntax.String = { fg = nord.nord14_gui } -- any string
+	end
 
   return syntax
 
