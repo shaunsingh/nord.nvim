@@ -134,6 +134,9 @@ theme.loadEditor = function ()
     DashboardCenter =   { fg = nord.nord8_gui },
     DashboardFooter =   { fg = nord.nord14_gui, style = "italic" },
 
+    -- BufferLine
+    BufferLineIndicatorSelected = { fg = nord.bg },
+    BufferLineFill =              { bg = nord.bg },
   }
 
   -- Options:
@@ -375,11 +378,7 @@ theme.loadPlugins = function()
     ReferencesIcon =             { fg = nord.nord7_gui },
     TargetWord =                 { fg = nord.nord8_gui },
 
-    -- BufferLine
-    BufferLineIndicatorSelected = { fg = nord.bg },
-    BufferLineFill =              { bg = nord.bg },
-
-    -- Sneak
+        -- Sneak
     Sneak =      { fg = nord.bg, bg = nord.accent },
     SneakScope = { bg = nord.selection },
 
