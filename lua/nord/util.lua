@@ -88,8 +88,6 @@ function util.load()
     util.highlight(group, colors)
   end
 
-  -- load the rest later ( lsp, treesitter, plugins )
-  async:send()
 end
 
 return util
