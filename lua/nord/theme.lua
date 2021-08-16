@@ -92,7 +92,7 @@ theme.loadEditor = function ()
     ErrorMsg =         { fg = nord.none },
     Folded =           { fg = nord.nord1_gui, nord.none, style = 'italic' },
     FoldColumn =       { fg = nord.nord7_gui },
-    IncSearch =        { fg = nord.none, bg = nord.nord4_gui, style = 'reverse' },
+    IncSearch =        { fg = nord.nord6_gui, bg = nord.nord10_gui },
     LineNr =           { fg = nord.nord3_gui_bright },
     CursorLineNr =     { fg = nord.nord4_gui },
     MatchParen =       { fg = nord.nord15_gui, bg = nord.none, style = 'bold' },
