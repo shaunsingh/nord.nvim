@@ -88,6 +88,7 @@ function util.load()
     util.highlight(group, colors)
   end
 
+  async:send()
 end
 
 return util
