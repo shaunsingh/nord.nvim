@@ -51,7 +51,7 @@ theme.loadSyntax = function ()
   }
 
   	-- Italic comments
-	if vim.g.nord_italic == false then
+	if vim.g.nord_italic == true then
 		syntax.Conditional =		{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
 		syntax.Keyword =			{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' } -- italic for, do, while, etc.
 		syntax.Repeat =				{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' } -- italic any other keyword
@@ -278,9 +278,9 @@ theme.loadLSP = function ()
     LspDiagnosticsFloatingHint =           { fg = nord.nord9_gui  }, -- used for "Hint" diagnostic messages in the diagnostics float
     LspDiagnosticsVirtualTextHint =        { fg = nord.nord9_gui  }, -- Virtual text "Hint"
     LspDiagnosticsUnderlineHint =          { style = 'undercurl', sp = nord.nord10_gui }, -- used to underline "Hint" diagnostics.
-    LspReferenceText =                     { fg = nord.nord4_gui, bg = nord.nord4_gui }, -- used for highlighting "text" references
-    LspReferenceRead =                     { fg = nord.nord4_gui, bg = nord.nord4_gui }, -- used for highlighting "read" references
-    LspReferenceWrite =                    { fg = nord.nord4_gui, bg = nord.nord4_gui }, -- used for highlighting "write" references
+    LspReferenceText =                     { fg = nord.nord4_gui, bg = nord.nord1_gui }, -- used for highlighting "text" references
+    LspReferenceRead =                     { fg = nord.nord4_gui, bg = nord.nord1_gui }, -- used for highlighting "read" references
+    LspReferenceWrite =                    { fg = nord.nord4_gui, bg = nord.nord1_gui }, -- used for highlighting "write" references
   }
 
   return lsp
@@ -310,11 +310,11 @@ theme.loadPlugins = function()
     -- Neogit
     NeogitBranch =               { fg = nord.nord10_gui },
     NeogitRemote =               { fg = nord.nord9_gui },
-    NeogitHunkHeader =           { fg = nord.nord4_gui, bg = nord.nord4_gui },
-    NeogitHunkHeaderHighlight =  { fg = nord.nord7_gui, bg = nord.nord2_gui },
-    NeogitDiffContextHighlight = { fg = nord.nord1_gui, bg = nord.nord2_gui },
-    NeogitDiffDeleteHighlight =  { fg = nord.nord11_gui },
-    NeogitDiffAddHighlight =     { fg = nord.nord14_gui },
+    NeogitHunkHeader =           { fg = nord.nord8_gui },
+    NeogitHunkHeaderHighlight =  { fg = nord.nord8_gui, bg = nord.nord1_gui },
+    NeogitDiffContextHighlight = { bg = nord.nord1_gui },
+    NeogitDiffDeleteHighlight =  { fg = nord.nord11_gui, style='reverse' },
+    NeogitDiffAddHighlight =     { fg = nord.nord14_gui, style='reverse' },
 
     -- GitGutter
     GitGutterAdd =    { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
