@@ -42,32 +42,6 @@ function util.load()
   vim.o.termguicolors = true
   vim.g.colors_name = "nord"
 
-  -- Load plugins and lsp async
-  local async
-  async = vim.loop.new_async(vim.schedule_wrap(function ()
-    nord.loadTerminal()
-
-    -- imort tables for plugins and lsp
-    local plugins = nord.loadPlugins()
-    local lsp = nord.loadLSP()
-
-    -- loop trough the plugins table and highlight every member
-    for group, colors in pairs(plugins) do
-      util.highlight(group, colors)
-    end
-
-    -- loop trough the lsp table and highlight every member
-    for group, colors in pairs(lsp) do
-      util.highlight(group, colors)
-    end
-
-    -- if contrast is enabled, apply it to sidebars and floating windows
-    if vim.g.nord_contrast == true then
-      util.contrast()
-    end
-    async:close()
-  end))
-
   -- load the most importaint parts of the theme
   local editor = nord.loadEditor()
   local syntax = nord.loadSyntax()
@@ -88,7 +62,26 @@ function util.load()
     util.highlight(group, colors)
   end
 
-  async:send()
+  nord.loadTerminal()
+
+  -- imort tables for plugins and lsp
+  local plugins = nord.loadPlugins()
+  local lsp = nord.loadLSP()
+
+  -- loop trough the plugins table and highlight every member
+  for group, colors in pairs(plugins) do
+    util.highlight(group, colors)
+  end
+
+  -- loop trough the lsp table and highlight every member
+  for group, colors in pairs(lsp) do
+    util.highlight(group, colors)
+  end
+
+  -- if contrast is enabled, apply it to sidebars and floating windows
+  if vim.g.nord_contrast == true then
+    util.contrast()
+  end
 end
 
 return util
