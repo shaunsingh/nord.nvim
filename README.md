@@ -59,7 +59,7 @@ colorscheme nord
 
 ```lua
 --Lua:
-require('nord').set()
+vim.cmd[[colorscheme nord]]
 ```
 
 To enable the `nord` theme for `Lualine`, simply specify it in your lualine settings:
