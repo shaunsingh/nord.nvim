@@ -223,7 +223,7 @@ theme.loadTreeSitter = function ()
     TSPunctBracket =      { fg = nord.nord8_gui }, -- For brackets and parens.
     TSPunctSpecial =      { fg = nord.nord8_gui }, -- For special punctutation that does not fall in the catagories before.
     TSStringRegex =       { fg = nord.nord7_gui }, -- For regexes.
-    TSStringEscape =      { fg = nord.nord1_gui }, -- For escape characters within a string.
+    TSStringEscape =      { fg = nord.nord15_gui }, -- For escape characters within a string.
     TSSymbol =            { fg = nord.nord15_gui },    -- For identifiers referring to symbols or atoms.
     TSType =              { fg = nord.nord9_gui},    -- For types.
     TSTypeBuiltin =       { fg = nord.nord9_gui},    -- For builtin types.
