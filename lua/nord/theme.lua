@@ -421,6 +421,22 @@ theme.loadPlugins = function()
     rainbowcol5 = { fg = nord.nord11_gui },
     rainbowcol6 = { fg = nord.nord10_gui },
     rainbowcol7 = { fg = nord.nord9_gui },
+
+    -- lightspeed
+    LightspeedLabel = { fg = nord.nord15_gui, style = "bold,reverse" },
+    LightspeedLabelOverlapped = { fg = nord.nord10_gui, style = "bold,underline,reverse" },
+    LightspeedLabelDistant = { fg = nord.nord13_gui, style = "bold,reverse" },
+    LightspeedLabelDistantOverlapped = { fg = nord.nord13_gui, style = "bold,underline,reverse" },
+    LightspeedShortcut = { fg = nord.nord11_gui, style = "bold,reverse" },
+    LightspeedShortcutOverlapped = { fg = nord.nord11_gui, style = "bold,underline,reverse" },
+    LightspeedMaskedChar = { fg = nord.nord9_gui, style = "bold,reverse" },
+    LightspeedGreyWash = { fg = nord.nord3_gui_bright },
+    LightspeedUnlabeledMatch = { fg = nord.nord9_gui, style = "bold,reverse" },
+    LightspeedOneCharMatch = { fg = nord.nord9_gui, style = "bold,reverse" },
+    LightspeedUniqueChar = { style = "bold,underline" },
+    -- LightspeedPendingOpArea = { style = "strikethrough" },
+    -- LightspeedPendingChangeOpArea = { style = "strikethrough" },
+    -- LightspeedCursor = { fg = nord.nord7_gui, style = "underline,reverse" },
   }
   -- Options:
 
