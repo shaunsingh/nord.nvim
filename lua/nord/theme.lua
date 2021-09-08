@@ -394,7 +394,7 @@ theme.loadPlugins = function()
 
     -- Indent Blankline
     IndentBlanklineChar =        { fg = nord.nord3_gui },
-    IndentBlanklineContextChar = { fg = nord.nord3_gui },
+    IndentBlanklineContextChar = { fg = nord.nord10_gui },
 
     -- Illuminate
     illuminatedWord =    { bg = nord.nord3_gui },
