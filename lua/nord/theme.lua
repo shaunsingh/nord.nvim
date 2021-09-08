@@ -90,7 +90,7 @@ theme.loadEditor = function ()
     DiffText =         { fg = nord.nord15_gui, bg = nord.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
     EndOfBuffer =      { fg = nord.nord1_gui },
     ErrorMsg =         { fg = nord.none },
-    Folded =           { fg = nord.nord1_gui, nord.none, style = 'italic' },
+    Folded =           { fg = nord.nord_3_gui_bright, nord.none, style = 'italic' },
     FoldColumn =       { fg = nord.nord7_gui },
     IncSearch =        { fg = nord.nord6_gui, bg = nord.nord10_gui },
     LineNr =           { fg = nord.nord3_gui_bright },
