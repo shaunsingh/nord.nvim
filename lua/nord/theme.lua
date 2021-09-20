@@ -322,15 +322,15 @@ theme.loadPlugins = function()
     GitGutterDelete = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 
     -- GitSigns
-    GitSignsAdd =      { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
-    GitSignsAddNr =    { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
-    GitSignsAddLn =    { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
-    GitSignsChange =   { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-    GitSignsChangeNr = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-    GitSignsChangeLn = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-    GitSignsDelete =   { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
-    GitSignsDeleteNr = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
-    GitSignsDeleteLn = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
+    GitSignsAdd =      { bg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
+    GitSignsAddNr =    { bg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
+    GitSignsAddLn =    { bg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
+    GitSignsChange =   { bg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
+    GitSignsChangeNr = { bg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
+    GitSignsChangeLn = { bg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
+    GitSignsDelete =   { bg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
+    GitSignsDeleteNr = { bg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
+    GitSignsDeleteLn = { bg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
     TelescopePromptBorder =   { fg = nord.nord8_gui },
