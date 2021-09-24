@@ -415,12 +415,12 @@ theme.loadPlugins = function()
 
     -- nvim-ts-rainbow
     rainbowcol1 = { fg = nord.nord15_gui },
-    rainbowcol2 = { fg = nord.nord14_gui },
-    rainbowcol3 = { fg = nord.nord13_gui },
+    rainbowcol2 = { fg = nord.nord13_gui },
+    rainbowcol3 = { fg = nord.nord14_gui },
     rainbowcol4 = { fg = nord.nord12_gui },
     rainbowcol5 = { fg = nord.nord11_gui },
-    rainbowcol6 = { fg = nord.nord10_gui },
-    rainbowcol7 = { fg = nord.nord9_gui },
+    rainbowcol6 = { fg = nord.nord15_gui },
+    rainbowcol7 = { fg = nord.nord13_gui },
 
     -- lightspeed
     LightspeedLabel = { fg = nord.nord8_gui, style = "bold" },
