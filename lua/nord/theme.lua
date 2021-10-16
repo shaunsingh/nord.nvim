@@ -411,9 +411,9 @@ theme.loadPlugins = function()
     SneakScope = { bg = nord.nord1_gui },
 		
     -- Cmp
-    CmpItemKind =	{ fg = nord.nord15_gui }
-    CmpItemAbbrMatch =	{ fg = nord.nord5_gui, style = 'bold' }
-    CmpItemAbbr =	{ fg = nord.nord7_gui }
+    CmpItemKind =	{ fg = nord.nord15_gui },
+    CmpItemAbbrMatch =	{ fg = nord.nord5_gui, style = 'bold' },
+    CmpItemAbbr =	{ fg = nord.nord7_gui },
 		
     -- Indent Blankline
     IndentBlanklineChar =        { fg = nord.nord3_gui },
