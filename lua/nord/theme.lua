@@ -413,7 +413,8 @@ theme.loadPlugins = function()
     -- Cmp
     CmpItemKind =	{ fg = nord.nord15_gui },
     CmpItemAbbrMatch =	{ fg = nord.nord5_gui, style = 'bold' },
-    CmpItemAbbr =	{ fg = nord.nord7_gui },
+    CmpItemAbbr =	{ fg = nord.nord3_gui_bright },
+    CmpItemMenu =       { fg = nord.nord13_gui },
 		
     -- Indent Blankline
     IndentBlanklineChar =        { fg = nord.nord3_gui },
