@@ -294,7 +294,7 @@ theme.loadLSP = function ()
     DiagnosticUnderlineInfo    = { link = "LspDiagnosticsUnderlineInformation" },
     DiagnosticFloatingInfo     = { link = "LspDiagnosticsFloatingInformation" },
     DiagnosticSignInfo         = { link = "LspDiagnosticsSignInformation" },
-    DiagnosticVirtualTextHint  = { link = "LspDiagnosticsVirtualTextHin" },
+    DiagnosticVirtualTextHint  = { link = "LspDiagnosticsVirtualTextHint" },
     DiagnosticUnderlineHint    = { link = "LspDiagnosticsUnderlineHint" },
     DiagnosticFloatingHint     = { link = "LspDiagnosticsFloatingHint" },
     DiagnosticSignHint         = { link = "LspDiagnosticsSignHint" },
