@@ -413,6 +413,7 @@ theme.loadPlugins = function()
     -- Cmp
     CmpItemKind =	{ fg = nord.nord15_gui },
     CmpItemAbbrMatch =	{ fg = nord.nord5_gui, style = 'bold' },
+    CmpItemAbbrMatchFuzzy = { fg = nord.nord5_gui, style = 'bold' },
     CmpItemAbbr =	{ fg = nord.nord4_gui},
     CmpItemMenu =       { fg = nord.nord14_gui },
 		
