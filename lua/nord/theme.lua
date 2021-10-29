@@ -357,7 +357,6 @@ theme.loadPlugins = function()
     TelescopeSelectionCaret = { fg = nord.nord9_gui },
     TelescopeSelection =      { fg = nord.nord9_gui },
     TelescopeMatching =       { fg = nord.nord8_gui },
-    TelescopeNormal =         { fg = nord.nord4_gui, bg = nord.float },
 
     -- NvimTree
     NvimTreeRootFolder =        { fg = nord.nord7_gui, style = "bold" },
