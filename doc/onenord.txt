@@ -1,20 +1,20 @@
 ================================================================================
 
-nord is a colorscheme for NeoVim written in Lua with built in support
+onenord is a colorscheme for NeoVim written in Lua with built in support
 for native LSP, TreeSitter and many more plugins.
 
 ================================================================================
 CONTENTS
 
-    1. Features ................. |nord-features|
-    2. Usage .................... |nord-usage|
-    3. Styles ................... |nord-styles|
-    4. Configuration ............ |nord-configuration|
-    5. Functions ................ |nord-functions|
-    6. Mappings ................. |nord-mappings|
+    1. Features ................. |onenord-features|
+    2. Usage .................... |onenord-usage|
+    3. Styles ................... |onenord-styles|
+    4. Configuration ............ |onenord-configuration|
+    5. Functions ................ |onenord-functions|
+    6. Mappings ................. |onenord-mappings|
 
 ================================================================================
-1. Features                                             *nord-features*
+1. Features                                             *onenord-features*
 
     + A wide array of supported plugins -TreeSitter
                                         -LSP Diagnostics
@@ -48,26 +48,26 @@ CONTENTS
       NeoVim
 
 ================================================================================
-2. Usage                                                   *nord-usage*
+2. Usage                                                   *onenord-usage*
 
     To use the default settings, just apply the theme
 
     If you are using Vim-Script:
-        colorscheme nord~
+        colorscheme onenord~
 
     If you are using Lua:
-        require('nord').set~
+        require('onenord').set~
 
 
-    nord also includes a Lualine theme. Set it in your Lualine config
+    onenord also includes a Lualine theme. Set it in your Lualine config
         require('lualine').setup {~
           options = {~
             -- ... your lualine config
-            theme = 'nord'~
+            theme = 'onenord'~
             -- ... your lualine config
           }~
         }~
-    Just make sure to set the theme to "nord", as "nord" already
+    Just make sure to set the theme to "onenord", as "onenord" already
     exist built in to lualine
 
 vim:tw=78:ts=4:ft=help:norl:
