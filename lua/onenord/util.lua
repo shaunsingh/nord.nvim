@@ -64,7 +64,7 @@ function util.load()
 
   onenord.loadTerminal()
 
-  -- imort tables for plugins and lsp
+  -- import tables for plugins and lsp
   local plugins = onenord.loadPlugins()
   local lsp = onenord.loadLSP()
 

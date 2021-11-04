@@ -739,12 +739,6 @@ theme.loadPlugins = function()
     remove_background(plugins.NvimTreeNormal)
   end
 
-  -- if vim.g.onenord_enable_sidebar_background then
-  --   plugins.NvimTreeNormal = { fg = onenord.onenord4_gui, bg = onenord.sidebar }
-  -- else
-  --   plugins.NvimTreeNormal = { fg = onenord.onenord4_gui, bg = onenord.none }
-  -- end
-
   return plugins
 
 end
