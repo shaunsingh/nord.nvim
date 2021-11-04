@@ -1,13 +1,13 @@
 
-# shaunsingh/nord.nvim 
+# th4tkh13m/onenord.nvim (Based on shaunsingh/nord.nvim and rmehri01/onenord.nvim)
 
-## Neovim theme based off of the [Nord Color Palette.](https://www.nordtheme.com/docs/colors-and-palettes)
+## Neovim theme based off of the [Nord Color Palette and Atom's OneDark Color Pallete for better constrast](https://www.nordtheme.com/docs/colors-and-palettes)
 
 ![118406380-d78ad580-b649-11eb-945c-5988fa717f39](https://user-images.githubusercontent.com/71196912/128029391-ad55fd41-d5f9-43bd-a795-c11b562f9d6d.jpg)
 
 ## Features
 
-Nord.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
+OneNord.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
 added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 + Supported plugins:
@@ -42,12 +42,12 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
 Install via your favourite package manager:
 ```vim
 " If you are using Vim-Plug
-Plug 'shaunsingh/nord.nvim'
+Plug 'th4tkh13m/onenord.nvim'
 ```
 
 ```lua
 -- If you are using Packer
-use 'shaunsingh/nord.nvim'
+use 'th4tkh13m/onenord.nvim'
 ```
 
 ## 🌓 Usage
@@ -55,12 +55,12 @@ use 'shaunsingh/nord.nvim'
 Enable the colorscheme:
 ```vim 
 "Vim-Script:
-colorscheme nord
+colorscheme onenord
 ```
 
 ```lua
 --Lua:
-vim.cmd[[colorscheme nord]]
+vim.cmd[[colorscheme onenord]]
 ```
 
 To enable the `nord` theme for `Lualine`, simply specify it in your lualine settings:
@@ -106,6 +106,6 @@ let g:nord_disable_background = v:false
 let g:nord_italic = v:false
 
 -- Load the colorscheme
-colorscheme nord
+colorscheme onenord
 ```
 
