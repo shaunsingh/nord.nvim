@@ -58,5 +58,3 @@ onenord.highlight = "#434C5E"
 onenord.selection = "#4C566A"
 
 return onenord
-
-return nord
