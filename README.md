@@ -1,14 +1,27 @@
 
-# th4tkh13m/onenord.nvim (Based on shaunsingh/nord.nvim and rmehri01/onenord.nvim)
+# th4tkh13m/onenord.nvim 
+## (Based on shaunsingh/nord.nvim and rmehri01/onenord.nvim)
 
-## Neovim theme based off of the [Nord Color Palette and Atom's OneDark Color Pallete for better constrast](https://www.nordtheme.com/docs/colors-and-palettes)
+## Neovim theme based off of the [Nord Color Palette](https://www.nordtheme.com/docs/colors-and-palettes) and [Atom's OneDark Color Pallete](https://github.com/atom/atom/tree/master/packages/one-dark-ui)
 
 ![118406380-d78ad580-b649-11eb-945c-5988fa717f39](https://user-images.githubusercontent.com/71196912/128029391-ad55fd41-d5f9-43bd-a795-c11b562f9d6d.jpg)
 
 ## Features
 
 OneNord.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
-added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
+added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter).
+
+It is a fork of [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim) and inspired on [rmehri01/onenord.nvim](https://github.com/rmehri01/onenord.nvim).
+
+### Why does this repository exist? Don't we have [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim) and [rmehri01/onenord.nvim](https://github.com/rmehri01/onenord.nvim)?
+
+That is a good point. I do love [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim), but the constrast of the colorscheme does not satisfy me! The comments are hard to see, as well as some elements as keywords and modifiers have the same colors. Otherwise, [rmehri01/onenord.nvim](https://github.com/rmehri01/onenord.nvim) has the perfect colorscheme I need, but I do notice it makes my startuptime a little bit slower (10ms) than [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim).
+
+- [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim) 
+
+- [rmehri01/onenord.nvim](https://github.com/rmehri01/onenord.nvim)
+- [th4tkh13m/onenord.nvim](https://github.com/th4tkh13m/onenord.nvim)
+
 
 + Supported plugins:
     + [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
