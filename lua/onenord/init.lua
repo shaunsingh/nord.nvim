@@ -2,7 +2,7 @@
 -- Description:         Port of articicestudio's nord theme for neovim
 -- Author:              https://github.com/shaunsingh
 
-local util = require('nord.util')
+local util = require('onenord.util')
 
 -- Load the theme
 local set = function ()

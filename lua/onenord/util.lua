@@ -1,5 +1,5 @@
 local util = {}
-local nord = require('nord.theme')
+local onenord = require('onenord.theme')
 
 -- Go trough the table and highlight the group with the color values
 util.highlight = function (group, color)
@@ -14,19 +14,19 @@ util.highlight = function (group, color)
   if color.link then vim.cmd("highlight! link " .. group .. " " .. color.link) end
 end
 
--- Only define nord if it's the active colorscheme
+-- Only define onenord if it's the active colorscheme
 function util.onColorScheme()
-  if vim.g.colors_name ~= "nord" then
-    vim.cmd [[autocmd! nord]]
-    vim.cmd [[augroup! nord]]
+  if vim.g.colors_name ~= "onenord" then
+    vim.cmd [[autocmd! onenord]]
+    vim.cmd [[augroup! onenord]]
   end
 end
 
 -- Change the background for the terminal, packer and qf windows
 util.contrast = function ()
-  vim.cmd [[augroup nord]]
+  vim.cmd [[augroup onenord]]
   vim.cmd [[  autocmd!]]
-  vim.cmd [[  autocmd ColorScheme * lua require("nord.util").onColorScheme()]]
+  vim.cmd [[  autocmd ColorScheme * lua require("onenord.util").onColorScheme()]]
   vim.cmd [[  autocmd TermOpen * setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]]
   vim.cmd [[  autocmd FileType packer setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]]
   vim.cmd [[  autocmd FileType qf setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]]
@@ -40,12 +40,12 @@ function util.load()
   if vim.fn.exists("syntax_on") then vim.cmd("syntax reset") end
   vim.o.background = "dark"
   vim.o.termguicolors = true
-  vim.g.colors_name = "nord"
+  vim.g.colors_name = "onenord"
 
   -- load the most importaint parts of the theme
-  local editor = nord.loadEditor()
-  local syntax = nord.loadSyntax()
-  local treesitter = nord.loadTreeSitter()
+  local editor = onenord.loadEditor()
+  local syntax = onenord.loadSyntax()
+  local treesitter = onenord.loadTreeSitter()
 
   -- load editor highlights
   for group, colors in pairs(editor) do
@@ -62,11 +62,11 @@ function util.load()
     util.highlight(group, colors)
   end
 
-  nord.loadTerminal()
+  onenord.loadTerminal()
 
   -- imort tables for plugins and lsp
-  local plugins = nord.loadPlugins()
-  local lsp = nord.loadLSP()
+  local plugins = onenord.loadPlugins()
+  local lsp = onenord.loadLSP()
 
   -- loop trough the plugins table and highlight every member
   for group, colors in pairs(plugins) do
@@ -79,7 +79,7 @@ function util.load()
   end
 
   -- if contrast is enabled, apply it to sidebars and floating windows
-  if vim.g.nord_contrast == true then
+  if vim.g.onenord_contrast == true then
     util.contrast()
   end
 end
