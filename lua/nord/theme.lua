@@ -85,7 +85,7 @@ theme.loadEditor = function ()
     CursorIM =         { fg = nord.nord5_gui, bg = nord.none, style = 'reverse' }, -- like Cursor, but used when in IME mode
     Directory =        { fg = nord.nord7_gui, bg = nord.none }, -- directory names (and other special names in listings)
     DiffAdd =          { fg = nord.nord14_gui, bg = nord.none, style = 'reverse' }, -- diff mode: Added line
-    DiffChange =       { fg = nord.nord12_gui, bg = nord.none, style = 'reverse' }, --  diff mode: Changed line
+    DiffChange =       { fg = nord.nord13_gui, bg = nord.none, style = 'reverse' }, --  diff mode: Changed line
     DiffDelete =       { fg = nord.nord11_gui, bg = nord.none, style = 'reverse' }, -- diff mode: Deleted line
     DiffText =         { fg = nord.nord15_gui, bg = nord.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
     EndOfBuffer =      { fg = nord.nord1_gui },
