@@ -106,7 +106,7 @@ theme.loadEditor = function ()
     Question =         { fg = nord.nord14_gui },
     QuickFixLine =     { fg = nord.nord4_gui, nord.nord6_gui, style = 'reverse' },
     qfLineNr =         { fg = nord.nord4_gui, nord.nord6_gui, style = 'reverse' },
-    Search =           { fg = nord.nord1_gui, bg = nord.nord6_gui, style = 'reverse' },
+    Search =           { fg = nord.nord10_gui, bg = nord.nord6_gui, style = 'reverse' },
     SpecialKey =       { fg = nord.nord9_gui },
     SpellBad =         { fg = nord.nord11_gui, bg = nord.none, style = 'italic,undercurl' },
     SpellCap =         { fg = nord.nord7_gui, bg = nord.none, style = 'italic,undercurl' },
