@@ -49,6 +49,17 @@ Plug 'shaunsingh/nord.nvim'
 use 'shaunsingh/nord.nvim'
 ```
 
+To enable the `nord` theme for `Lualine`, simply specify it in your lualine settings:
+```lua
+require('lualine').setup {
+  options = {
+    -- ... your lualine config
+    theme = 'nord'
+    -- ... your lualine config
+  }
+}
+```
+
 ## 🌓 Usage
 
 Enable the colorscheme:
