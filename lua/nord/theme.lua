@@ -79,6 +79,7 @@ theme.loadEditor = function ()
 
   local editor = {
     NormalFloat =      { fg = nord.nord4_gui, bg = nord.float }, -- normal text and background color
+    FloatBorder =      { fg = nord.nord4_gui, bg = nord.float }, -- normal text and background color
     ColorColumn =      { fg = nord.none, bg = nord.nord1_gui }, --  used for the columns set with 'colorcolumn'
     Conceal =          { fg = nord.nord1_gui }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor =           { fg = nord.nord4_gui, bg = nord.none, style = 'reverse' }, -- the character under the cursor
@@ -90,7 +91,7 @@ theme.loadEditor = function ()
     DiffText =         { fg = nord.nord15_gui, bg = nord.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
     EndOfBuffer =      { fg = nord.nord1_gui },
     ErrorMsg =         { fg = nord.none },
-    Folded =           { fg = nord.nord_3_gui_bright, nord.none, style = 'italic' },
+    Folded =           { fg = nord.nord_3_gui_bright, bg = nord.none, style = 'italic' },
     FoldColumn =       { fg = nord.nord7_gui },
     IncSearch =        { fg = nord.nord6_gui, bg = nord.nord10_gui },
     LineNr =           { fg = nord.nord3_gui_bright },
@@ -104,8 +105,8 @@ theme.loadEditor = function ()
     PmenuSbar =        { fg = nord.nord4_gui, bg = nord.nord2_gui },
     PmenuThumb =       { fg = nord.nord4_gui, bg = nord.nord4_gui },
     Question =         { fg = nord.nord14_gui },
-    QuickFixLine =     { fg = nord.nord4_gui, nord.nord6_gui, style = 'reverse' },
-    qfLineNr =         { fg = nord.nord4_gui, nord.nord6_gui, style = 'reverse' },
+    QuickFixLine =     { fg = nord.nord4_gui, bg = nord.nord6_gui, style = 'reverse' },
+    qfLineNr =         { fg = nord.nord4_gui, bg = nord.nord6_gui, style = 'reverse' },
     Search =           { fg = nord.nord10_gui, bg = nord.nord6_gui, style = 'reverse' },
     SpecialKey =       { fg = nord.nord9_gui },
     SpellBad =         { fg = nord.nord11_gui, bg = nord.none, style = 'italic,undercurl' },
