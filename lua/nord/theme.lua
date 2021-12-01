@@ -283,6 +283,10 @@ theme.loadLSP = function ()
     LspReferenceRead =                     { fg = nord.nord4_gui, bg = nord.nord1_gui }, -- used for highlighting "read" references
     LspReferenceWrite =                    { fg = nord.nord4_gui, bg = nord.nord1_gui }, -- used for highlighting "write" references
 
+    DiagnosticError            = { link = "LspDiagnosticsDefaultError" },
+    DiagnosticWarn             = { link = "LspDiagnosticsDefaultWarning" },
+    DiagnosticInfo             = { link = "LspDiagnosticsDefaultInformation" },
+    DiagnosticHint             = { link = "LspDiagnosticsDefaultHint" },
     DiagnosticVirtualTextWarn  = { link = "LspDiagnosticsVirtualTextWarning" },
     DiagnosticUnderlineWarn    = { link = "LspDiagnosticsUnderlineWarning" },
     DiagnosticFloatingWarn     = { link = "LspDiagnosticsFloatingWarning" },
