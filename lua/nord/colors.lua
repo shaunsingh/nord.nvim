@@ -23,8 +23,8 @@ local nord = (vim.o.background == 'dark') and {
   nord0_gui        = "#ECEFF4", -- nord6 in palette
   nord1_gui        = "#E5E9F0", -- nord5 in palette
   nord2_gui        = "#D8DEE9", -- nord4 in palette
-  nord3_gui        = "#4C566A", -- out of palette
-  nord3_gui_bright = "#AEC7DF", -- nord3 in palette
+  nord3_gui        = "#4C566A", -- nord3 in palette
+  nord3_gui_bright = "#AEC7DF", -- out of palette
   nord4_gui        = "#434C5E", -- nord2 in palette
   nord5_gui        = "#3B4252", -- nord1 in palette
   nord6_gui        = "#2E3440", -- nord0 in palette
