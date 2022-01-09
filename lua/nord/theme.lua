@@ -198,33 +198,28 @@ theme.loadTreeSitter = function ()
 
   local treesitter = {
     TSAnnotation =        { fg = nord.nord12_gui },    -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
-    TSCharacter=          { fg = nord.nord14_gui },    -- For characters.
     TSConstructor =       { fg = nord.nord9_gui }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     TSConstant =          { fg = nord.nord13_gui },    -- For constants
     TSFloat =             { fg = nord.nord15_gui },    -- For floats
     TSNumber =            { fg = nord.nord15_gui },    -- For all number
-    TSString =            { fg = nord.nord14_gui },    -- For strings.
 
     TSAttribute =         { fg = nord.nord15_gui },    -- (unstable) TODO: docs
-    TSBoolean=            { fg = nord.nord9_gui },    -- For booleans.
-    TSConstBuiltin =      { fg = nord.nord7_gui },    -- For constant that are built in the language: `nil` in Lua.
-    TSConstMacro =        { fg = nord.nord7_gui },    -- For constants that are defined by macros: `NULL` in C.
+    TSVariable =          { fg = nord.nord4_gui, style = 'bold' }, -- Any variable name that does not have another highlight.
+    TSVariableBuiltin =   { fg = nord.nord4_gui, style = 'bold' },
+    TSBoolean =           { fg = nord.nord9_gui, style = 'bold' },    -- For booleans.
+    TSConstBuiltin =      { fg = nord.nord7_gui, style = 'bold' },    -- For constant that are built in the language: `nil` in Lua.
+    TSConstMacro =        { fg = nord.nord7_gui, style = 'bold' },    -- For constants that are defined by macros: `NULL` in C.
     TSError =             { fg = nord.nord11_gui },    -- For syntax/parser errors.
     TSException =         { fg = nord.nord15_gui },    -- For exception related keywords.
-    TSField =             { fg = nord.nord4_gui }, -- For fields.
     TSFuncMacro =         { fg = nord.nord7_gui },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     TSInclude =           { fg = nord.nord9_gui },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     TSLabel =             { fg = nord.nord15_gui }, -- For labels: `label:` in C and `:label:` in Lua.
-    TSNamespace =         { fg = nord.nord4_gui},    -- For identifiers referring to modules and namespaces.
     TSOperator =          { fg = nord.nord9_gui }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter =         { fg = nord.nord10_gui }, -- For parameters of a function.
     TSParameterReference= { fg = nord.nord10_gui },    -- For references to parameters of a function.
-    TSProperty =          { fg = nord.nord10_gui }, -- Same as `TSField`.
     TSPunctDelimiter =    { fg = nord.nord8_gui }, -- For delimiters ie: `.`
     TSPunctBracket =      { fg = nord.nord8_gui }, -- For brackets and parens.
     TSPunctSpecial =      { fg = nord.nord8_gui }, -- For special punctutation that does not fall in the catagories before.
-    TSStringRegex =       { fg = nord.nord7_gui }, -- For regexes.
-    TSStringEscape =      { fg = nord.nord15_gui }, -- For escape characters within a string.
     TSSymbol =            { fg = nord.nord15_gui },    -- For identifiers referring to symbols or atoms.
     TSType =              { fg = nord.nord9_gui},    -- For types.
     TSTypeBuiltin =       { fg = nord.nord9_gui},    -- For builtin types.
@@ -236,32 +231,59 @@ theme.loadTreeSitter = function ()
     TSUnderline =         { fg = nord.nord4_gui, bg = nord.none, style = 'underline' },    -- For text to be represented with an underline.
     TSTitle =             { fg = nord.nord10_gui, bg = nord.none, style = 'bold' },    -- Text that is part of a title.
     TSLiteral =           { fg = nord.nord4_gui },    -- Literal text.
-    TSURI =               { fg = nord.nord14_gui },    -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = nord.nord11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-
+    TSURI =               { fg = nord.nord14_gui },    -- Any URI like a link or email.
+    TSAnnotation =        { fg = nord.nord11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
   }
 
+
   if vim.g.nord_italic == false then
-    treesitter.TSComment         = { fg = nord.nord3_gui_bright }
-    treesitter.TSConditional     = { fg = nord.nord9_gui }   -- For keywords related to conditionnals.
-    treesitter.TSKeyword         = { fg = nord.nord9_gui } -- For keywords that don't fall in previous categories.
-    treesitter.TSRepeat          = { fg = nord.nord9_gui }    -- For keywords related to loops.
+    -- Comments
+    treesitter.TSComment =         { fg = nord.nord3_gui_bright }
+    -- Conditionals
+    treesitter.TSConditional =     { fg = nord.nord9_gui } -- For keywords related to conditionnals.
+    -- Function names
+    treesitter.TSFunction =        { fg = nord.nord8_gui } -- For fuction (calls and definitions).
+    treesitter.TSMethod =          { fg = nord.nord7_gui } -- For method calls and definitions.
+    treesitter.TSFuncBuiltin =     { fg = nord.nord8_gui }
+    -- Namespaces and property accessors
+    treesitter.TSNamespace =       { fg = nord.nord4_gui } -- For identifiers referring to modules and namespaces.
+    treesitter.TSField =           { fg = nord.nord4_gui } -- For fields in literals
+    treesitter.TSProperty =        { fg = nord.nord10_gui } -- Same as `TSField`
+    -- Language keywords
+    treesitter.TSKeyword =         { fg = nord.nord9_gui } -- For keywords that don't fall in other categories.
     treesitter.TSKeywordFunction = { fg = nord.nord8_gui }
-    treesitter.TSFunction        = { fg = nord.nord8_gui }    -- For fuction (calls and definitions).
-    treesitter.TSMethod          = { fg = nord.nord7_gui }    -- For method calls and definitions.
-    treesitter.TSFuncBuiltin     = { fg = nord.nord8_gui }
-    treesitter.TSVariable        = { fg = nord.nord4_gui }-- Any variable name that does not have another highlight.
-    treesitter.TSVariableBuiltin = { fg = nord.nord4_gui }
+    treesitter.TSKeywordReturn =   { fg = nord.nord8_gui }
+    treesitter.TSKeywordOperator = { fg = nord.nord8_gui }
+    treesitter.TSRepeat =          { fg = nord.nord9_gui } -- For keywords related to loops.
+    -- Strings
+    treesitter.TSString =          { fg = nord.nord14_gui } -- For strings.
+    treesitter.TSStringRegex =     { fg = nord.nord7_gui } -- For regexes.
+    treesitter.TSStringEscape =    { fg = nord.nord15_gui } -- For escape characters within a string.
+    treesitter.TSCharacter =       { fg = nord.nord14_gui } -- For characters.
   else
-    treesitter.TSComment         = { fg = nord.nord3_gui_bright, style = 'italic' }
-    treesitter.TSConditional     = { fg = nord.nord9_gui, style = 'italic' }   -- For keywords related to conditionnals.
-    treesitter.TSKeyword         = { fg = nord.nord9_gui, style = 'italic' } -- For keywords that don't fall in previous categories.
-    treesitter.TSRepeat          = { fg = nord.nord9_gui, style = 'italic' }    -- For keywords related to loops.
+    -- Comments
+    treesitter.TSComment =         { fg = nord.nord3_gui_bright, style = 'italic' }
+    -- Conditionals
+    treesitter.TSConditional =     { fg = nord.nord9_gui, style = 'italic' } -- For keywords related to conditionnals.
+    -- Function names
+    treesitter.TSFunction =        { fg = nord.nord8_gui, style = 'italic' } -- For fuction (calls and definitions).
+    treesitter.TSMethod =          { fg = nord.nord7_gui, style = 'italic' } -- For method calls and definitions.
+    treesitter.TSFuncBuiltin =     { fg = nord.nord8_gui, style = 'italic' }
+    -- Namespaces and property accessors
+    treesitter.TSNamespace =       { fg = nord.nord4_gui, style = 'italic' } -- For identifiers referring to modules and namespaces.
+    treesitter.TSField =           { fg = nord.nord4_gui, style = 'italic' } -- For fields.
+    treesitter.TSProperty =        { fg = nord.nord10_gui, style = 'italic' } -- Same as `TSField`, but when accessing, not declaring.
+    -- Language keywords
+    treesitter.TSKeyword =         { fg = nord.nord9_gui, style = 'italic' } -- For keywords that don't fall in other categories.
     treesitter.TSKeywordFunction = { fg = nord.nord8_gui, style = 'italic' }
-    treesitter.TSFunction        = { fg = nord.nord8_gui, style = 'italic' }    -- For fuction (calls and definitions).
-    treesitter.TSMethod          = { fg = nord.nord7_gui, style = 'italic' }    -- For method calls and definitions.
-    treesitter.TSFuncBuiltin     = { fg = nord.nord8_gui, style = 'italic' }
-    treesitter.TSVariable        = { fg = nord.nord4_gui, style = 'italic' }-- Any variable name that does not have another highlight.
-    treesitter.TSVariableBuiltin = { fg = nord.nord4_gui, style = 'italic' }
+    treesitter.TSKeywordReturn =   { fg = nord.nord8_gui, style = 'italic' }
+    treesitter.TSKeywordOperator = { fg = nord.nord8_gui, style = 'italic' }
+    treesitter.TSRepeat =          { fg = nord.nord9_gui, style = 'italic' } -- For keywords related to loops.
+    -- Strings
+    treesitter.TSString =          { fg = nord.nord14_gui, style = 'italic' } -- For strings.
+    treesitter.TSStringRegex =     { fg = nord.nord7_gui, style = 'italic' } -- For regexes.
+    treesitter.TSStringEscape =    { fg = nord.nord15_gui, style = 'italic' } -- For escape characters within a string.
+    treesitter.TSCharacter =       { fg = nord.nord14_gui, style = 'italic' } -- For characters.
   end
 
   return treesitter
