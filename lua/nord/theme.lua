@@ -35,7 +35,6 @@ theme.loadSyntax = function ()
     Todo =           { fg = nord.nord13_gui, bg = nord.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     Conceal =        { fg = nord.none, bg = nord.nord0_gui },
 
-
     htmlLink =            { fg = nord.nord14_gui, style = "underline" },
     htmlH1 =              { fg = nord.nord8_gui, style = "bold" },
     htmlH2 =              { fg = nord.nord11_gui, style = "bold" },
@@ -173,7 +172,6 @@ theme.loadEditor = function ()
 end
 
 theme.loadTerminal = function ()
-
   vim.g.terminal_color_0 = nord.nord1_gui
   vim.g.terminal_color_1 = nord.nord11_gui
   vim.g.terminal_color_2 = nord.nord14_gui
@@ -190,7 +188,6 @@ theme.loadTerminal = function ()
   vim.g.terminal_color_13 = nord.nord15_gui
   vim.g.terminal_color_14 = nord.nord7_gui
   vim.g.terminal_color_15 = nord.nord6_gui
-
 end
 
 theme.loadTreeSitter = function ()
@@ -445,9 +442,10 @@ theme.loadPlugins = function()
     ReferencesIcon =             { fg = nord.nord7_gui },
     TargetWord =                 { fg = nord.nord8_gui },
 
-        -- Sneak
+    -- Sneak
     Sneak =      { fg = nord.nord0_gui, bg = nord.nord4_gui },
     SneakScope = { bg = nord.nord1_gui },
+
     
     -- Cmp
     CmpItemKind =           { fg = nord.nord15_gui },
@@ -498,9 +496,16 @@ theme.loadPlugins = function()
     LightspeedUnlabeledMatch =         { fg = nord.nord4_gui, bg = nord.nord1_gui },
     LightspeedOneCharMatch =           { fg = nord.nord8_gui, style = "bold,reverse" },
     LightspeedUniqueChar =             { style = "bold,underline" },
-    -- LightspeedPendingOpArea =          { style = "strikethrough" },
-    -- LightspeedPendingChangeOpArea =    { style = "strikethrough" },
-    -- LightspeedCursor =                 { fg = nord.nord7_gui, style = "underline,reverse" },
+
+
+    -- copilot
+    CopilotLabel = { fg = nord.nord3_gui, bg = nord.none },
+
+    -- Statusline
+    StatusLineDull = { fg = nord.nord3_gui, bg = nord.nord1_gui }, 
+    StatusLineAccent = { fg = nord.none, bg = nord.nord13_gui }, 
+    
+
   }
   -- Options:
 
