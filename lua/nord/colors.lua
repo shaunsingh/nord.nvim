@@ -43,7 +43,7 @@ local nord = (vim.o.background == "dark")
 	}
 
 -- Enable contrast sidebars, floating windows and popup menus
-if vim.g.nord_contrast == true then
+if vim.g.nord_contrast then
 	nord.sidebar = nord.nord1_gui
 	nord.float = nord.nord1_gui
 else
@@ -51,7 +51,7 @@ else
 	nord.float = nord.nord0_gui
 end
 
-if vim.g.nord_cursorline_transparent == true then
+if vim.g.nord_cursorline_transparent then
 	nord.cursorlinefg = nord.nord0_gui
 else
 	nord.cursorlinefg = nord.nord1_gui
