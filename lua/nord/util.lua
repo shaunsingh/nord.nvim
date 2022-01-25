@@ -34,7 +34,12 @@ util.contrast = function()
 	vim.cmd([[  autocmd FileType qf setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]])
 	vim.cmd([[augroup end]])
 end
-
+-- Loads the colors from the dictionary Object (colorSet)
+function util.loadColorSet(colorSet)
+	for group, colors in pairs(colorSet) do
+		util.highlight(group, colors)
+	end
+end
 -- Load the theme
 function util.load()
 	-- Set the theme environment
@@ -52,19 +57,13 @@ function util.load()
 	local treesitter = nord.loadTreeSitter()
 
 	-- load editor highlights
-	for group, colors in pairs(editor) do
-		util.highlight(group, colors)
-	end
+	util.loadColorSet(editor)
 
 	-- load syntax highlights
-	for group, colors in pairs(syntax) do
-		util.highlight(group, colors)
-	end
+	util.loadColorSet(syntax)
 
-	-- loop trough the treesitter table and highlight every member
-	for group, colors in pairs(treesitter) do
-		util.highlight(group, colors)
-	end
+	-- load treesitter highlights
+	util.loadColorSet(treesitter)
 
 	nord.loadTerminal()
 
@@ -72,15 +71,11 @@ function util.load()
 	local plugins = nord.loadPlugins()
 	local lsp = nord.loadLSP()
 
-	-- loop trough the plugins table and highlight every member
-	for group, colors in pairs(plugins) do
-		util.highlight(group, colors)
-	end
+	-- load plugin highlights
+	util.loadColorSet(plugins)
 
-	-- loop trough the lsp table and highlight every member
-	for group, colors in pairs(lsp) do
-		util.highlight(group, colors)
-	end
+	-- load lsp highlights
+	util.loadColorSet(lsp)
 
 	-- if contrast is enabled, apply it to sidebars and floating windows
 	if vim.g.nord_contrast == true then
