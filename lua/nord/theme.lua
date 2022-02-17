@@ -459,6 +459,27 @@ theme.loadPlugins = function()
 		DapBreakpoint = { fg = nord.nord14_gui },
 		DapStopped = { fg = nord.nord15_gui },
 
+		-- nvim-dap-ui
+		DapUIVariable = { fg = nord.nord4_gui },
+                DapUIScope = { fg = nord.nord8_gui },
+                DapUIType = { fg = nord.nord9_gui },
+                DapUIValue = { fg = nord.nord4_gui },
+                DapUIModifiedValue = { fg = nord.nord8_gui },
+                DapUIDecoration = { fg = nord.nord8_gui },
+                DapUIThread = { fg = nord.nord8_gui },
+                DapUIStoppedThread = { fg = nord.nord8_gui },
+                DapUIFrameName = { fg = nord.nord4_gui },
+                DapUISource = { fg = nord.nord9_gui },
+                DapUILineNumber = { fg = nord.nord8_gui },
+                DapUIFloatBorder = { fg = nord.nord8_gui },
+                DapUIWatchesEmpty = { fg = nord.nord11_gui },
+                DapUIWatchesValue = { fg = nord.nord8_gui },
+                DapUIWatchesError = { fg = nord.nord11_gui },
+                DapUIBreakpointsPath = { fg = nord.nord8_gui },
+                DapUIBreakpointsInfo = { fg = nord.nord8_gui },
+                DapUIBreakpointsCurrentLine = { fg = nord.nord8_gui },
+                DapUIBreakpointsLine = { fg = nord.nord8_gui },
+
 		-- Hop
 		HopNextKey = { fg = nord.nord4_gui, style = "bold" },
 		HopNextKey1 = { fg = nord.nord8_gui, style = "bold" },
