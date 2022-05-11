@@ -146,6 +146,30 @@ theme.loadEditor = function()
 		-- BufferLine
 		BufferLineIndicatorSelected = { fg = nord.nord0_gui },
 		BufferLineFill = { bg = nord.nord0_gui },
+		
+		-- Barbar
+		BufferTabpageFill = { bg = nord.nord0_gui },
+
+		BufferCurrent = { bg = nord.nord1_gui },
+		BufferCurrentMod = { bg = nord.nord1_gui, fg = nord.nord15_gui },
+		BufferCurrentIcon = { bg = nord.nord1_gui },
+		BufferCurrentSign = { bg = nord.nord1_gui },
+		BufferCurrentIndex = { bg = nord.nord1_gui },
+		BufferCurrentTarget = { bg = nord.nord1_gui, fg = nord.nord11_gui },
+
+		BufferInactive = { bg = nord.nord0_gui, fg = nord.nord3_gui },
+		BufferInactiveMod = { bg = nord.nord0_gui, fg = nord.nord15_gui },
+		BufferInactiveIcon = { bg = nord.nord0_gui , fg = nord.nord3_gui },
+		BufferInactiveSign = { bg = nord.nord0_gui , fg = nord.nord3_gui },
+		BufferInactiveIndex = { bg = nord.nord0_gui , fg = nord.nord3_gui },
+		BufferInactiveTarget = { bg = nord.nord0_gui, fg = nord.nord11_gui },
+
+		BufferVisible = { bg = nord.nord2_gui },
+		BufferVisibleMod = { bg = nord.nord2_gui, fg = nord.nord15_gui },
+		BufferVisibleIcon = { bg = nord.nord2_gui },
+		BufferVisibleSign = { bg = nord.nord2_gui },
+		BufferVisibleIndex = { bg = nord.nord2_gui },
+		BufferVisibleTarget = { bg = nord.nord2_gui, fg = nord.nord11_gui },
 	}
 
 	-- Options:
