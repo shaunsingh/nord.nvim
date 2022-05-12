@@ -170,6 +170,23 @@ theme.loadEditor = function()
 		BufferVisibleSign = { bg = nord.nord2_gui },
 		BufferVisibleIndex = { bg = nord.nord2_gui },
 		BufferVisibleTarget = { bg = nord.nord2_gui, fg = nord.nord11_gui },
+
+		-- nvim-notify
+		NotifyDEBUGBorder = { fg = nord.nord3_gui },
+		NotifyDEBUGIcon = { fg = nord.nord3_gui },
+		NotifyDEBUGTitle = { fg = nord.nord3_gui },
+		NotifyERRORBorder = { fg = nord.nord11_gui },
+		NotifyERRORIcon = { fg = nord.nord11_gui },
+		NotifyERRORTitle = { fg = nord.nord11_gui },
+		NotifyINFOBorder = { fg = nord.nord14_gui },
+		NotifyINFOIcon = { fg = nord.nord14_gui },
+		NotifyINFOTitle = { fg = nord.nord14_gui },
+		NotifyTRACEBorder = { fg = nord.nord15_gui },
+		NotifyTRACEIcon = { fg = nord.nord15_gui },
+		NotifyTRACETitle = { fg = nord.nord15_gui },
+		NotifyWARNBorder = { fg = nord.nord13_gui },
+		NotifyWARNIcon = { fg = nord.nord13_gui },
+		NotifyWARNTitle = { fg = nord.nord13_gui },
 	}
 
 	-- Options:

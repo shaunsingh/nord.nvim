@@ -30,6 +30,7 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
     + [vim-sneak](https://github.com/justinmk/vim-sneak)
     + [lightspeed.nvim](https://github.com/ggandor/lightspeed.nvim)
     + [barbar.nvim](https://github.com/romgrk/barbar.nvim)
+    + [nvim-notify](https://github.com/rcarriga/nvim-notify)
 
 + Ability to change background on sidebar-like windows like Nvim-Tree, Packer, terminal etc.
 
