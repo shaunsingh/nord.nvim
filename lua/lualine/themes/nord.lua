@@ -15,7 +15,7 @@ nord.insert = {
 }
 
 nord.visual = {
-	a = { fg = colors.nord0_gui, bg = colors.nord9_gui },
+	a = { fg = colors.nord0_gui, bg = colors.nord7_gui },
 	b = { fg = colors.nord4_gui, bg = colors.nord2_gui },
 	y = {  fg = colors.nord5_gui, bg = colors.nord2_gui },
 }
