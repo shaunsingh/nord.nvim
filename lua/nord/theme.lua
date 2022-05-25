@@ -187,6 +187,11 @@ theme.loadEditor = function()
 		NotifyWARNBorder = { fg = nord.nord13_gui },
 		NotifyWARNIcon = { fg = nord.nord13_gui },
 		NotifyWARNTitle = { fg = nord.nord13_gui },
+
+		-- leap.nvim
+		LeapMatch = { style="underline,nocombine", fg=nord.nord13_gui },
+		LeapLabelPrimary = { style="nocombine", fg=nord.nord0_gui, bg=nord.nord13_gui },
+		LeapLabelSecondary = { style="nocombine", fg=nord.nord0_gui, bg=nord.nord15_gui },
 	}
 
 	-- Options:
