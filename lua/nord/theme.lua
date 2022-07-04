@@ -426,6 +426,7 @@ theme.loadPlugins = function()
 		GitSignsDelete = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteNr = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteLn = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
+        GitSignsCurrentLineBlame = { fg = nord.nord3_gui_bright, style = "bold" },
 
 		-- Telescope
 		TelescopePromptBorder = { fg = nord.nord8_gui },
