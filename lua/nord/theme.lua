@@ -564,6 +564,57 @@ theme.loadPlugins = function()
 		-- Statusline
 		StatusLineDull = { fg = nord.nord3_gui, bg = nord.nord1_gui },
 		StatusLineAccent = { fg = nord.nord0_gui, bg = nord.nord13_gui },
+
+		-- mini.nvim
+		MiniCompletionActiveParameter = { style = "underline" },
+
+		MiniCursorword = { bg = nord.nord3_gui },
+		MiniCursorwordCurrent = { bg = nord.nord3_gui },
+
+		MiniIndentscopeSymbol = { fg = nord.nord10_gui },
+		MiniIndentscopePrefix = { style = "nocombine" }, -- Make it invisible
+
+		MiniJump = { fg = nord.nord0_gui, bg = nord.nord4_gui },
+
+		MiniJump2dSpot = { fg = nord.nord12_gui, style = "bold,nocombine" },
+
+		MiniStarterCurrent = { style = "nocombine" },
+		MiniStarterFooter = { fg = nord.nord14_gui, style = "italic" },
+		MiniStarterHeader = { fg = nord.nord9_gui },
+		MiniStarterInactive = { link = "Comment" },
+		MiniStarterItem = { link = "Normal" },
+		MiniStarterItemBullet = { fg = nord.nord4_gui },
+		MiniStarterItemPrefix = { fg = nord.nord15_gui },
+		MiniStarterSection = { fg = nord.nord4_gui },
+		MiniStarterQuery = { fg = nord.nord10_gui },
+
+		MiniStatuslineDevinfo = { fg = nord.nord4_gui, bg = nord.nord2_gui },
+		MiniStatuslineFileinfo = { fg = nord.nord4_gui, bg = nord.nord2_gui },
+		MiniStatuslineFilename = { fg = nord.nord4_gui, bg = nord.nord1_gui },
+		MiniStatuslineInactive = { fg = nord.nord4_gui, bg = nord.nord0_gui, style = "bold" },
+		MiniStatuslineModeCommand = { fg = nord.nord0_gui, bg = nord.nord15_gui, style = "bold" },
+		MiniStatuslineModeInsert = { fg = nord.nord1_gui, bg = nord.nord4_gui, style = "bold" },
+		MiniStatuslineModeNormal = { fg = nord.nord1_gui, bg = nord.nord9_gui, style = "bold" },
+		MiniStatuslineModeOther = { fg = nord.nord0_gui, bg = nord.nord13_gui, style = "bold" },
+		MiniStatuslineModeReplace = { fg = nord.nord0_gui, bg = nord.nord11_gui, style = "bold" },
+		MiniStatuslineModeVisual = { fg = nord.nord0_gui, bg = nord.nord7_gui, style = "bold" },
+
+		MiniSurround = { link = "IncSearch" },
+
+		MiniTablineCurrent = { bg = nord.nord1_gui },
+		MiniTablineFill = { link = "TabLineFill" },
+		MiniTablineHidden = { bg = nord.nord0_gui, fg = nord.nord3_gui },
+		MiniTablineModifiedCurrent = { bg = nord.nord1_gui, fg = nord.nord15_gui },
+		MiniTablineModifiedHidden = { bg = nord.nord0_gui, fg = nord.nord15_gui },
+		MiniTablineModifiedVisible = { bg = nord.nord2_gui, fg = nord.nord15_gui },
+		MiniTablineTabpagesection = { fg = nord.nord10_gui, bg = nord.nord6_gui, style = "reverse,bold" },
+		MiniTablineVisible = { bg = nord.nord2_gui },
+
+		MiniTestEmphasis = { style = "bold" },
+		MiniTestFail = { fg = nord.nord11_gui, style = "bold" },
+		MiniTestPass = { fg = nord.nord14_gui, style = "bold" },
+
+		MiniTrailspace = { bg = nord.nord11_gui },
 	}
 	-- Options:
 
