@@ -82,10 +82,6 @@ theme.loadEditor = function()
 		Cursor = { fg = nord.nord4_gui, bg = nord.none, style = "reverse" }, -- the character under the cursor
 		CursorIM = { fg = nord.nord5_gui, bg = nord.none, style = "reverse" }, -- like Cursor, but used when in IME mode
 		Directory = { fg = nord.nord7_gui, bg = nord.none }, -- directory names (and other special names in listings)
-		DiffAdd = { fg = nord.nord14_gui, bg = nord.none, style = "reverse" }, -- diff mode: Added line
-		DiffChange = { fg = nord.nord13_gui, bg = nord.none, style = "reverse" }, --  diff mode: Changed line
-		DiffDelete = { fg = nord.nord11_gui, bg = nord.none, style = "reverse" }, -- diff mode: Deleted line
-		DiffText = { fg = nord.nord15_gui, bg = nord.none, style = "reverse" }, -- diff mode: Changed text within a changed line
 		EndOfBuffer = { fg = nord.nord1_gui },
 		ErrorMsg = { fg = nord.none },
 		Folded = { fg = nord.nord3_gui_bright, bg = nord.none, style = "italic" },
@@ -210,6 +206,18 @@ theme.loadEditor = function()
 		editor.VertSplit = { fg = nord.nord2_gui }
 	else
 		editor.VertSplit = { fg = nord.nord0_gui }
+	end
+
+	if vim.g.nord_uniform_diff_background then
+		editor.DiffAdd = { fg = nord.nord14_gui, bg = nord.nord1_gui } -- diff mode: Added line
+		editor.DiffChange = { fg = nord.nord13_gui, bg = nord.nord1_gui } --  diff mode: Changed line
+		editor.DiffDelete = { fg = nord.nord11_gui, bg = nord.nord1_gui } -- diff mode: Deleted line
+		editor.DiffText = { fg = nord.nord15_gui, bg = nord.nord1_gui } -- diff mode: Changed text within a changed line
+	else
+		editor.DiffAdd = { fg = nord.nord14_gui, bg = nord.none, style = "reverse" } -- diff mode: Added line
+		editor.DiffChange = { fg = nord.nord13_gui, bg = nord.none, style = "reverse" } --  diff mode: Changed line
+		editor.DiffDelete = { fg = nord.nord11_gui, bg = nord.none, style = "reverse" } -- diff mode: Deleted line
+		editor.DiffText = { fg = nord.nord15_gui, bg = nord.none, style = "reverse" } -- diff mode: Changed text within a changed line
 	end
 
 	return editor
