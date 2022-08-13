@@ -55,6 +55,7 @@ function util.load()
 	local editor = nord.loadEditor()
 	local syntax = nord.loadSyntax()
 	local treesitter = nord.loadTreeSitter()
+	local filetypes = nord.loadFiletypes()
 
 	-- load editor highlights
 	util.loadColorSet(editor)
@@ -64,6 +65,9 @@ function util.load()
 
 	-- load treesitter highlights
 	util.loadColorSet(treesitter)
+
+	-- load filetype-specific highlights
+	util.loadColorSet(filetypes)
 
 	nord.loadTerminal()
 

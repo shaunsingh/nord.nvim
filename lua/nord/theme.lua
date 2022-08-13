@@ -337,6 +337,23 @@ theme.loadTreeSitter = function()
 	return treesitter
 end
 
+theme.loadFiletypes = function()
+	-- Filetype-specific highlight groups
+
+	local ft = {
+		-- yaml
+		yamlBlockMappingKey = { fg = nord.nord7_gui },
+		yamlBool = { link = "Boolean" },
+		yamlDocumentStart = { link = "Keyword" },
+		yamlTSField = { fg = nord.nord7_gui },
+		yamlTSString = { fg = nord.nord4_gui },
+		yamlTSPunctSpecial = { link = "Keyword" },
+		yamlKey = { fg = nord.nord7_gui }, -- stephpy/vim-yaml
+	}
+
+	return ft
+end
+
 theme.loadLSP = function()
 	-- Lsp highlight groups
 
