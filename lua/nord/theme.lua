@@ -139,10 +139,6 @@ theme.loadEditor = function()
 		DashboardCenter = { fg = nord.nord8_gui },
 		DashboardFooter = { fg = nord.nord14_gui, style = "italic" },
 
-		-- BufferLine
-		BufferLineIndicatorSelected = { fg = nord.nord0_gui },
-		BufferLineFill = { bg = nord.nord0_gui },
-		
 		-- Barbar
 		BufferTabpageFill = { bg = nord.nord0_gui },
 
@@ -451,7 +447,7 @@ theme.loadPlugins = function()
 		GitSignsDelete = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteNr = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteLn = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
-        GitSignsCurrentLineBlame = { fg = nord.nord3_gui_bright, style = "bold" },
+		GitSignsCurrentLineBlame = { fg = nord.nord3_gui_bright, style = "bold" },
 
 		-- Telescope
 		TelescopePromptBorder = { fg = nord.nord8_gui },
@@ -533,24 +529,24 @@ theme.loadPlugins = function()
 
 		-- nvim-dap-ui
 		DapUIVariable = { fg = nord.nord4_gui },
-                DapUIScope = { fg = nord.nord8_gui },
-                DapUIType = { fg = nord.nord9_gui },
-                DapUIValue = { fg = nord.nord4_gui },
-                DapUIModifiedValue = { fg = nord.nord8_gui },
-                DapUIDecoration = { fg = nord.nord8_gui },
-                DapUIThread = { fg = nord.nord8_gui },
-                DapUIStoppedThread = { fg = nord.nord8_gui },
-                DapUIFrameName = { fg = nord.nord4_gui },
-                DapUISource = { fg = nord.nord9_gui },
-                DapUILineNumber = { fg = nord.nord8_gui },
-                DapUIFloatBorder = { fg = nord.nord8_gui },
-                DapUIWatchesEmpty = { fg = nord.nord11_gui },
-                DapUIWatchesValue = { fg = nord.nord8_gui },
-                DapUIWatchesError = { fg = nord.nord11_gui },
-                DapUIBreakpointsPath = { fg = nord.nord8_gui },
-                DapUIBreakpointsInfo = { fg = nord.nord8_gui },
-                DapUIBreakpointsCurrentLine = { fg = nord.nord8_gui },
-                DapUIBreakpointsLine = { fg = nord.nord8_gui },
+		DapUIScope = { fg = nord.nord8_gui },
+		DapUIType = { fg = nord.nord9_gui },
+		DapUIValue = { fg = nord.nord4_gui },
+		DapUIModifiedValue = { fg = nord.nord8_gui },
+		DapUIDecoration = { fg = nord.nord8_gui },
+		DapUIThread = { fg = nord.nord8_gui },
+		DapUIStoppedThread = { fg = nord.nord8_gui },
+		DapUIFrameName = { fg = nord.nord4_gui },
+		DapUISource = { fg = nord.nord9_gui },
+		DapUILineNumber = { fg = nord.nord8_gui },
+		DapUIFloatBorder = { fg = nord.nord8_gui },
+		DapUIWatchesEmpty = { fg = nord.nord11_gui },
+		DapUIWatchesValue = { fg = nord.nord8_gui },
+		DapUIWatchesError = { fg = nord.nord11_gui },
+		DapUIBreakpointsPath = { fg = nord.nord8_gui },
+		DapUIBreakpointsInfo = { fg = nord.nord8_gui },
+		DapUIBreakpointsCurrentLine = { fg = nord.nord8_gui },
+		DapUIBreakpointsLine = { fg = nord.nord8_gui },
 
 		-- Hop
 		HopNextKey = { fg = nord.nord4_gui, style = "bold" },
