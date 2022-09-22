@@ -636,6 +636,38 @@ theme.loadPlugins = function()
 		MiniTestPass = { fg = nord.nord14_gui, style = "bold" },
 
 		MiniTrailspace = { bg = nord.nord11_gui },
+
+
+        -- Aerail
+        AerialLine = {bg = nord.nord2_gui},
+        AerialLineNC = {bg = nord.nord2_gui},
+        
+        AerialArray = { fg = nord.nord13_gui },
+        AerialBoolean = { fg = nord.nord9_gui, style = "bold" },
+        AerialClass = { fg = nord.nord9_gui },
+        AerialConstans = { fg = nord.nord13_gui },
+        AerialConstructor = { fg = nord.nord9_gui },
+        AerialEnum = { fg = nord.nord9_gui },
+        AerialEnumMember = { fg = nord.nord4_gui },
+        AerialEvent = { fg = nord.nord9_gui },
+        AerialField = { fg = nord.nord4_gui },
+        AerialFile = { fg = nord.nord14_gui },
+        AerialFunction = vim.g.nord_italic and { fg = nord.nord8_gui } or { fg = nord.nord8_gui, style = "italic" },
+        AerialInterface = { fg = nord.nord9_gui },
+        AerialKey = { fg = nord.nord9_gui },
+        AerialMethod = { fg = nord.nord7_gui },
+        AerialModule = { fg = nord.nord4_gui },
+        AerialNamespace = { fg = nord.nord4_gui },
+        AerialNull = { fg = nord.nord9_gui },
+        AerialNumber = { fg = nord.nord15_gui },
+        AerialObject = { fg = nord.nord9_gui },
+        AerialOperator = { fg = nord.nord9_gui },
+        AerialPackage = { fg = nord.nord4_gui },
+        AerialProperty = { fg = nord.nord10_gui },
+        AerialString = vim.g.nord_italic and { fg = nord.nord14_gui } or { fg = nord.nord14_gui, style = "italic" },
+        AerialStruct = { fg = nord.nord9_gui },
+        AerialTypeParameter = { fg = nord.nord10_gui },
+        AerialVariable = {fg = nord.nord4_gui, style = "bold"},
 	}
 	-- Options:
 
