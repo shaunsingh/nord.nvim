@@ -33,6 +33,7 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
     + [nvim-notify](https://github.com/rcarriga/nvim-notify)
     + [leap.nvim](https://github.com/ggandor/leap.nvim)
     + [mini.nvim](https://github.com/echasnovski/mini.nvim)
+    + [aerial.nvim](https://github.com/stevearc/aerial.nvim)
 
 + Ability to change background on sidebar-like windows like Nvim-Tree, Packer, terminal etc.
 
