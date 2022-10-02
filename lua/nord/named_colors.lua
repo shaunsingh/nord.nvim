@@ -22,4 +22,19 @@ local jellybeans = {
 	none = "NONE",
 }
 
-return jellybeans
+local github = {
+   add = '#244032',
+   add_fg = '#56d364',
+   change = '#341a00',
+   change_fg = '#e3b341',
+   delete = '#462c32',
+   delete_fg = '#f85149',
+   gutter_fg = '#e1e4e8',
+   fg_light = '#d1d5da',
+   yellow = '#ffea7f',
+   orange = '#d18616',
+   blue = '#2188ff',
+   magenta = '#b392f0',
+}
+
+return { jellybeans = jellybeans, github = github }

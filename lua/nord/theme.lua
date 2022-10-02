@@ -1,71 +1,208 @@
 local nord = require("nord.colors")
 
-local theme = {}
+-- 默认先迁移再考虑使用 palette 好了
+-- start
+local foreground = "#e8e8d3"
+local background = "#151515"
+local grey       = "#888888"
+local grey_one   = "#1c1c1c"
+local grey_two   = "#f0f0f0"
+local grey_three = "#333333"
+local regent_grey = "#9098A0"
+local scorpion   = "#606060"
+local cod_grey   = "#101010"
+local tundora    = "#404040"
+local zambezi    = "#605958"
+local silver_rust = "#ccc5c4"
+local silver     = "#c7c7c7"
+local alto       = "#dddddd"
+local gravel     = "#403c41"
+local boulder    = "#777777"
+local cocoa_brown = "#302028"
+local grey_chateau = "#a0a8b0"
+local bright_grey = "#384048"
+local shuttle_grey = "#535d66"
+local mine_shaft = "#1f1f1f"
+local temptress = "#40000a"
 
+local bayoux_blue = "#556779"
+local total_white = "#ffffff"
+local total_black = "#000000"
+local cadet_blue = "#b0b8c0"
+local perano     = "#b0d0f0"
+local wewak      = "#f0a0c0"
+local mantis     = "#70b950"
+local raw_sienna = "#cf6a4c"
+local highland   = "#799d6a"
+local hoki       = "#668799"
+local green_smoke = "#99ad6a"
+local costa_del_sol = "#556633"
+local biloba_flower = "#c6b6ee"
+local morning_glory = "#8fbfdc"
+local goldenrod = "#fad07a"
+local ship_cove = "#8197bf"
+local koromiko = "#ffb964"
+local brandy = "#dad085"
+local old_brick = "#902020"
+local dark_blue = "#0000df"
+local ripe_plum = "#540063"
+local casal = "#2D7067"
+local purple = "#700089"
+local tea_green  ="#d2ebbe"
+local dell = "#437019"
+local calypso = "#2B5B77"
+
+-- Mapping
+local fg = foreground
+local bg = background 
+local error = wewak
+local warning = koromiko
+local info = morning_glory
+local hint = brandy
+
+-- Syntax
+local syntax = {
+   comment = bayoux_blue,
+   constant = morning_glory,
+   variable = morning_glory,
+   string = perano,
+   keyword = wewak,
+   func = biloba_flower,
+   func_param = alto,
+   match_paren_bg = casal,
+   tag = tea_green,
+   html_arg = wewak,
+   param = raw_sienna,
+   json_label = morning_glory,
+}
+
+local github = {
+   add = '#244032',
+   add_fg = '#56d364',
+   change = '#341a00',
+   change_fg = '#e3b341',
+   delete = '#462c32',
+   delete_fg = '#f85149',
+   gutter_fg = '#e1e4e8',
+   fg_light = '#d1d5da',
+   yellow = '#ffea7f',
+   orange = '#d18616',
+   blue = '#2188ff',
+   magenta = '#b392f0',
+}
+-- end
+
+local theme = {}
 theme.loadSyntax = function()
 	-- Syntax highlight groups
 	local syntax = {
-		Type = { fg = nord.nord9_gui }, -- int, long, char, etc.
-		StorageClass = { fg = nord.nord9_gui }, -- static, register, volatile, etc.
-		Structure = { fg = nord.nord9_gui }, -- struct, union, enum, etc.
-		Constant = { fg = nord.nord4_gui }, -- any constant
-		Character = { fg = nord.nord14_gui }, -- any character constant: 'c', '\n'
-		Number = { fg = nord.nord15_gui }, -- a number constant: 5
-		Boolean = { fg = nord.nord9_gui }, -- a boolean constant: TRUE, false
-		Float = { fg = nord.nord15_gui }, -- a floating point constant: 2.3e10
-		Statement = { fg = nord.nord9_gui }, -- any statement
-		Label = { fg = nord.nord9_gui }, -- case, default, etc.
-		Operator = { fg = nord.nord9_gui }, -- sizeof", "+", "*", etc.
-		Exception = { fg = nord.nord9_gui }, -- try, catch, throw
-		PreProc = { fg = nord.nord9_gui }, -- generic Preprocessor
-		Include = { fg = nord.nord9_gui }, -- preprocessor #include
-		Define = { fg = nord.nord9_gui }, -- preprocessor #define
-		Macro = { fg = nord.nord9_gui }, -- same as Define
-		Typedef = { fg = nord.nord9_gui }, -- A typedef
-		PreCondit = { fg = nord.nord13_gui }, -- preprocessor #if, #else, #endif, etc.
-		Special = { fg = nord.nord4_gui }, -- any special symbol
-		SpecialChar = { fg = nord.nord13_gui }, -- special character in a constant
-		Tag = { fg = nord.nord4_gui }, -- you can use CTRL-] on this
-		Delimiter = { fg = nord.nord6_gui }, -- character that needs attention like , or .
-		SpecialComment = { fg = nord.nord8_gui }, -- special things inside a comment
-		Debug = { fg = nord.nord11_gui }, -- debugging statements
-		Underlined = { fg = nord.nord14_gui, bg = nord.none, style = "underline" }, -- text that stands out, HTML links
-		Ignore = { fg = nord.nord1_gui }, -- left blank, hidden
-		Error = { fg = nord.nord11_gui, bg = nord.none, style = "bold,underline" }, -- any erroneous construct
-		Todo = { fg = nord.nord13_gui, bg = nord.none, style = "bold,italic" }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-		Conceal = { fg = nord.none, bg = nord.nord0_gui },
-
-		htmlLink = { fg = nord.nord14_gui, style = "underline" },
-		htmlH1 = { fg = nord.nord8_gui, style = "bold" },
-		htmlH2 = { fg = nord.nord11_gui, style = "bold" },
-		htmlH3 = { fg = nord.nord14_gui, style = "bold" },
-		htmlH4 = { fg = nord.nord15_gui, style = "bold" },
-		htmlH5 = { fg = nord.nord9_gui, style = "bold" },
-		markdownH1 = { fg = nord.nord8_gui, style = "bold" },
-		markdownH2 = { fg = nord.nord11_gui, style = "bold" },
-		markdownH3 = { fg = nord.nord14_gui, style = "bold" },
-		markdownH1Delimiter = { fg = nord.nord8_gui },
-		markdownH2Delimiter = { fg = nord.nord11_gui },
-		markdownH3Delimiter = { fg = nord.nord14_gui },
+		Comment      = { fg = grey }, -- any comment
+    ColorColumn  = { bg = total_black }, -- used for the columns set with 'colorcolumn'
+    Conceal      = { fg = morning_glory }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Cursor       = { fg = background, bg = perano }, -- character under the cursor
+    -- lCursor      = { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    -- CursorIM     = { }, -- like Cursor, but used when in IME mode |CursorIM|
+    CursorColumn = { bg = grey_one }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    CursorLine   = { bg = grey_one }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    Directory    = { fg = brandy }, -- directory names (and other special names in listings)
+    DiffAdd = { fg = github.add_fg, bg = github.add }, -- diff mode: Added line |diff.txt|
+    DiffChange = { fg = github.change_fg, bg = github.change }, -- diff mode: Changed line |diff.txt|
+    DiffDelete = { fg = github.delete_fg, bg = github.delete }, -- diff mode: Deleted line |diff.txt|
+    DiffText = { fg = github.gutter_fg }, -- diff mode: Changed text within a changed line |diff.txt|
+    DiffviewFilePanelFileName = { fg = github.fg_light },
+    -- EndOfBuffer  = { }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+    -- TermCursor   = { }, -- cursor in a focused terminal
+    -- TermCursorNC = { }, -- cursor in an unfocused terminal
+    ErrorMsg     = { bg = old_brick }, -- error messages on the command line
+    VertSplit    = { fg = gravel }, -- the column separating vertically split windows
+    Folded       = { fg = grey_chateau, bg = bright_grey }, -- line used for closed folds
+    FoldColumn   = { fg = shuttle_grey, bg = mine_shaft }, -- 'foldcolumn'
+    SignColumn   = { fg = boulder }, -- column where |signs| are displayed
+    -- IncSearch    = { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    -- Substitute   = { }, -- |:substitute| replacement text highlighting
+    LineNr       = { fg = zambezi }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = { fg = silver_rust }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    MatchParen   = { fg = wewak, gui="bold" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    -- ModeMsg      = { }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    -- MsgArea      = { }, -- Area for messages and cmdline
+    -- MsgSeparator = { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
+    MoreMsg      = { fg = highland }, -- |more-prompt|
+    NonText      = { fg = scorpion }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    Normal       = { bg = background, fg = foreground }, -- normal text
+    -- NormalFloat  = { }, -- Normal text in floating windows.
+    -- NormalNC     = { }, -- normal text in non-current windows
+    Pmenu        = { fg = total_white, bg = background }, -- Popup menu: normal item.
+    PmenuSel     = { fg = total_black, bg = ship_cove, style = "bold" }, -- Popup menu: selected item.
+    -- PmenuSbar    = { }, -- Popup menu: scrollbar.
+    -- PmenuThumb   = { }, -- Popup menu: Thumb of the scrollbar.
+    Question     = { fg = mantis }, -- |hit-enter| prompt and yes/no questions
+    QuickFixLine = { bg = bright_grey }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+    Search       = { fg = wewak, bg = cocoa_brown }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    SpecialKey   = { fg = tundora, bg = grey_one }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+    SpellBad     = { bg = old_brick }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
+    SpellCap     = { bg = dark_blue }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    SpellLocal   = { bg = casal }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellRare    = { bg = ripe_plum }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+    StatusLine   = { fg = total_white, bg = grey_one }, -- status line of current window
+    StatusLineNC = { fg = silver, bg = grey_one }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    TabLine      = { fg = goldenrod, bg = background }, -- tab pages line, not active tab page label
+    TabLineFill  = { fg = background }, -- tab pages line, where there are no labels
+    TabLineSel   = { fg = background, bg = goldenrod }, -- tab pages line, active tab page label
+    Title        = { fg = mantis }, -- titles for output from ":set all", ":autocmd" etc.
+    Visual       = { bg = tundora }, -- Visual mode selection
+    -- VisualNOS    = { }, -- Visual mode selection when vim is "Not Owning the Selection".
+    -- WarningMsg   = { }, -- warning messages
+    -- Whitespace   = { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    WildMenu     = { fg = wewak, bg = cocoa_brown }, -- current match in 'wildmenu' completion
+    -- These groups are not listed as default vim groups,
+    -- but they are defacto standard group names for syntax highlighting.
+    -- commented out groups should chain up to their "preferred" group by
+    -- default,
+    -- Uncomment and edit if you want more specific syntax highlighting.
+    Constant       = { fg = raw_sienna }, -- (preferred) any constant
+    String         = { fg = green_smoke }, --   a string constant: "this is a string"
+    StringDelimiter = { fg = costa_del_sol },
+    -- Character      = { }, --  a character constant: 'c', '\n'
+    -- Number         = { }, --   a number constant: 234, 0xff
+    -- Boolean        = { }, --  a boolean constant: TRUE, false
+    -- Float          = { }, --    a floating point constant: 2.3e10
+    Identifier     = { fg = biloba_flower }, -- (preferred) any variable name
+    Function       = { fg = goldenrod }, -- function name (also: methods for classes)
+    Statement      = { fg = perano }, -- (preferred) any statement
+    -- Conditional    = { }, --  if, then, else, endif, switch, etc.
+    -- Repeat         = { }, --   for, do, while, etc.
+    -- Label          = { }, --    case, default, etc.
+    Operator       = { fg = morning_glory }, -- "sizeof", "+", "*", etc.
+    -- Keyword        = { }, --  any other keyword
+    -- Exception      = { }, --  try, catch, throw
+    PreProc        = { fg = ship_cove }, -- (preferred) generic Preprocessor
+    Include        = { PreProc, style = "italic" }, --  preprocessor #include
+    -- Define         = { }, --   preprocessor #define
+    -- Macro          = { }, --    same as Define
+    -- PreCondit      = { }, --  preprocessor #if, #else, #endif, etc.
+    Type           = { fg = koromiko, gui="italic" }, -- (preferred) int, long, char, etc.
+    -- StorageClass   = { }, -- static, register, volatile, etc.
+    Structure      = { fg = morning_glory }, --  struct, union, enum, etc.
+    -- Typedef        = { }, --  A typedef
+    Special        = { fg = "#9b1e41" }, -- highland -- (preferred) any special symbol
+    -- SpecialChar    = { }, --  special character in a constant
+    -- Tag            = { }, --    you can use CTRL-] on this
+    Delimiter      = { fg = hoki }, --  character that needs attention
+    -- SpecialComment = { }, -- special things inside a comment
+    -- Debug          = { }, --    debugging statements
+    Underlined = { style = "underline" }, -- (preferred) text that stands out, HTML links
+    Bold       = { style = "bold" },
+    Italic     = { style = "italic" },
+    -- ("Ignore", below, may be invisible...)
+    -- Ignore =          { }, -- (preferred) left blank, hidden  |hl-Ignore|
+    Error          = { bg = old_brick }, -- (preferred) any erroneous construct
+    Todo           = { fg = silver }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 	}
 
 	-- Italic comments
+  -- TODO: italic
 	if vim.g.nord_italic == false then
-		syntax.Comment = { fg = nord.nord3_gui_bright } -- normal comments
-		syntax.Conditional = { fg = nord.nord9_gui } -- normal if, then, else, endif, switch, etc.
-		syntax.Function = { fg = nord.nord8_gui } -- normal function names
-		syntax.Identifier = { fg = nord.nord9_gui } -- any variable name
-		syntax.Keyword = { fg = nord.nord9_gui } -- normal for, do, while, etc.
-		syntax.Repeat = { fg = nord.nord9_gui } -- normal any other keyword
-		syntax.String = { fg = nord.nord14_gui } -- any string
 	else
-		syntax.Comment = { fg = nord.nord3_gui_bright, bg = nord.none, style = "italic" } -- italic comments
-		syntax.Conditional = { fg = nord.nord9_gui, bg = nord.none, style = "italic" } -- italic if, then, else, endif, switch, etc.
-		syntax.Function = { fg = nord.nord8_gui, bg = nord.none, style = "italic" } -- italic funtion names
-		syntax.Identifier = { fg = nord.nord9_gui, bg = nord.none, style = "italic" } -- any variable name
-		syntax.Keyword = { fg = nord.nord9_gui, bg = nord.none, style = "italic" } -- italic for, do, while, etc.
-		syntax.Repeat = { fg = nord.nord9_gui, bg = nord.none, style = "italic" } -- italic any other keyword
-		syntax.String = { fg = nord.nord14_gui, bg = nord.none, style = "italic" } -- any string
 	end
 
 	return syntax
@@ -75,259 +212,78 @@ theme.loadEditor = function()
 	-- Editor highlight groups
 
 	local editor = {
-		NormalFloat = { fg = nord.nord4_gui, bg = nord.float }, -- normal text and background color
-		FloatBorder = { fg = nord.nord4_gui, bg = nord.float }, -- normal text and background color
-		ColorColumn = { fg = nord.none, bg = nord.nord1_gui }, --  used for the columns set with 'colorcolumn'
-		Conceal = { fg = nord.nord1_gui }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-		Cursor = { fg = nord.nord4_gui, bg = nord.none, style = "reverse" }, -- the character under the cursor
-		CursorIM = { fg = nord.nord5_gui, bg = nord.none, style = "reverse" }, -- like Cursor, but used when in IME mode
-		Directory = { fg = nord.nord7_gui, bg = nord.none }, -- directory names (and other special names in listings)
-		EndOfBuffer = { fg = nord.nord1_gui },
-		ErrorMsg = { fg = nord.none },
-		Folded = { fg = nord.nord3_gui_bright, bg = nord.none, style = "italic" },
-		FoldColumn = { fg = nord.nord7_gui },
-		IncSearch = { fg = nord.nord6_gui, bg = nord.nord10_gui },
-		LineNr = { fg = nord.nord3_gui_bright },
-		CursorLineNr = { fg = nord.nord4_gui },
-		MatchParen = { fg = nord.nord15_gui, bg = nord.none, style = "bold" },
-		ModeMsg = { fg = nord.nord4_gui },
-		MoreMsg = { fg = nord.nord4_gui },
-		NonText = { fg = nord.nord1_gui },
-		Pmenu = { fg = nord.nord4_gui, bg = nord.nord2_gui },
-		PmenuSel = { fg = nord.nord4_gui, bg = nord.nord10_gui },
-		PmenuSbar = { fg = nord.nord4_gui, bg = nord.nord2_gui },
-		PmenuThumb = { fg = nord.nord4_gui, bg = nord.nord4_gui },
-		Question = { fg = nord.nord14_gui },
-		QuickFixLine = { fg = nord.nord4_gui, bg = nord.none, style = "reverse" },
-		qfLineNr = { fg = nord.nord4_gui, bg = nord.none, style = "reverse" },
-		Search = { fg = nord.nord10_gui, bg = nord.nord6_gui, style = "reverse" },
-		SpecialKey = { fg = nord.nord9_gui },
-		SpellBad = { fg = nord.nord11_gui, bg = nord.none, style = "italic,undercurl" },
-		SpellCap = { fg = nord.nord7_gui, bg = nord.none, style = "italic,undercurl" },
-		SpellLocal = { fg = nord.nord8_gui, bg = nord.none, style = "italic,undercurl" },
-		SpellRare = { fg = nord.nord9_gui, bg = nord.none, style = "italic,undercurl" },
-		StatusLine = { fg = nord.nord4_gui, bg = nord.nord2_gui },
-		StatusLineNC = { fg = nord.nord4_gui, bg = nord.nord1_gui },
-		StatusLineTerm = { fg = nord.nord4_gui, bg = nord.nord2_gui },
-		StatusLineTermNC = { fg = nord.nord4_gui, bg = nord.nord1_gui },
-		TabLineFill = { fg = nord.nord4_gui, bg = nord.none },
-		TablineSel = { fg = nord.nord1_gui, bg = nord.nord9_gui },
-		Tabline = { fg = nord.nord4_gui, bg = nord.nord1_gui },
-		Title = { fg = nord.nord14_gui, bg = nord.none, style = "bold" },
-		Visual = { fg = nord.none, bg = nord.nord2_gui },
-		VisualNOS = { fg = nord.none, bg = nord.nord2_gui },
-		WarningMsg = { fg = nord.nord15_gui },
-		WildMenu = { fg = nord.nord12_gui, bg = nord.none, style = "bold" },
-		CursorColumn = { fg = nord.none, bg = nord.cursorlinefg },
-		CursorLine = { fg = nord.none, bg = nord.cursorlinefg },
-		ToolbarLine = { fg = nord.nord4_gui, bg = nord.nord1_gui },
-		ToolbarButton = { fg = nord.nord4_gui, bg = nord.none, style = "bold" },
-		NormalMode = { fg = nord.nord4_gui, bg = nord.none, style = "reverse" },
-		InsertMode = { fg = nord.nord14_gui, bg = nord.none, style = "reverse" },
-		ReplacelMode = { fg = nord.nord11_gui, bg = nord.none, style = "reverse" },
-		VisualMode = { fg = nord.nord9_gui, bg = nord.none, style = "reverse" },
-		CommandMode = { fg = nord.nord4_gui, bg = nord.none, style = "reverse" },
-		Warnings = { fg = nord.nord15_gui },
-
-		healthError = { fg = nord.nord11_gui },
-		healthSuccess = { fg = nord.nord14_gui },
-		healthWarning = { fg = nord.nord15_gui },
-
-		-- dashboard
-		DashboardShortCut = { fg = nord.nord7_gui },
-		DashboardHeader = { fg = nord.nord9_gui },
-		DashboardCenter = { fg = nord.nord8_gui },
-		DashboardFooter = { fg = nord.nord14_gui, style = "italic" },
-
-		-- Barbar
-		BufferTabpageFill = { bg = nord.nord0_gui },
-
-		BufferCurrent = { bg = nord.nord1_gui },
-		BufferCurrentMod = { bg = nord.nord1_gui, fg = nord.nord15_gui },
-		BufferCurrentIcon = { bg = nord.nord1_gui },
-		BufferCurrentSign = { bg = nord.nord1_gui },
-		BufferCurrentIndex = { bg = nord.nord1_gui },
-		BufferCurrentTarget = { bg = nord.nord1_gui, fg = nord.nord11_gui },
-
-		BufferInactive = { bg = nord.nord0_gui, fg = nord.nord3_gui },
-		BufferInactiveMod = { bg = nord.nord0_gui, fg = nord.nord15_gui },
-		BufferInactiveIcon = { bg = nord.nord0_gui , fg = nord.nord3_gui },
-		BufferInactiveSign = { bg = nord.nord0_gui , fg = nord.nord3_gui },
-		BufferInactiveIndex = { bg = nord.nord0_gui , fg = nord.nord3_gui },
-		BufferInactiveTarget = { bg = nord.nord0_gui, fg = nord.nord11_gui },
-
-		BufferVisible = { bg = nord.nord2_gui },
-		BufferVisibleMod = { bg = nord.nord2_gui, fg = nord.nord15_gui },
-		BufferVisibleIcon = { bg = nord.nord2_gui },
-		BufferVisibleSign = { bg = nord.nord2_gui },
-		BufferVisibleIndex = { bg = nord.nord2_gui },
-		BufferVisibleTarget = { bg = nord.nord2_gui, fg = nord.nord11_gui },
-
-		-- nvim-notify
-		NotifyDEBUGBorder = { fg = nord.nord3_gui },
-		NotifyDEBUGIcon = { fg = nord.nord3_gui },
-		NotifyDEBUGTitle = { fg = nord.nord3_gui },
-		NotifyERRORBorder = { fg = nord.nord11_gui },
-		NotifyERRORIcon = { fg = nord.nord11_gui },
-		NotifyERRORTitle = { fg = nord.nord11_gui },
-		NotifyINFOBorder = { fg = nord.nord14_gui },
-		NotifyINFOIcon = { fg = nord.nord14_gui },
-		NotifyINFOTitle = { fg = nord.nord14_gui },
-		NotifyTRACEBorder = { fg = nord.nord15_gui },
-		NotifyTRACEIcon = { fg = nord.nord15_gui },
-		NotifyTRACETitle = { fg = nord.nord15_gui },
-		NotifyWARNBorder = { fg = nord.nord13_gui },
-		NotifyWARNIcon = { fg = nord.nord13_gui },
-		NotifyWARNTitle = { fg = nord.nord13_gui },
-
-		-- leap.nvim
-		LeapMatch = { style="underline,nocombine", fg=nord.nord13_gui },
-		LeapLabelPrimary = { style="nocombine", fg=nord.nord0_gui, bg=nord.nord13_gui },
-		LeapLabelSecondary = { style="nocombine", fg=nord.nord0_gui, bg=nord.nord15_gui },
 	}
 
 	-- Options:
-
-	--Set transparent background
-	if vim.g.nord_disable_background then
-		editor.Normal = { fg = nord.nord4_gui, bg = nord.none } -- normal text and background color
-		editor.SignColumn = { fg = nord.nord4_gui, bg = nord.none }
-	else
-		editor.Normal = { fg = nord.nord4_gui, bg = nord.nord0_gui } -- normal text and background color
-		editor.SignColumn = { fg = nord.nord4_gui, bg = nord.nord0_gui }
-	end
-
-	-- Remove window split borders
-	if vim.g.nord_borders then
-		editor.VertSplit = { fg = nord.nord2_gui }
-	else
-		editor.VertSplit = { fg = nord.nord0_gui }
-	end
-
-	if vim.g.nord_uniform_diff_background then
-		editor.DiffAdd = { fg = nord.nord14_gui, bg = nord.nord1_gui } -- diff mode: Added line
-		editor.DiffChange = { fg = nord.nord13_gui, bg = nord.nord1_gui } --  diff mode: Changed line
-		editor.DiffDelete = { fg = nord.nord11_gui, bg = nord.nord1_gui } -- diff mode: Deleted line
-		editor.DiffText = { fg = nord.nord15_gui, bg = nord.nord1_gui } -- diff mode: Changed text within a changed line
-	else
-		editor.DiffAdd = { fg = nord.nord14_gui, bg = nord.none, style = "reverse" } -- diff mode: Added line
-		editor.DiffChange = { fg = nord.nord13_gui, bg = nord.none, style = "reverse" } --  diff mode: Changed line
-		editor.DiffDelete = { fg = nord.nord11_gui, bg = nord.none, style = "reverse" } -- diff mode: Deleted line
-		editor.DiffText = { fg = nord.nord15_gui, bg = nord.none, style = "reverse" } -- diff mode: Changed text within a changed line
-	end
-
+  -- TODO: Later 
 	return editor
 end
 
 theme.loadTerminal = function()
-	vim.g.terminal_color_0 = nord.nord1_gui
-	vim.g.terminal_color_1 = nord.nord11_gui
-	vim.g.terminal_color_2 = nord.nord14_gui
-	vim.g.terminal_color_3 = nord.nord13_gui
-	vim.g.terminal_color_4 = nord.nord9_gui
-	vim.g.terminal_color_5 = nord.nord15_gui
-	vim.g.terminal_color_6 = nord.nord8_gui
-	vim.g.terminal_color_7 = nord.nord5_gui
-	vim.g.terminal_color_8 = nord.nord3_gui
-	vim.g.terminal_color_9 = nord.nord11_gui
-	vim.g.terminal_color_10 = nord.nord14_gui
-	vim.g.terminal_color_11 = nord.nord13_gui
-	vim.g.terminal_color_12 = nord.nord9_gui
-	vim.g.terminal_color_13 = nord.nord15_gui
-	vim.g.terminal_color_14 = nord.nord7_gui
-	vim.g.terminal_color_15 = nord.nord6_gui
 end
 
 theme.loadTreeSitter = function()
 	-- TreeSitter highlight groups
 
 	local treesitter = {
-		TSAnnotation = { fg = nord.nord12_gui }, -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
-		TSConstructor = { fg = nord.nord9_gui }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-		TSConstant = { fg = nord.nord13_gui }, -- For constants
-		TSFloat = { fg = nord.nord15_gui }, -- For floats
-		TSNumber = { fg = nord.nord15_gui }, -- For all number
-
-		TSAttribute = { fg = nord.nord15_gui }, -- (unstable) TODO: docs
-		TSVariable = { fg = nord.nord4_gui, style = "bold" }, -- Any variable name that does not have another highlight.
-		TSVariableBuiltin = { fg = nord.nord4_gui, style = "bold" },
-		TSBoolean = { fg = nord.nord9_gui, style = "bold" }, -- For booleans.
-		TSConstBuiltin = { fg = nord.nord7_gui, style = "bold" }, -- For constant that are built in the language: `nil` in Lua.
-		TSConstMacro = { fg = nord.nord7_gui, style = "bold" }, -- For constants that are defined by macros: `NULL` in C.
-		TSError = { fg = nord.nord11_gui }, -- For syntax/parser errors.
-		TSException = { fg = nord.nord15_gui }, -- For exception related keywords.
-		TSFuncMacro = { fg = nord.nord7_gui }, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-		TSInclude = { fg = nord.nord9_gui }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-		TSLabel = { fg = nord.nord15_gui }, -- For labels: `label:` in C and `:label:` in Lua.
-		TSOperator = { fg = nord.nord9_gui }, -- For any operator: `+`, but also `->` and `*` in C.
-		TSParameter = { fg = nord.nord10_gui }, -- For parameters of a function.
-		TSParameterReference = { fg = nord.nord10_gui }, -- For references to parameters of a function.
-		TSPunctDelimiter = { fg = nord.nord8_gui }, -- For delimiters ie: `.`
-		TSPunctBracket = { fg = nord.nord8_gui }, -- For brackets and parens.
-		TSPunctSpecial = { fg = nord.nord8_gui }, -- For special punctutation that does not fall in the catagories before.
-		TSSymbol = { fg = nord.nord15_gui }, -- For identifiers referring to symbols or atoms.
-		TSType = { fg = nord.nord9_gui }, -- For types.
-		TSTypeBuiltin = { fg = nord.nord9_gui }, -- For builtin types.
-		TSTag = { fg = nord.nord4_gui }, -- Tags like html tag names.
-		TSTagDelimiter = { fg = nord.nord15_gui }, -- Tag delimiter like `<` `>` `/`
-		TSText = { fg = nord.nord4_gui }, -- For strings considenord11_gui text in a markup language.
-		TSTextReference = { fg = nord.nord15_gui }, -- FIXME
-		TSEmphasis = { fg = nord.nord10_gui }, -- For text to be represented with emphasis.
-		TSUnderline = { fg = nord.nord4_gui, bg = nord.none, style = "underline" }, -- For text to be represented with an underline.
-		TSTitle = { fg = nord.nord10_gui, bg = nord.none, style = "bold" }, -- Text that is part of a title.
-		TSLiteral = { fg = nord.nord4_gui }, -- Literal text.
-		TSURI = { fg = nord.nord14_gui }, -- Any URI like a link or email.
-		TSAnnotation = { fg = nord.nord11_gui }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+        -- TSAnnotation        { };    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+    -- TSAttribute         = { };    -- (unstable) TODO: docs
+    -- TSBoolean           = { };    -- For booleans.
+    -- TSCharacter         = { };    -- For characters.
+    -- TSComment           = { };    -- For comment blocks.
+    TSNote = { fg = bg, bg = info },
+    TSWarning = { fg = bg, bg = warning },
+    TSDanger = { fg = bg, bg = error },
+    TSConstructor = { fg = syntax.variable }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    -- TSConditional       = { };    -- For keywords related to conditionnals.
+    TSConstant = { fg = syntax.constant }, -- For constants
+    commentTSConstant = { fg = syntax.keyword },
+    -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
+    -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
+    -- TSError             = { };    -- For syntax/parser errors.
+    -- TSException         = { };    -- For exception related keywords.
+    TSField = { fg = fg }, -- For fields.
+    -- TSFloat             = { };    -- For floats.
+    -- TSFunction          = { };    -- For function (calls and definitions).
+    -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
+    -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+    TSInclude = { fg = syntax.keyword }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+    TSKeyword = { fg = syntax.keyword, gui="italic" }, -- For keywords that don't fall in previous categories.
+    TSKeywordFunction = { fg = syntax.keyword, gui="italic" }, -- For keywords used to define a fuction.
+    TSLabel = { fg = perano }, -- For labels: `label:` in C and `:label:` in Lua.
+    -- TSMethod            = { };    -- For method calls and definitions.
+    -- TSNone              = { };    -- TODO: docs
+    -- TSNumber            = { };    -- For all numbers
+    TSOperator = { fg = syntax.keyword }, -- For any operator: `+`, but also `->` and `*` in C.
+    TSParameter = { fg = syntax.func_param }, -- For parameters of a function.
+    -- TSParameterReference = { };    -- For references to parameters of a function.
+    TSProperty = { fg = syntax.func }, -- Same as `TSField`.
+    TSPunctDelimiter = { fg = fg }, -- For delimiters ie: `.`
+    TSPunctBracket = { fg = fg }, -- For brackets and parens.
+    TSPunctSpecial = { fg = fg }, -- For special punctutation that does not fall in the catagories before.
+    -- TSRepeat            = { };    -- For keywords related to loops.
+    -- TSString            = { };    -- For strings.
+    TSStringRegex = { fg = syntax.variable }, -- For regexes.
+    TSStringEscape = { fg = old_brick }, -- For escape characters within a string.
+    -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
+    TSType = { fg = syntax.keyword }, -- For types.
+    -- TSTypeBuiltin       = { };    -- For builtin types.
+    TSVariableBuiltin = { fg = syntax.variable }, -- Variable names that are defined by the languages, like `this` or `self`.
+    TSTag = { fg = syntax.tag }, -- Tags like html tag names.
+    -- TSText              = { };    -- For strings considered text in a markup language.
+    TSTextReference = { fg = old_brick }, -- FIXME
+    TSNamespace          = { fg = wewak },    -- For identifiers referring to modules and namespaces.
+    TSVariable           = { Normal, gui="NONE" };    -- Any variable name that does not have another highlight.
+    TSTagDelimiter       = { fg = bayoux_blue },    -- Tag delimiter like `<` `>` `/`
+    TSEmphasis           = { Italic },    -- For text to be represented with emphasis.
+    TSUnderline          = { Underlined },    -- For text to be represented with an underline.
+    TSStrike             = { gui="strikethrough" },    -- For strikethrough text.
+    TSURI                = { fg = morning_glory },    -- Any URI like a link or email.
 	}
 
+  -- TODO:
 	if vim.g.nord_italic == false then
-		-- Comments
-		treesitter.TSComment = { fg = nord.nord3_gui_bright }
-		-- Conditionals
-		treesitter.TSConditional = { fg = nord.nord9_gui } -- For keywords related to conditionnals.
-		-- Function names
-		treesitter.TSFunction = { fg = nord.nord8_gui } -- For fuction (calls and definitions).
-		treesitter.TSMethod = { fg = nord.nord7_gui } -- For method calls and definitions.
-		treesitter.TSFuncBuiltin = { fg = nord.nord8_gui }
-		-- Namespaces and property accessors
-		treesitter.TSNamespace = { fg = nord.nord4_gui } -- For identifiers referring to modules and namespaces.
-		treesitter.TSField = { fg = nord.nord4_gui } -- For fields in literals
-		treesitter.TSProperty = { fg = nord.nord10_gui } -- Same as `TSField`
-		-- Language keywords
-		treesitter.TSKeyword = { fg = nord.nord9_gui } -- For keywords that don't fall in other categories.
-		treesitter.TSKeywordFunction = { fg = nord.nord8_gui }
-		treesitter.TSKeywordReturn = { fg = nord.nord8_gui }
-		treesitter.TSKeywordOperator = { fg = nord.nord8_gui }
-		treesitter.TSRepeat = { fg = nord.nord9_gui } -- For keywords related to loops.
-		-- Strings
-		treesitter.TSString = { fg = nord.nord14_gui } -- For strings.
-		treesitter.TSStringRegex = { fg = nord.nord7_gui } -- For regexes.
-		treesitter.TSStringEscape = { fg = nord.nord15_gui } -- For escape characters within a string.
-		treesitter.TSCharacter = { fg = nord.nord14_gui } -- For characters.
 	else
-		-- Comments
-		treesitter.TSComment = { fg = nord.nord3_gui_bright, style = "italic" }
-		-- Conditionals
-		treesitter.TSConditional = { fg = nord.nord9_gui, style = "italic" } -- For keywords related to conditionnals.
-		-- Function names
-		treesitter.TSFunction = { fg = nord.nord8_gui, style = "italic" } -- For fuction (calls and definitions).
-		treesitter.TSMethod = { fg = nord.nord7_gui, style = "italic" } -- For method calls and definitions.
-		treesitter.TSFuncBuiltin = { fg = nord.nord8_gui, style = "italic" }
-		-- Namespaces and property accessors
-		treesitter.TSNamespace = { fg = nord.nord4_gui, style = "italic" } -- For identifiers referring to modules and namespaces.
-		treesitter.TSField = { fg = nord.nord4_gui, style = "italic" } -- For fields.
-		treesitter.TSProperty = { fg = nord.nord10_gui, style = "italic" } -- Same as `TSField`, but when accessing, not declaring.
-		-- Language keywords
-		treesitter.TSKeyword = { fg = nord.nord9_gui, style = "italic" } -- For keywords that don't fall in other categories.
-		treesitter.TSKeywordFunction = { fg = nord.nord8_gui, style = "italic" }
-		treesitter.TSKeywordReturn = { fg = nord.nord8_gui, style = "italic" }
-		treesitter.TSKeywordOperator = { fg = nord.nord8_gui, style = "italic" }
-		treesitter.TSRepeat = { fg = nord.nord9_gui, style = "italic" } -- For keywords related to loops.
-		-- Strings
-		treesitter.TSString = { fg = nord.nord14_gui, style = "italic" } -- For strings.
-		treesitter.TSStringRegex = { fg = nord.nord7_gui, style = "italic" } -- For regexes.
-		treesitter.TSStringEscape = { fg = nord.nord15_gui, style = "italic" } -- For escape characters within a string.
-		treesitter.TSCharacter = { fg = nord.nord14_gui, style = "italic" } -- For characters.
 	end
 
 	return treesitter
@@ -354,50 +310,29 @@ theme.loadLSP = function()
 	-- Lsp highlight groups
 
 	local lsp = {
-		LspDiagnosticsDefaultError = { fg = nord.nord11_gui }, -- used for "Error" diagnostic virtual text
-		LspDiagnosticsSignError = { fg = nord.nord11_gui }, -- used for "Error" diagnostic signs in sign column
-		LspDiagnosticsFloatingError = { fg = nord.nord11_gui }, -- used for "Error" diagnostic messages in the diagnostics float
-		LspDiagnosticsVirtualTextError = { fg = nord.nord11_gui }, -- Virtual text "Error"
-		LspDiagnosticsUnderlineError = { style = "undercurl", sp = nord.nord11_gui }, -- used to underline "Error" diagnostics.
-		LspDiagnosticsDefaultWarning = { fg = nord.nord15_gui }, -- used for "Warning" diagnostic signs in sign column
-		LspDiagnosticsSignWarning = { fg = nord.nord15_gui }, -- used for "Warning" diagnostic signs in sign column
-		LspDiagnosticsFloatingWarning = { fg = nord.nord15_gui }, -- used for "Warning" diagnostic messages in the diagnostics float
-		LspDiagnosticsVirtualTextWarning = { fg = nord.nord15_gui }, -- Virtual text "Warning"
-		LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = nord.nord15_gui }, -- used to underline "Warning" diagnostics.
-		LspDiagnosticsDefaultInformation = { fg = nord.nord10_gui }, -- used for "Information" diagnostic virtual text
-		LspDiagnosticsSignInformation = { fg = nord.nord10_gui }, -- used for "Information" diagnostic signs in sign column
-		LspDiagnosticsFloatingInformation = { fg = nord.nord10_gui }, -- used for "Information" diagnostic messages in the diagnostics float
-		LspDiagnosticsVirtualTextInformation = { fg = nord.nord10_gui }, -- Virtual text "Information"
-		LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = nord.nord10_gui }, -- used to underline "Information" diagnostics.
-		LspDiagnosticsDefaultHint = { fg = nord.nord9_gui }, -- used for "Hint" diagnostic virtual text
-		LspDiagnosticsSignHint = { fg = nord.nord9_gui }, -- used for "Hint" diagnostic signs in sign column
-		LspDiagnosticsFloatingHint = { fg = nord.nord9_gui }, -- used for "Hint" diagnostic messages in the diagnostics float
-		LspDiagnosticsVirtualTextHint = { fg = nord.nord9_gui }, -- Virtual text "Hint"
-		LspDiagnosticsUnderlineHint = { style = "undercurl", sp = nord.nord10_gui }, -- used to underline "Hint" diagnostics.
-		LspReferenceText = { fg = nord.nord4_gui, bg = nord.nord1_gui }, -- used for highlighting "text" references
-		LspReferenceRead = { fg = nord.nord4_gui, bg = nord.nord1_gui }, -- used for highlighting "read" references
-		LspReferenceWrite = { fg = nord.nord4_gui, bg = nord.nord1_gui }, -- used for highlighting "write" references
-
-		DiagnosticError = { link = "LspDiagnosticsDefaultError" },
-		DiagnosticWarn = { link = "LspDiagnosticsDefaultWarning" },
-		DiagnosticInfo = { link = "LspDiagnosticsDefaultInformation" },
-		DiagnosticHint = { link = "LspDiagnosticsDefaultHint" },
-		DiagnosticVirtualTextWarn = { link = "LspDiagnosticsVirtualTextWarning" },
-		DiagnosticUnderlineWarn = { link = "LspDiagnosticsUnderlineWarning" },
-		DiagnosticFloatingWarn = { link = "LspDiagnosticsFloatingWarning" },
-		DiagnosticSignWarn = { link = "LspDiagnosticsSignWarning" },
-		DiagnosticVirtualTextError = { link = "LspDiagnosticsVirtualTextError" },
-		DiagnosticUnderlineError = { link = "LspDiagnosticsUnderlineError" },
-		DiagnosticFloatingError = { link = "LspDiagnosticsFloatingError" },
-		DiagnosticSignError = { link = "LspDiagnosticsSignError" },
-		DiagnosticVirtualTextInfo = { link = "LspDiagnosticsVirtualTextInformation" },
-		DiagnosticUnderlineInfo = { link = "LspDiagnosticsUnderlineInformation" },
-		DiagnosticFloatingInfo = { link = "LspDiagnosticsFloatingInformation" },
-		DiagnosticSignInfo = { link = "LspDiagnosticsSignInformation" },
-		DiagnosticVirtualTextHint = { link = "LspDiagnosticsVirtualTextHint" },
-		DiagnosticUnderlineHint = { link = "LspDiagnosticsUnderlineHint" },
-		DiagnosticFloatingHint = { link = "LspDiagnosticsFloatingHint" },
-		DiagnosticSignHint = { link = "LspDiagnosticsSignHint" },
+    LspReferenceText                     = { bg=background }, -- used for highlighting "text" references
+    LspReferenceRead                     = { bg=background }, -- used for highlighting "read" references
+    LspReferenceWrite                    = { bg=background }, -- used for highlighting "write" references
+    LspDiagnosticsDefaultError           = { fg = old_brick }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    LspDiagnosticsDefaultWarning         = { fg = koromiko }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    LspDiagnosticsDefaultInformation     = { fg = perano }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    LspDiagnosticsDefaultHint            = { fg = tea_green }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    LspDiagnosticsVirtualTextError       = { LspDiagnosticsDefaultError, bg = old_brick }, -- Used for "Error" diagnostic virtual text
+    LspDiagnosticsVirtualTextWarning     = { LspDiagnosticsDefaultWarning, bg = koromiko }, -- Used for "Warning" diagnostic virtual text
+    LspDiagnosticsVirtualTextInformation = { LspDiagnosticsDefaultInformation, bg = perano }, -- Used for "Information" diagnostic virtual text
+    LspDiagnosticsVirtualTextHint        = { LspDiagnosticsDefaultHint, bg = tea_green }, -- Used for "Hint" diagnostic virtual text
+    LspDiagnosticsUnderlineError         = { sp = old_brick, gui="undercurl" }, -- Used to underline "Error" diagnostics
+    LspDiagnosticsUnderlineWarning       = { sp = koromiko, gui="undercurl" }, -- Used to underline "Warning" diagnostics
+    LspDiagnosticsUnderlineInformation   = { sp = perano, gui="undercurl" }, -- Used to underline "Information" diagnostics
+    LspDiagnosticsUnderlineHint          = { sp = tea_green, gui="undercurl" }, -- Used to underline "Hint" diagnostics
+    -- LspDiagnosticsFloatingError          = { }, -- Used to color "Error" diagnostic messages in diagnostics float
+    -- LspDiagnosticsFloatingWarning        = { }, -- Used to color "Warning" diagnostic messages in diagnostics float
+    -- LspDiagnosticsFloatingInformation    = { }, -- Used to color "Information" diagnostic messages in diagnostics float
+    -- LspDiagnosticsFloatingHint           = { }, -- Used to color "Hint" diagnostic messages in diagnostics float
+    -- LspDiagnosticsSignError              = { }, -- Used for "Error" signs in sign column
+    -- LspDiagnosticsSignWarning            = { }, -- Used for "Warning" signs in sign column
+    -- LspDiagnosticsSignInformation        = { }, -- Used for "Information" signs in sign column
+    -- LspDiagnosticsSignHint               = { }, -- Used for "Hint" signs in sign column
 	}
 
 	return lsp
@@ -408,310 +343,79 @@ theme.loadPlugins = function()
 
 	local plugins = {
 
-		-- LspTrouble
-		LspTroubleText = { fg = nord.nord4_gui },
-		LspTroubleCount = { fg = nord.nord9_gui, bg = nord.nord10_gui },
-		LspTroubleNormal = { fg = nord.nord4_gui, bg = nord.sidebar },
-
 		-- Diff
-		diffAdded = { fg = nord.nord14_gui },
-		diffRemoved = { fg = nord.nord11_gui },
-		diffChanged = { fg = nord.nord15_gui },
-		diffOldFile = { fg = nord.yelow },
-		diffNewFile = { fg = nord.nord12_gui },
-		diffFile = { fg = nord.nord7_gui },
-		diffLine = { fg = nord.nord3_gui },
-		diffIndexLine = { fg = nord.nord9_gui },
+    diffAdded = { fg = github.add_fg, bg = github.add },
+    diffChanged = { fg = github.change_fg, bg = github.change },
+    diffRemoved = { fg = github.delete_fg , bg = github.delete },
+    diffOldFile = { fg = github.yellow },
+    diffNewFile = { fg = github.orange },
+    diffFile = { fg = github.blue },
+    diffLine = { fg = github.gutter_fg },
+    diffIndexLine = { fg = github.magenta },
 
-		-- Neogit
-		NeogitBranch = { fg = nord.nord10_gui },
-		NeogitRemote = { fg = nord.nord9_gui },
-		NeogitHunkHeader = { fg = nord.nord8_gui },
-		NeogitHunkHeaderHighlight = { fg = nord.nord8_gui, bg = nord.nord1_gui },
-		NeogitDiffContextHighlight = { bg = nord.nord1_gui },
-		NeogitDiffDeleteHighlight = { fg = nord.nord11_gui, style = "reverse" },
-		NeogitDiffAddHighlight = { fg = nord.nord14_gui, style = "reverse" },
+    -- HTML
+    htmlLink = { },
 
-		-- GitGutter
-		GitGutterAdd = { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
-		GitGutterChange = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-		GitGutterDelete = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
+    -- GitSigns
+    GitSignsAdd    = { fg = mantis },
+    GitSignsChange = { fg = koromiko },
+    GitSignsDelete = { fg = old_brick },
 
-		-- GitSigns
-		GitSignsAdd = { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
-		GitSignsAddNr = { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
-		GitSignsAddLn = { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
-		GitSignsChange = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-		GitSignsChangeNr = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-		GitSignsChangeLn = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-		GitSignsDelete = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
-		GitSignsDeleteNr = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
-		GitSignsDeleteLn = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
-		GitSignsCurrentLineBlame = { fg = nord.nord3_gui_bright, style = "bold" },
+    -- Telescope
+    TelescopeBorder = { fg = ship_cove },
+    TelescopeSelection = { fg = ship_cove, bg = ship_cove},
+    TelescopeMatching = { Search },
+    TelescopeSelectionCaret = { fg = koromiko },
+    TelescopePromptPrefix = { fg = koromiko },
 
-		-- Telescope
-		TelescopePromptBorder = { fg = nord.nord8_gui },
-		TelescopeResultsBorder = { fg = nord.nord9_gui },
-		TelescopePreviewBorder = { fg = nord.nord14_gui },
-		TelescopeSelectionCaret = { fg = nord.nord9_gui },
-		TelescopeSelection = { fg = nord.nord9_gui },
-		TelescopeMatching = { fg = nord.nord8_gui },
+    -- vim-sneak
+    Sneak = { Search },
 
-		-- NvimTree
-		NvimTreeRootFolder = { fg = nord.nord7_gui, style = "bold" },
-		NvimTreeGitDirty = { fg = nord.nord15_gui },
-		NvimTreeGitNew = { fg = nord.nord14_gui },
-		NvimTreeImageFile = { fg = nord.nord15_gui },
-		NvimTreeExecFile = { fg = nord.nord14_gui },
-		NvimTreeSpecialFile = { fg = nord.nord9_gui, style = "underline" },
-		NvimTreeFolderName = { fg = nord.nord10_gui },
-		NvimTreeEmptyFolderName = { fg = nord.nord1_gui },
-		NvimTreeFolderIcon = { fg = nord.nord4_gui },
-		NvimTreeIndentMarker = { fg = nord.nord1_gui },
-		LspDiagnosticsError = { fg = nord.nord11_gui },
-		LspDiagnosticsWarning = { fg = nord.nord15_gui },
-		LspDiagnosticsInformation = { fg = nord.nord10_gui },
-		LspDiagnosticsHint = { fg = nord.nord9_gui },
+    -- NeoVim
+    healthError = { fg = wewak },
+    healthSuccess = { fg = mantis },
+    healthWarning = { fg = koromiko },
 
-		-- WhichKey
-		WhichKey = { fg = nord.nord4_gui, style = "bold" },
-		WhichKeyGroup = { fg = nord.nord4_gui },
-		WhichKeyDesc = { fg = nord.nord7_gui, style = "italic" },
-		WhichKeySeperator = { fg = nord.nord4_gui },
-		WhichKeyFloating = { bg = nord.float },
-		WhichKeyFloat = { bg = nord.float },
+    -- LspSaga
+    DiagnosticError = { fg = error },
+    DiagnosticWarning = { fg = warning },
+    DiagnosticInformation = { fg = info },
+    DiagnosticHint = { fg = hint },
 
-		-- LspSaga
-		DiagnosticError = { fg = nord.nord11_gui },
-		DiagnosticWarning = { fg = nord.nord15_gui },
-		DiagnosticInformation = { fg = nord.nord10_gui },
-		DiagnosticHint = { fg = nord.nord9_gui },
-		DiagnosticTruncateLine = { fg = nord.nord4_gui },
-		LspFloatWinNormal = { bg = nord.nord2_gui },
-		LspFloatWinBorder = { fg = nord.nord9_gui },
-		LspSagaBorderTitle = { fg = nord.nord8_gui },
-		LspSagaHoverBorder = { fg = nord.nord10_gui },
-		LspSagaRenameBorder = { fg = nord.nord14_gui },
-		LspSagaDefPreviewBorder = { fg = nord.nord14_gui },
-		LspSagaCodeActionBorder = { fg = nord.nord7_gui },
-		LspSagaFinderSelection = { fg = nord.nord14_gui },
-		LspSagaCodeActionTitle = { fg = nord.nord10_gui },
-		LspSagaCodeActionContent = { fg = nord.nord9_gui },
-		LspSagaSignatureHelpBorder = { fg = nord.nord13_gui },
-		ReferencesCount = { fg = nord.nord9_gui },
-		DefinitionCount = { fg = nord.nord9_gui },
-		DefinitionIcon = { fg = nord.nord7_gui },
-		ReferencesIcon = { fg = nord.nord7_gui },
-		TargetWord = { fg = nord.nord8_gui },
+    -- Git Default
+    gitcommitSummary = { fg = mantis },
 
-		-- Sneak
-		Sneak = { fg = nord.nord0_gui, bg = nord.nord4_gui },
-		SneakScope = { bg = nord.nord1_gui },
+    -- typescript
+    typescriptTSType = { fg = syntax.func },
+    typescriptTSConstructor = { fg = syntax.func },
+    typescriptTSTypeBuiltin = { fg = syntax.variable },
 
-		-- Cmp
-		CmpItemKind = { fg = nord.nord15_gui },
-		CmpItemAbbrMatch = { fg = nord.nord5_gui, style = "bold" },
-		CmpItemAbbrMatchFuzzy = { fg = nord.nord5_gui, style = "bold" },
-		CmpItemAbbr = { fg = nord.nord4_gui },
-		CmpItemMenu = { fg = nord.nord14_gui },
+    -- CSS
+    cssTSProperty = { fg = syntax.func },
+    cssTSType = { fg = syntax.tag },
 
-		-- Indent Blankline
-		IndentBlanklineChar = { fg = nord.nord3_gui },
-		IndentBlanklineContextChar = { fg = nord.nord10_gui },
+    -- html
+    htmlTSConstant = { fg = syntax.tag },
+    htmlTag = { fg = fg },
+    htmlEndTag = { fg = fg },
+    htmlTagName = { fg = syntax.tag },
+    htmlArg = { fg = syntax.html_arg },
 
-		-- Illuminate
-		illuminatedWord = { bg = nord.nord3_gui },
-		illuminatedCurWord = { bg = nord.nord3_gui },
-
-		-- nvim-dap
-		DapBreakpoint = { fg = nord.nord14_gui },
-		DapStopped = { fg = nord.nord15_gui },
-
-		-- nvim-dap-ui
-		DapUIVariable = { fg = nord.nord4_gui },
-		DapUIScope = { fg = nord.nord8_gui },
-		DapUIType = { fg = nord.nord9_gui },
-		DapUIValue = { fg = nord.nord4_gui },
-		DapUIModifiedValue = { fg = nord.nord8_gui },
-		DapUIDecoration = { fg = nord.nord8_gui },
-		DapUIThread = { fg = nord.nord8_gui },
-		DapUIStoppedThread = { fg = nord.nord8_gui },
-		DapUIFrameName = { fg = nord.nord4_gui },
-		DapUISource = { fg = nord.nord9_gui },
-		DapUILineNumber = { fg = nord.nord8_gui },
-		DapUIFloatBorder = { fg = nord.nord8_gui },
-		DapUIWatchesEmpty = { fg = nord.nord11_gui },
-		DapUIWatchesValue = { fg = nord.nord8_gui },
-		DapUIWatchesError = { fg = nord.nord11_gui },
-		DapUIBreakpointsPath = { fg = nord.nord8_gui },
-		DapUIBreakpointsInfo = { fg = nord.nord8_gui },
-		DapUIBreakpointsCurrentLine = { fg = nord.nord8_gui },
-		DapUIBreakpointsLine = { fg = nord.nord8_gui },
-
-		-- Hop
-		HopNextKey = { fg = nord.nord4_gui, style = "bold" },
-		HopNextKey1 = { fg = nord.nord8_gui, style = "bold" },
-		HopNextKey2 = { fg = nord.nord4_gui },
-		HopUnmatched = { fg = nord.nord3_gui },
-
-		-- Fern
-		FernBranchText = { fg = nord.nord3_gui_bright },
-
-		-- nvim-ts-rainbow
-		rainbowcol1 = { fg = nord.nord15_gui },
-		rainbowcol2 = { fg = nord.nord13_gui },
-		rainbowcol3 = { fg = nord.nord11_gui },
-		rainbowcol4 = { fg = nord.nord7_gui },
-		rainbowcol5 = { fg = nord.nord8_gui },
-		rainbowcol6 = { fg = nord.nord15_gui },
-		rainbowcol7 = { fg = nord.nord13_gui },
-
-		-- lightspeed
-		LightspeedLabel = { fg = nord.nord8_gui, style = "bold" },
-		LightspeedLabelOverlapped = { fg = nord.nord8_gui, style = "bold,underline" },
-		LightspeedLabelDistant = { fg = nord.nord15_gui, style = "bold" },
-		LightspeedLabelDistantOverlapped = { fg = nord.nord15_gui, style = "bold,underline" },
-		LightspeedShortcut = { fg = nord.nord10_gui, style = "bold" },
-		LightspeedShortcutOverlapped = { fg = nord.nord10_gui, style = "bold,underline" },
-		LightspeedMaskedChar = { fg = nord.nord4_gui, bg = nord.nord2_gui, style = "bold" },
-		LightspeedGreyWash = { fg = nord.nord3_gui_bright },
-		LightspeedUnlabeledMatch = { fg = nord.nord4_gui, bg = nord.nord1_gui },
-		LightspeedOneCharMatch = { fg = nord.nord8_gui, style = "bold,reverse" },
-		LightspeedUniqueChar = { style = "bold,underline" },
-
-		-- copilot
-		CopilotLabel = { fg = nord.nord3_gui, bg = nord.none },
-
-		-- Statusline
-		StatusLineDull = { fg = nord.nord3_gui, bg = nord.nord1_gui },
-		StatusLineAccent = { fg = nord.nord0_gui, bg = nord.nord13_gui },
-
-		-- mini.nvim
-		MiniCompletionActiveParameter = { style = "underline" },
-
-		MiniCursorword = { bg = nord.nord3_gui },
-		MiniCursorwordCurrent = { bg = nord.nord3_gui },
-
-		MiniIndentscopeSymbol = { fg = nord.nord10_gui },
-		MiniIndentscopePrefix = { style = "nocombine" }, -- Make it invisible
-
-		MiniJump = { fg = nord.nord0_gui, bg = nord.nord4_gui },
-
-		MiniJump2dSpot = { fg = nord.nord12_gui, style = "bold,nocombine" },
-
-		MiniStarterCurrent = { style = "nocombine" },
-		MiniStarterFooter = { fg = nord.nord14_gui, style = "italic" },
-		MiniStarterHeader = { fg = nord.nord9_gui },
-		MiniStarterInactive = { link = "Comment" },
-		MiniStarterItem = { link = "Normal" },
-		MiniStarterItemBullet = { fg = nord.nord4_gui },
-		MiniStarterItemPrefix = { fg = nord.nord15_gui },
-		MiniStarterSection = { fg = nord.nord4_gui },
-		MiniStarterQuery = { fg = nord.nord10_gui },
-
-		MiniStatuslineDevinfo = { fg = nord.nord4_gui, bg = nord.nord2_gui },
-		MiniStatuslineFileinfo = { fg = nord.nord4_gui, bg = nord.nord2_gui },
-		MiniStatuslineFilename = { fg = nord.nord4_gui, bg = nord.nord1_gui },
-		MiniStatuslineInactive = { fg = nord.nord4_gui, bg = nord.nord0_gui, style = "bold" },
-		MiniStatuslineModeCommand = { fg = nord.nord0_gui, bg = nord.nord15_gui, style = "bold" },
-		MiniStatuslineModeInsert = { fg = nord.nord1_gui, bg = nord.nord4_gui, style = "bold" },
-		MiniStatuslineModeNormal = { fg = nord.nord1_gui, bg = nord.nord9_gui, style = "bold" },
-		MiniStatuslineModeOther = { fg = nord.nord0_gui, bg = nord.nord13_gui, style = "bold" },
-		MiniStatuslineModeReplace = { fg = nord.nord0_gui, bg = nord.nord11_gui, style = "bold" },
-		MiniStatuslineModeVisual = { fg = nord.nord0_gui, bg = nord.nord7_gui, style = "bold" },
-
-		MiniSurround = { link = "IncSearch" },
-
-		MiniTablineCurrent = { bg = nord.nord1_gui },
-		MiniTablineFill = { link = "TabLineFill" },
-		MiniTablineHidden = { bg = nord.nord0_gui, fg = nord.nord3_gui },
-		MiniTablineModifiedCurrent = { bg = nord.nord1_gui, fg = nord.nord15_gui },
-		MiniTablineModifiedHidden = { bg = nord.nord0_gui, fg = nord.nord15_gui },
-		MiniTablineModifiedVisible = { bg = nord.nord2_gui, fg = nord.nord15_gui },
-		MiniTablineTabpagesection = { fg = nord.nord10_gui, bg = nord.nord6_gui, style = "reverse,bold" },
-		MiniTablineVisible = { bg = nord.nord2_gui },
-
-		MiniTestEmphasis = { style = "bold" },
-		MiniTestFail = { fg = nord.nord11_gui, style = "bold" },
-		MiniTestPass = { fg = nord.nord14_gui, style = "bold" },
-
-		MiniTrailspace = { bg = nord.nord11_gui },
-
-
-        -- Aerail
-        AerialLine = {bg = nord.nord2_gui},
-        AerialLineNC = {bg = nord.nord2_gui},
-        
-        AerialArrayIcon = { fg = nord.nord13_gui },
-        AerialBooleanIcon = { fg = nord.nord9_gui, style = "bold" },
-        AerialClassIcon = { fg = nord.nord9_gui },
-        AerialConstansIcon = { fg = nord.nord13_gui },
-        AerialConstructorIcon = { fg = nord.nord9_gui },
-        AerialEnumIcon = { fg = nord.nord9_gui },
-        AerialEnumMemberIcon = { fg = nord.nord4_gui },
-        AerialEventIcon = { fg = nord.nord9_gui },
-        AerialFieldIcon = vim.g.nord_italic and  { fg = nord.nord4_gui, style = "italic"} or {fg = nord.nord4_gui },
-        AerialFileIcon = { fg = nord.nord14_gui },
-        AerialFunctionIcon = vim.g.nord_italic and { fg = nord.nord8_gui, style = "italic" } or { fg = nord.nord8_gui },
-        AerialInterfaceIcon = { fg = nord.nord9_gui },
-        AerialKeyIcon = { fg = nord.nord9_gui },
-        AerialMethodIcon = vim.g.nord_italic and  { fg = nord.nord7_gui, style = "italic" } or {fg = nord.nord7_gui },
-        AerialModuleIcon = vim.g.nord_italic and  { fg = nord.nord4_gui, style = "italic" } or { fg = nord.nord4_gui },
-        AerialNamespaceIcon = vim.g.nord_italic and  { fg = nord.nord4_gui, style = "italic" } or { fg = nord.nord4_gui },
-        AerialNullIcon = { fg = nord.nord9_gui },
-        AerialNumberIcon = { fg = nord.nord15_gui },
-        AerialObjectIcon = { fg = nord.nord9_gui },
-        AerialOperatorIcon = { fg = nord.nord9_gui },
-        AerialPackageIcon = vim.g.nord_italic and  { fg = nord.nord4_gui, style = "italic" } or { fg = nord.nord4_gui },
-        AerialPropertyIcon = vim.g.nord_italic and  { fg = nord.nord4_gui, style = "italic" } or { fg = nord.nord10_gui },
-        AerialStringIcon = vim.g.nord_italic and { fg = nord.nord14_gui, style = "italic" } or { fg = nord.nord14_gui },
-        AerialStructIcon = { fg = nord.nord9_gui },
-        AerialTypeParameterIcon = { fg = nord.nord10_gui },
-        AerialVariableIcon = {fg = nord.nord4_gui, style = "bold"},
-
-        AerialArray = { fg = nord.nord13_gui },
-        AerialBoolean = { fg = nord.nord9_gui, style = "bold" },
-        AerialClass = { fg = nord.nord9_gui },
-        AerialConstans = { fg = nord.nord13_gui },
-        AerialConstructor = { fg = nord.nord9_gui },
-        AerialEnum = { fg = nord.nord9_gui },
-        AerialEnumMember = { fg = nord.nord4_gui },
-        AerialEvent = { fg = nord.nord9_gui },
-        AerialField = vim.g.nord_italic and  { fg = nord.nord4_gui, style = "italic"} or {fg = nord.nord4_gui },
-        AerialFile = { fg = nord.nord14_gui },
-        AerialFunction = vim.g.nord_italic and { fg = nord.nord8_gui, style = "italic" } or { fg = nord.nord8_gui },
-        AerialInterface = { fg = nord.nord9_gui },
-        AerialKey = { fg = nord.nord9_gui },
-        AerialMethod = vim.g.nord_italic and  { fg = nord.nord7_gui, style = "italic" } or {fg = nord.nord7_gui },
-        AerialModule = vim.g.nord_italic and  { fg = nord.nord4_gui, style = "italic" } or { fg = nord.nord4_gui },
-        AerialNamespace = vim.g.nord_italic and  { fg = nord.nord4_gui, style = "italic" } or { fg = nord.nord4_gui },
-        AerialNull = { fg = nord.nord9_gui },
-        AerialNumber = { fg = nord.nord15_gui },
-        AerialObject = { fg = nord.nord9_gui },
-        AerialOperator = { fg = nord.nord9_gui },
-        AerialPackage = vim.g.nord_italic and  { fg = nord.nord4_gui, style = "italic" } or { fg = nord.nord4_gui },
-        AerialProperty = vim.g.nord_italic and  { fg = nord.nord4_gui, style = "italic" } or { fg = nord.nord10_gui },
-        AerialString = vim.g.nord_italic and { fg = nord.nord14_gui, style = "italic" } or { fg = nord.nord14_gui },
-        AerialStruct = { fg = nord.nord9_gui },
-        AerialTypeParameter = { fg = nord.nord10_gui },
-        AerialVariable = {fg = nord.nord4_gui, style = "bold"},
+    -- javascript
+    javascriptTSType = { fg = fg },
+    javascriptTSParameter = { fg = syntax.param },
+    javascriptTSVariable = { fg = syntax.variable },
+    javascriptTSPunctDelimiter = { fg = fg },
+    javascriptTSStringRegex = { fg = syntax.string },
+    javascriptTSConstructor = { fg = syntax.func },
+    javascriptTSProperty = { fg = syntax.func },
+    regexTSStringEscape = { fg = syntax.keyword },
 	}
 	-- Options:
-
-	-- Disable nvim-tree background
-	if vim.g.nord_disable_background then
-		plugins.NvimTreeNormal = { fg = nord.nord4_gui, bg = nord.none }
-	else
-		plugins.NvimTreeNormal = { fg = nord.nord4_gui, bg = nord.sidebar }
-	end
-
-	if vim.g.nord_enable_sidebar_background then
-		plugins.NvimTreeNormal = { fg = nord.nord4_gui, bg = nord.sidebar }
-	else
-		plugins.NvimTreeNormal = { fg = nord.nord4_gui, bg = nord.none }
-	end
 
 	return plugins
 end
 
 return theme
+
+-- vi:nowrap
