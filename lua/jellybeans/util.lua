@@ -1,5 +1,5 @@
 local util = {}
-local nord = require("nord.theme")
+local jellybeans = require("jellybeans.theme")
 
 -- Go trough the table and highlight the group with the color values
 util.highlight = function(group, color)
@@ -16,19 +16,19 @@ util.highlight = function(group, color)
 	end
 end
 
--- Only define nord if it's the active colorscheme
+-- Only define jellybeans if it's the active colorscheme
 function util.onColorScheme()
-	if vim.g.colors_name ~= "nord" then
-		vim.cmd([[autocmd! nord]])
-		vim.cmd([[augroup! nord]])
+	if vim.g.colors_name ~= "jellybeans" then
+		vim.cmd([[autocmd! jellybeans]])
+		vim.cmd([[augroup! jellybeans]])
 	end
 end
 
 -- Change the background for the terminal, packer and qf windows
 util.contrast = function()
-	vim.cmd([[augroup nord]])
+	vim.cmd([[augroup jellybeans]])
 	vim.cmd([[  autocmd!]])
-	vim.cmd([[  autocmd ColorScheme * lua require("nord.util").onColorScheme()]])
+	vim.cmd([[  autocmd ColorScheme * lua require("jellybeans.util").onColorScheme()]])
 	vim.cmd([[  autocmd TermOpen * setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]])
 	vim.cmd([[  autocmd FileType packer setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]])
 	vim.cmd([[  autocmd FileType qf setlocal winhighlight=Normal:NormalFloat,SignColumn:NormalFloat]])
@@ -47,15 +47,15 @@ function util.load()
 	if vim.fn.exists("syntax_on") then
 		vim.cmd("syntax reset")
 	end
-	-- vim.o.background = "dark"
+	vim.o.background = "dark"
 	vim.o.termguicolors = true
-	vim.g.colors_name = "nord"
+	vim.g.colors_name = "jellybeans"
 
 	-- load the most importaint parts of the theme
-	local editor = nord.loadEditor()
-	local syntax = nord.loadSyntax()
-	local treesitter = nord.loadTreeSitter()
-	local filetypes = nord.loadFiletypes()
+	local editor = jellybeans.loadEditor()
+	local syntax = jellybeans.loadSyntax()
+	local treesitter = jellybeans.loadTreeSitter()
+	local filetypes = jellybeans.loadFiletypes()
 
 	-- load editor highlights
 	util.loadColorSet(editor)
@@ -69,22 +69,17 @@ function util.load()
 	-- load filetype-specific highlights
 	util.loadColorSet(filetypes)
 
-	nord.loadTerminal()
+	jellybeans.loadTerminal()
 
 	-- imort tables for plugins and lsp
-	local plugins = nord.loadPlugins()
-	local lsp = nord.loadLSP()
+	local plugins = jellybeans.loadPlugins()
+	local lsp = jellybeans.loadLSP()
 
 	-- load plugin highlights
 	util.loadColorSet(plugins)
 
 	-- load lsp highlights
 	util.loadColorSet(lsp)
-
-	-- if contrast is enabled, apply it to sidebars and floating windows
-	if vim.g.nord_contrast == true then
-		util.contrast()
-	end
 end
 
 return util

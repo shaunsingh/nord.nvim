@@ -1,5 +1,3 @@
-local nord = require("nord.colors")
-
 -- 默认先迁移再考虑使用 palette 好了
 -- start
 local foreground = "#e8e8d3"
@@ -201,7 +199,7 @@ theme.loadSyntax = function()
 
 	-- Italic comments
   -- TODO: italic
-	if vim.g.nord_italic == false then
+	if vim.g.jellybeans_italic == false then
 	else
 	end
 
@@ -282,7 +280,7 @@ theme.loadTreeSitter = function()
 	}
 
   -- TODO:
-	if vim.g.nord_italic == false then
+	if vim.g.jellybeans_italic == false then
 	else
 	end
 
@@ -293,14 +291,6 @@ theme.loadFiletypes = function()
 	-- Filetype-specific highlight groups
 
 	local ft = {
-		-- yaml
-		yamlBlockMappingKey = { fg = nord.nord7_gui },
-		yamlBool = { link = "Boolean" },
-		yamlDocumentStart = { link = "Keyword" },
-		yamlTSField = { fg = nord.nord7_gui },
-		yamlTSString = { fg = nord.nord4_gui },
-		yamlTSPunctSpecial = { link = "Keyword" },
-		yamlKey = { fg = nord.nord7_gui }, -- stephpy/vim-yaml
 	}
 
 	return ft
