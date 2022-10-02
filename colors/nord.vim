@@ -7,3 +7,5 @@ package.loaded['nord.functions'] = nil
 
 require('nord').set()
 EOF
+
+nnoremap <leader>r :source /Users/cary/.local/share/nvim/plugged/nord.nvim/colors/nord.vim<CR>

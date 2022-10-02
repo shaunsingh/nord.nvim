@@ -1,22 +1,25 @@
-local nord = {
+-- palette
+
+local jellybeans = {
 	--16 colors
-	black = "#2E3440", -- nord0 in palette
-	dark_gray = "#3B4252", -- nord1 in palette
-	gray = "#434C5E", -- nord2 in palette
-	light_gray = "#4C566A", -- nord3 in palette
-	light_gray_bright = "#616E88", -- out of palette
-	darkest_white = "#D8DEE9", -- nord4 in palette
-	darker_white = "#E5E9F0", -- nord5 in palette
-	white = "#ECEFF4", -- nord6 in palette
-	teal = "#8FBCBB", -- nord7 in palette
-	off_blue = "#88C0D0", -- nord8 in palette
-	glacier = "#81A1C1", -- nord9 in palette
-	blue = "#5E81AC", -- nord10 in palette
-	red = "#BF616A", -- nord11 in palette
-	orange = "#D08770", -- nord12 in palette
-	yellow = "#EBCB8B", -- nord13 in palette
-	green = "#A3BE8C", -- nord14 in palette
-	purple = "#B48EAD", -- nord15 in palette
+	black = "#101010", -- jellybeans0 in palette
+	dark_gray = "#333333", -- jellybeans1 in palette
+	gray = "#403c41", -- jellybeans2 in palette
+	light_gray = "#606060", -- jellybeans3 in palette
+	light_gray_bright = "#ccc5c4", -- out of palette
+	darkest_white = "#dddddd", -- jellybeans4 in palette
+	darker_white = "#f0f0ff", -- jellybeans5 in palette
+	white = "#ffffff", -- jellybeans6 in palette
+  teal = "#2B5B77", -- jellybeans7 in palette
+	off_blue = "#b0d0f0", -- jellybeans8 in palette
+	glacier = "#8fbfdc", -- jellybeans9 in palette
+	blue = "#8197bf", -- jellybeans10 in palette
+	red = "#902020", -- jellybeans11 in palette
+	orange = "#cf6a4c", -- jellybeans12 in palette
+	yellow = "#fad07a", -- jellybeans13 in palette
+	green = "#d2ebbe", -- jellybeans14 in palette
+	purple = "#c6b6ee", -- jellybeans15 in palette
 	none = "NONE",
 }
-return nord
+
+return jellybeans

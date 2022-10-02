@@ -30,7 +30,6 @@ local light_colors = {
 	nord4_gui = named_colors.gray, -- nord4 in palette
 	nord5_gui = named_colors.dark_gray, -- nord5 in palette
 	nord6_gui = named_colors.black, -- nord6 in palette
-
 	-- Same colors across light and dark from here down...
 	nord7_gui = named_colors.teal, -- nord7 in palette
 	nord8_gui = named_colors.off_blue, -- nord8 in palette
@@ -44,21 +43,6 @@ local light_colors = {
 	none = "NONE",
 }
 
-local nord = (vim.o.background == "dark") and dark_colors or light_colors
+local jellybeans = (vim.o.background == "dark") and dark_colors or light_colors
 
--- Enable contrast sidebars, floating windows and popup menus
-if vim.g.nord_contrast then
-	nord.sidebar = nord.nord1_gui
-	nord.float = nord.nord1_gui
-else
-	nord.sidebar = nord.nord0_gui
-	nord.float = nord.nord0_gui
-end
-
-if vim.g.nord_cursorline_transparent then
-	nord.cursorlinefg = nord.nord0_gui
-else
-	nord.cursorlinefg = nord.nord1_gui
-end
-
-return nord
+return jellybeans
