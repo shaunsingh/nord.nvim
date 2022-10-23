@@ -11,32 +11,32 @@ Nord.nvim is meant to be a modern colorscheme written in lua for NeoVim that sup
 added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 + Supported plugins:
-    + [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
-    + [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
-    + [Lsp Saga](https://github.com/glepnir/lspsaga.nvim)
-    + [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
-    + [Git Gutter](https://github.com/airblade/vim-gitgutter)
-    + [git-messenger](https://github.com/rhysd/git-messenger.vim)
-    + [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
-    + [Telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-    + [Nvim-Tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
-    + [NERDTree](https://github.com/preservim/nerdtree)
-    + [vim-which-key](https://github.com/liuchengxu/vim-which-key)
-    + [Indent-Blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-    + [Dashboard](https://github.com/glepnir/dashboard-nvim)
-    + [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
-    + [Lualine](https://github.com/hoob3rt/lualine.nvim)
-    + [Neogit](https://github.com/TimUntersberger/neogit)
-    + [vim-sneak](https://github.com/justinmk/vim-sneak)
-    + [lightspeed.nvim](https://github.com/ggandor/lightspeed.nvim)
-    + [barbar.nvim](https://github.com/romgrk/barbar.nvim)
-    + [nvim-notify](https://github.com/rcarriga/nvim-notify)
-    + [leap.nvim](https://github.com/ggandor/leap.nvim)
-    + [mini.nvim](https://github.com/echasnovski/mini.nvim)
-    + [aerial.nvim](https://github.com/stevearc/aerial.nvim)
+  + [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  + [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
+  + [Lsp Saga](https://github.com/glepnir/lspsaga.nvim)
+  + [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
+  + [Git Gutter](https://github.com/airblade/vim-gitgutter)
+  + [git-messenger](https://github.com/rhysd/git-messenger.vim)
+  + [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
+  + [Telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+  + [Nvim-Tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
+  + [NERDTree](https://github.com/preservim/nerdtree)
+  + [vim-which-key](https://github.com/liuchengxu/vim-which-key)
+  + [Indent-Blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+  + [Dashboard](https://github.com/glepnir/dashboard-nvim)
+  + [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
+  + [Lualine](https://github.com/hoob3rt/lualine.nvim)
+  + [Neogit](https://github.com/TimUntersberger/neogit)
+  + [vim-sneak](https://github.com/justinmk/vim-sneak)
+  + [lightspeed.nvim](https://github.com/ggandor/lightspeed.nvim)
+  + [barbar.nvim](https://github.com/romgrk/barbar.nvim)
+  + [nvim-notify](https://github.com/rcarriga/nvim-notify)
+  + [leap.nvim](https://github.com/ggandor/leap.nvim)
+  + [mini.nvim](https://github.com/echasnovski/mini.nvim)
+  + [aerial.nvim](https://github.com/stevearc/aerial.nvim)
+  + [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim)
 
 + Ability to change background on sidebar-like windows like Nvim-Tree, Packer, terminal etc.
-
 
 ## ⚡️ Requirements
 
@@ -45,6 +45,7 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
 ## 🌙 Installation
 
 Install via your favourite package manager:
+
 ```vim
 " If you are using Vim-Plug
 Plug 'shaunsingh/nord.nvim'
@@ -58,6 +59,7 @@ use 'shaunsingh/nord.nvim'
 ## 🌓 Usage
 
 Enable the colorscheme:
+
 ```vim
 "Vim-Script:
 colorscheme nord
@@ -116,214 +118,87 @@ let g:nord_uniform_diff_background = v:true
 colorscheme nord
 ```
 
-To be support [BufferLine](https://github.com/akinsho/nvim-bufferline.lua), you can add these code to your settings:
+### headlines support
+
+To support [headlines]("https://github.com/lukas-reineke/headlines.nvim"), you should add these code to your settings:
 
 ```lua
-local nord0 = "#2E3440"
-local nord1 = "#3B4252"
-local nord9 = "#81A1C1"
-local fill = nord0 --'#181c24' if separator_style is "slant"
-local indicator = nord9
-local bg = nord0
-local buffer_bg = nord0
-local buffer_bg_selected = nord1
-local buffer_bg_visible = "#2A2F3A"
+require("headlines").setup({
+    markdown = {
+        headline_highlights = {
+            "Headline1",
+            "Headline2",
+            "Headline3",
+            "Headline4",
+            "Headline5",
+            "Headline6",
+        },
+        codeblock_highlight = "CodeBlock",
+        dash_highlight = "Dash",
+        quote_highlight = "Quote",
+    },
+})
+
+```
+
+It should look like this
+
+![26B3E551-FD57-458C-BE85-C8945BCE37DF](https://user-images.githubusercontent.com/61075605/197376829-43c30172-2528-47a0-b23f-ab63f73c0851.png)
+
+### bufferline support
+
+To support [BufferLine](https://github.com/akinsho/nvim-bufferline.lua), you can add these code to your settings:
+
+```lua
+local highlights = require("nord").bufferline.highlights({
+    italic = true,
+    bold = true,
+})
 
 require("bufferline").setup({
- highlights = {
-  fill = {
-   bg = fill
-  },
-  background = {
-   bg = bg,
-  },
-
-  buffer_selected = {
-   bg = buffer_bg_selected,
-  },
-  buffer_visible = {
-   bg = buffer_bg_visible,
-   italic = true
-  },
-
-  numbers = {
-   bg = buffer_bg,
-  },
-  numbers_selected = {
-   bg = buffer_bg_selected,
-  },
-  numbers_visible = {
-   bg = buffer_bg_visible,
-   italic = true
-  },
-
-  diagnostic = {
-   bg = buffer_bg,
-  },
-  diagnostic_selected = {
-   bg = buffer_bg_selected,
-   bold = true,
-   italic = true,
-  },
-  diagnostic_visible = {
-   bg = buffer_bg_visible
-  },
-
-  hint = {
-   bg = buffer_bg,
-  },
-  hint_visible = {
-   bg = buffer_bg_visible,
-  },
-  hint_selected = {
-   bg = buffer_bg_selected,
-   bold = true,
-   italic = true,
-  },
-  hint_diagnostic = {
-   bg = buffer_bg,
-  },
-  hint_diagnostic_visible = {
-   bg = buffer_bg_visible,
-  },
-  hint_diagnostic_selected = {
-   bg = buffer_bg_selected,
-   bold = true,
-   italic = true,
-  },
-
-  info = {
-   bg = buffer_bg;
-  },
-  info_visible = {
-   bg = buffer_bg_visible,
-  },
-  info_selected = {
-   bg = buffer_bg_selected,
-   bold = true,
-   italic = true,
-  },
-  info_diagnostic = {
-   bg = buffer_bg,
-  },
-  info_diagnostic_visible = {
-   bg = buffer_bg_visible,
-  },
-  info_diagnostic_selected = {
-   bg = buffer_bg_selected,
-   bold = true,
-   italic = true,
-  },
-
-  warning = {
-   bg = buffer_bg,
-  },
-  warning_visible = {
-   bg = buffer_bg_visible,
-  },
-  warning_selected = {
-   bg = buffer_bg_selected,
-   bold = true,
-   italic = true,
-  },
-  warning_diagnostic = {
-   bg = buffer_bg,
-  },
-  warning_diagnostic_visible = {
-   bg = buffer_bg_visible,
-  },
-  warning_diagnostic_selected = {
-   bg = buffer_bg_selected,
-   bold = true,
-   italic = true,
-  },
-  error = {
-   bg = buffer_bg,
-  },
-  error_visible = {
-   bg = buffer_bg_visible,
-  },
-  error_selected = {
-   bg = buffer_bg_selected,
-   bold = true,
-   italic = true,
-  },
-  error_diagnostic = {
-   bg = buffer_bg,
-  },
-  error_diagnostic_visible = {
-   bg = buffer_bg_visible,
-  },
-  error_diagnostic_selected = {
-   bg = buffer_bg_selected,
-   bold = true,
-   italic = true,
-  },
-
-  close_button = {
-   bg = buffer_bg,
-  },
-  close_button_visible = {
-   bg = buffer_bg_visible,
-  },
-  close_button_selected = {
-   bg = buffer_bg_selected,
-  },
-
-  duplicate = {
-   bg = buffer_bg,
-  },
-  duplicate_selected = {
-   bg = buffer_bg_selected,
-  },
-  duplicate_visible = {
-   bg = buffer_bg_visible,
-  },
-
-  separator = {
-   fg = fill,
-   bg = buffer_bg,
-  },
-  separator_selected = {
-   fg = fill,
-   bg = buffer_bg_selected,
-  },
-  separator_visible = {
-   fg = fill,
-   bg = buffer_bg_visible,
-  },
-  modified = {
-   bg = buffer_bg,
-  },
-  modified_selected = {
-   bg = buffer_bg_selected,
-  },
-  modified_visible = {
-   bg = buffer_bg_visible,
-  },
-  indicator_selected = {
-   fg = indicator,
-   bg = buffer_bg_selected,
-  },
-  pick = {
-   bg = buffer_bg,
-   bold = true,
-   italic = true,
-  },
-  pick_selected = {
-   bg = buffer_bg_selected,
-   bold = true,
-   italic = true,
-  },
-  pick_visible = {
-   bg = buffer_bg_visible,
-   bold = true,
-   italic = true,
-  },
- },
+    options = {
+        separator_style = "thin",
+    },
+    highlights = highlights,
 })
+
 ```
+
 It should look like this
-<img width="866" alt="image" src="https://user-images.githubusercontent.com/61075605/189151983-0cbf1f13-e62b-4b01-b6ce-a1c00a5f8ef3.png">
 
 <img width="891" alt="image" src="https://user-images.githubusercontent.com/61075605/189152634-6d309903-90e6-4ffe-a7bc-f65b19eb4c43.png">
+or you want to use slant separator
+
+```lua
+local highlights = require("nord").bufferline.highlights({
+    italic = true,
+    bold = true,
+    fill = "#181c24"
+})
+
+require("bufferline").setup({
+    options = {
+        separator_style = "slant",
+    },
+    highlights = highlights,
+})
+
+```
+
+
+<img width="866" alt="image" src="https://user-images.githubusercontent.com/61075605/189151983-0cbf1f13-e62b-4b01-b6ce-a1c00a5f8ef3.png">
+
+The default setting of bufferline highlights is
+
+```lua
+{
+    fill = colors.nord0_gui,
+    indicator = colors.nord9_gui,
+    bg = colors.nord0_gui,
+    buffer_bg = colors.nord0_gui,
+    buffer_bg_selected = colors.nord1_gui,
+    buffer_bg_visible = "#2A2F3A",
+    bold = true,
+    italic = true,
+}
+```
