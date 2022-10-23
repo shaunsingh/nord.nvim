@@ -117,6 +117,8 @@ let g:nord_uniform_diff_background = v:true
 colorscheme nord
 ```
 
+
+### headlines support
 To support [headlines]("https://github.com/lukas-reineke/headlines.nvim"), you should add these code to your settings:
 
 ```lua
@@ -139,6 +141,7 @@ require("headlines").setup({
 ```
 
 
+### bufferline support
 To support [BufferLine](https://github.com/akinsho/nvim-bufferline.lua), you can add these code to your settings:
 
 ```lua
