@@ -4,9 +4,11 @@
 
 local util = require("nord.util")
 
+local bufferline = require("bufferline.theme")
+
 -- Load the theme
 local set = function()
 	util.load()
 end
 
-return { set = set }
+return { set = set, bufferline = bufferline }
