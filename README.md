@@ -165,8 +165,8 @@ require("bufferline").setup({
 ```
 
 It should look like this
-<img width="866" alt="image" src="https://user-images.githubusercontent.com/61075605/189151983-0cbf1f13-e62b-4b01-b6ce-a1c00a5f8ef3.png">
 
+<img width="891" alt="image" src="https://user-images.githubusercontent.com/61075605/189152634-6d309903-90e6-4ffe-a7bc-f65b19eb4c43.png">
 or you want to use slant separator
 
 ```lua
@@ -185,7 +185,8 @@ require("bufferline").setup({
 
 ```
 
-<img width="891" alt="image" src="https://user-images.githubusercontent.com/61075605/189152634-6d309903-90e6-4ffe-a7bc-f65b19eb4c43.png">
+
+<img width="866" alt="image" src="https://user-images.githubusercontent.com/61075605/189151983-0cbf1f13-e62b-4b01-b6ce-a1c00a5f8ef3.png">
 
 The default setting of bufferline highlights is
 
