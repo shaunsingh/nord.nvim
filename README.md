@@ -34,6 +34,7 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
     + [leap.nvim](https://github.com/ggandor/leap.nvim)
     + [mini.nvim](https://github.com/echasnovski/mini.nvim)
     + [aerial.nvim](https://github.com/stevearc/aerial.nvim)
+    + [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim)
 
 + Ability to change background on sidebar-like windows like Nvim-Tree, Packer, terminal etc.
 
@@ -116,7 +117,29 @@ let g:nord_uniform_diff_background = v:true
 colorscheme nord
 ```
 
-To be support [BufferLine](https://github.com/akinsho/nvim-bufferline.lua), you can add these code to your settings:
+To support [headlines]("https://github.com/lukas-reineke/headlines.nvim"), you should add these code to your settings:
+
+```lua
+require("headlines").setup({
+	markdown = {
+		headline_highlights = {
+			"Headline1",
+			"Headline2",
+			"Headline3",
+			"Headline4",
+			"Headline5",
+			"Headline6",
+		},
+		codeblock_highlight = "CodeBlock",
+		dash_highlight = "Dash",
+		quote_highlight = "Quote",
+	},
+})
+
+```
+
+
+To support [BufferLine](https://github.com/akinsho/nvim-bufferline.lua), you can add these code to your settings:
 
 ```lua
 local nord0 = "#2E3440"
