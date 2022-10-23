@@ -140,6 +140,9 @@ require("headlines").setup({
 
 ```
 
+It should look like this
+
+![26B3E551-FD57-458C-BE85-C8945BCE37DF](https://user-images.githubusercontent.com/61075605/197376829-43c30172-2528-47a0-b23f-ab63f73c0851.png)
 
 ### bufferline support
 To support [BufferLine](https://github.com/akinsho/nvim-bufferline.lua), you can add these code to your settings:
