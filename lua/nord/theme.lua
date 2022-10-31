@@ -31,23 +31,36 @@ theme.loadSyntax = function()
 		Debug = { fg = nord.nord11_gui }, -- debugging statements
 		Underlined = { fg = nord.nord14_gui, bg = nord.none, style = "underline" }, -- text that stands out, HTML links
 		Ignore = { fg = nord.nord1_gui }, -- left blank, hidden
-		Error = { fg = nord.nord11_gui, bg = nord.none, style = "bold,underline" }, -- any erroneous construct
 		Todo = { fg = nord.nord13_gui, bg = nord.none, style = "bold,italic" }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 		Conceal = { fg = nord.none, bg = nord.nord0_gui },
-
 		htmlLink = { fg = nord.nord14_gui, style = "underline" },
-		htmlH1 = { fg = nord.nord8_gui, style = "bold" },
-		htmlH2 = { fg = nord.nord11_gui, style = "bold" },
-		htmlH3 = { fg = nord.nord14_gui, style = "bold" },
-		htmlH4 = { fg = nord.nord15_gui, style = "bold" },
-		htmlH5 = { fg = nord.nord9_gui, style = "bold" },
-		markdownH1 = { fg = nord.nord8_gui, style = "bold" },
-		markdownH2 = { fg = nord.nord11_gui, style = "bold" },
-		markdownH3 = { fg = nord.nord14_gui, style = "bold" },
 		markdownH1Delimiter = { fg = nord.nord8_gui },
 		markdownH2Delimiter = { fg = nord.nord11_gui },
 		markdownH3Delimiter = { fg = nord.nord14_gui },
 	}
+
+  -- Bold highlights --
+  if vim.g.nord_bold == false then
+		syntax.htmlH1 = { fg = nord.nord8_gui }
+		syntax.htmlH2 = { fg = nord.nord11_gui }
+		syntax.htmlH3 = { fg = nord.nord14_gui }
+		syntax.htmlH4 = { fg = nord.nord15_gui }
+		syntax.htmlH5 = { fg = nord.nord9_gui }
+		syntax.markdownH1 = { fg = nord.nord8_gui }
+		syntax.markdownH2 = { fg = nord.nord11_gui }
+		syntax.markdownH3 = { fg = nord.nord14_gui }
+		syntax.Error = { fg = nord.nord11_gui, bg = nord.none, style = "underline" } -- any erroneous construct without bold
+  else
+		syntax.htmlH1 = { fg = nord.nord8_gui, style = "bold" }
+		syntax.htmlH2 = { fg = nord.nord11_gui, style = "bold" }
+		syntax.htmlH3 = { fg = nord.nord14_gui, style = "bold" }
+		syntax.htmlH4 = { fg = nord.nord15_gui, style = "bold" }
+		syntax.htmlH5 = { fg = nord.nord9_gui, style = "bold" }
+		syntax.markdownH1 = { fg = nord.nord8_gui, style = "bold" }
+		syntax.markdownH2 = { fg = nord.nord11_gui, style = "bold" }
+		syntax.markdownH3 = { fg = nord.nord14_gui, style = "bold" }
+		syntax.Error = { fg = nord.nord11_gui, bg = nord.none, style = "bold,underline" } -- any erroneous construct with bold
+  end
 
 	-- Italic comments
 	if vim.g.nord_italic == false then
@@ -246,13 +259,7 @@ theme.loadTreeSitter = function()
 		TSConstant = { fg = nord.nord13_gui }, -- For constants
 		TSFloat = { fg = nord.nord15_gui }, -- For floats
 		TSNumber = { fg = nord.nord15_gui }, -- For all number
-
 		TSAttribute = { fg = nord.nord15_gui }, -- (unstable) TODO: docs
-		TSVariable = { fg = nord.nord4_gui, style = "bold" }, -- Any variable name that does not have another highlight.
-		TSVariableBuiltin = { fg = nord.nord4_gui, style = "bold" },
-		TSBoolean = { fg = nord.nord9_gui, style = "bold" }, -- For booleans.
-		TSConstBuiltin = { fg = nord.nord7_gui, style = "bold" }, -- For constant that are built in the language: `nil` in Lua.
-		TSConstMacro = { fg = nord.nord7_gui, style = "bold" }, -- For constants that are defined by macros: `NULL` in C.
 		TSError = { fg = nord.nord11_gui }, -- For syntax/parser errors.
 		TSException = { fg = nord.nord15_gui }, -- For exception related keywords.
 		TSFuncMacro = { fg = nord.nord7_gui }, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
@@ -273,22 +280,14 @@ theme.loadTreeSitter = function()
 		TSTextReference = { fg = nord.nord15_gui }, -- FIXME
 		TSEmphasis = { fg = nord.nord10_gui }, -- For text to be represented with emphasis.
 		TSUnderline = { fg = nord.nord4_gui, bg = nord.none, style = "underline" }, -- For text to be represented with an underline.
-		TSTitle = { fg = nord.nord10_gui, bg = nord.none, style = "bold" }, -- Text that is part of a title.
 		TSLiteral = { fg = nord.nord4_gui }, -- Literal text.
 		TSURI = { fg = nord.nord14_gui }, -- Any URI like a link or email.
 		TSAnnotation = { fg = nord.nord11_gui }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-
 		["@constructor"] = { fg = nord.nord9_gui },
 		["@constant"] = { fg = nord.nord13_gui },
 		["@float"] = { fg = nord.nord15_gui },
 		["@number"] = { fg = nord.nord15_gui },
 		["@attribute"] = { fg = nord.nord15_gui },
-		["@variable"] = { fg = nord.nord4_gui, style = "bold" },
-		["@variable.builtin"] = { fg = nord.nord4_gui, style = "bold" },
-		["@variable.global"] = { fg = nord.nord4_gui, style = "bold" },
-		["@boolean"] = { fg = nord.nord9_gui, style = "bold" },
-		["@constant.builtin"] = { fg = nord.nord7_gui, style = "bold" },
-		["@constant.macro"] = { fg = nord.nord7_gui, style = "bold" },
 		["@error"] = { fg = nord.nord11_gui },
 		["@exception"] = { fg = nord.nord15_gui },
 		["@funtion.macro"] = { fg = nord.nord7_gui },
@@ -308,8 +307,6 @@ theme.loadTreeSitter = function()
 		["@text.reference"] = { fg = nord.nord15_gui },
 		["@text.emphasis"] = { fg = nord.nord10_gui },
 		["@text.underline"] = { fg = nord.nord4_gui, bg = nord.none, style = "underline" },
-		["@text.title"] = { fg = nord.nord10_gui, bg = nord.none, style = "bold" },
-		["@text.strong"] = { fg = nord.nord10_gui, bg = nord.none, style = "bold" },
 		["@text.literal"] = { fg = nord.nord4_gui },
 		["@text.uri"] = { fg = nord.nord14_gui },
 
@@ -327,6 +324,38 @@ theme.loadTreeSitter = function()
 		-- @tag.attribute
 		-- @string.special
 	}
+
+  if vim.g.nord_bold == false then
+		treesitter.TSVariableBuiltin = { fg = nord.nord4_gui }
+		treesitter.TSBoolean = { fg = nord.nord9_gui } -- For booleans.
+		treesitter.TSConstBuiltin = { fg = nord.nord7_gui } -- For constant that are built in the language: `nil` in Lua.
+		treesitter.TSConstMacro = { fg = nord.nord7_gui } -- For constants that are defined by macros: `NULL` in C.
+		treesitter.TSVariable = { fg = nord.nord4_gui } -- Any variable name that does not have another highlight.
+		treesitter.TSTitle = { fg = nord.nord10_gui, bg = nord.none } -- Text that is part of a title.
+		treesitter["@variable"] = { fg = nord.nord4_gui }
+		treesitter["@variable.builtin"] = { fg = nord.nord4_gui }
+		treesitter["@variable.global"] = { fg = nord.nord4_gui }
+		treesitter["@boolean"] = { fg = nord.nord9_gui }
+		treesitter["@constant.builtin"] = { fg = nord.nord7_gui }
+		treesitter["@constant.macro"] = { fg = nord.nord7_gui }
+		treesitter["@text.title"] = { fg = nord.nord10_gui, bg = nord.none }
+		treesitter["@text.strong"] = { fg = nord.nord10_gui, bg = nord.none }
+  else
+		treesitter.TSVariableBuiltin = { fg = nord.nord4_gui, style = "bold" }
+		treesitter.TSBoolean = { fg = nord.nord9_gui, style = "bold" }
+		treesitter.TSConstBuiltin = { fg = nord.nord7_gui, style = "bold" }
+		treesitter.TSConstMacro = { fg = nord.nord7_gui, style = "bold" }
+		treesitter.TSVariable = { fg = nord.nord4_gui, style = "bold" }
+		treesitter.TSTitle = { fg = nord.nord10_gui, bg = nord.none, style = "bold" }
+		treesitter["@variable"] = { fg = nord.nord4_gui, style = "bold" }
+		treesitter["@variable.builtin"] = { fg = nord.nord4_gui, style = "bold" }
+		treesitter["@variable.global"] = { fg = nord.nord4_gui, style = "bold" }
+		treesitter["@boolean"] = { fg = nord.nord9_gui, style = "bold" }
+		treesitter["@constant.builtin"] = { fg = nord.nord7_gui, style = "bold" }
+		treesitter["@constant.macro"] = { fg = nord.nord7_gui, style = "bold" }
+		treesitter["@text.title"] = { fg = nord.nord10_gui, bg = nord.none, style = "bold" }
+		treesitter["@text.strong"] = { fg = nord.nord10_gui, bg = nord.none, style = "bold" }
+  end
 
 	if vim.g.nord_italic == false then
 		-- Comments
