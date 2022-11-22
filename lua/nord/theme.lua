@@ -648,6 +648,9 @@ theme.loadPlugins = function()
 		-- Illuminate
 		illuminatedWord = { bg = nord.nord3_gui },
 		illuminatedCurWord = { bg = nord.nord3_gui },
+		IlluminatedWordText = { bg = nord.nord3_gui },
+		IlluminatedWordRead = { bg = nord.nord3_gui },
+		IlluminatedWordWrite = { bg = nord.nord3_gui },
 
 		-- nvim-dap
 		DapBreakpoint = { fg = nord.nord14_gui },
