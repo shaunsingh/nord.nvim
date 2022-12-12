@@ -589,7 +589,7 @@ theme.loadPlugins = function()
 		NvimTreeGitRenamed = { fg = nord.nord10_gui },
 		NvimTreeGitNew = { fg = nord.nord14_gui },
 		NvimTreeGitDeleted = { fg = nord.nord14_gui },
-		NvimTreeGitIgnored = { fg = nord.nord3_gui },
+		NvimTreeGitIgnored = { fg = nord.nord3_gui_bright },
 		LspDiagnosticsError = { fg = nord.nord11_gui },
 		LspDiagnosticsWarning = { fg = nord.nord15_gui },
 		LspDiagnosticsInformation = { fg = nord.nord10_gui },
