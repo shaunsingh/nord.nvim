@@ -596,12 +596,12 @@ theme.loadPlugins = function()
     LspDiagnosticsHint = { fg = nord.nord9_gui },
 
 		-- WhichKey
-		WhichKey = { fg = nord.nord6_gui, style = "bold" },
+		WhichKey = { fg = nord.nord8_gui, style = "bold" },
 		WhichKeyGroup = { fg = nord.nord5_gui },
 		WhichKeyDesc = { fg = nord.nord7_gui, style = "italic" },
 		WhichKeySeperator = { fg = nord.nord9_gui },
-		WhichKeyFloating = { bg = nord.nord2_gui },
-		WhichKeyFloat = { bg = nord.nord2_gui },
+		WhichKeyFloating = { bg = nord.nord1_gui },
+		WhichKeyFloat = { bg = nord.nord1_gui },
 		WhichKeyValue = { fg = nord.nord7_gui },
 
 		-- LspSaga
