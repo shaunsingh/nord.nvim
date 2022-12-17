@@ -547,25 +547,25 @@ theme.loadPlugins = function()
 
 		-- GitGutter
 		GitGutterAdd = { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
-		GitGutterChange = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
+		GitGutterChange = { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
 		GitGutterDelete = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 
 		-- GitSigns
 		GitSignsAdd = { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
 		GitSignsAddNr = { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
 		GitSignsAddLn = { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
-		GitSignsChange = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-		GitSignsChangeNr = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-		GitSignsChangeLn = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
+		GitSignsChange = { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
+		GitSignsChangeNr = { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
+		GitSignsChangeLn = { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
 		GitSignsDelete = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteNr = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteLn = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 		GitSignsCurrentLineBlame = { fg = nord.nord3_gui_bright, style = "bold" },
 
 		-- Telescope
-		TelescopePromptBorder = { fg = nord.nord8_gui },
-		TelescopeResultsBorder = { fg = nord.nord9_gui },
-		TelescopePreviewBorder = { fg = nord.nord14_gui },
+		TelescopePromptBorder = { fg = nord.nord4_gui },
+		TelescopeResultsBorder = { fg = nord.nord4_gui },
+		TelescopePreviewBorder = { fg = nord.nord4_gui },
 		TelescopeSelectionCaret = { fg = nord.nord9_gui },
 		TelescopeSelection = { fg = nord.nord9_gui },
 		TelescopeMatching = { fg = nord.nord8_gui },
@@ -583,12 +583,12 @@ theme.loadPlugins = function()
     NvimTreeImageFile = { fg = nord.nord4_gui },
     NvimTreeMarkdownFile = { fg = nord.nord4_gui },
     NvimTreeIndentMarker = { fg = nord.nord9_gui },
-    NvimTreeGitDirty = { fg = nord.nord13_gui },
-    NvimTreeGitStaged = { fg = nord.nord13_gui },
-    NvimTreeGitMerge = { fg = nord.nord13_gui },
-    NvimTreeGitRenamed = { fg = nord.nord13_gui },
-    NvimTreeGitNew = { fg = nord.nord14_gui },
-    NvimTreeGitDeleted = { fg = nord.nord11_gui },
+    NvimTreeGitDirty = { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
+    NvimTreeGitStaged = { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
+    NvimTreeGitMerge = { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
+    NvimTreeGitRenamed = { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
+    NvimTreeGitNew = { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
+    NvimTreeGitDeleted = { fg = nord.nord11_gui },  -- diff mode: Deleted line |diff.txt|
     NvimTreeGitIgnored = { fg = nord.nord3_gui_bright },
     LspDiagnosticsError = { fg = nord.nord12_gui },
     LspDiagnosticsWarning = { fg = nord.nord15_gui },
@@ -626,7 +626,7 @@ theme.loadPlugins = function()
     TargetFileName = { fg = nord.nord4_gui },
     FinderParam = { fg = nord.nord15_gui, bold = true },
     FinderVirtText = { fg = nord.nord15_gui15 , bg = nord.none },
-    DefinitionsIcon = { fg = nord.nord15_gui },
+    DefinitionsIcon = { fg = nord.nord9_gui },
     Definitions = { fg = nord.nord15_gui, bold = true },
     DefinitionCount = { fg = nord.nord10_gui },
     ReferencesIcon = { fg = nord.nord9_gui },
@@ -644,7 +644,7 @@ theme.loadPlugins = function()
     DefinitionBorder = { fg = nord.nord4_gui, bg = nord.float },
     DefinitionArrow = { fg = nord.nord8_gui },
     DefinitionSearch = { link = 'Search' },
-    DefinitionFile = { bg = nord.none },
+    DefinitionFile = { fg = nord.nord4_gui, bg = nord.float },
     -- LspSaga hover
     LspSagaHoverBorder = { fg = nord.nord4_gui, bg = nord.float },
     LspSagaHoverTrunCateLine = { link = 'LspSagaHoverBorder' },
@@ -663,9 +663,9 @@ theme.loadPlugins = function()
     LspSagaHintTrunCateLine = { link = 'DiagnosticHint' },
     LspSagaDiagnosticBorder = { fg = nord.nord4_gui, bg = nord.float },
     LspSagaDiagnosticHeader = { fg = nord.nord4_gui },
-    DiagnosticQuickFix = { fg = '#4dd158', bold = true },
-    DiagnosticMap = { fg = '#cf80ce' },
-    DiagnosticLineCol = { fg = '#73797e' },
+    DiagnosticQuickFix = { fg = nord.nord14_gui, bold = true },
+    DiagnosticMap = { fg = nord.nord15_gui },
+    DiagnosticLineCol = { fg = nord.nord4_gui },
     LspSagaDiagnosticTruncateLine = { link = 'LspSagaDiagnosticBorder' },
     ColInLineDiagnostic = { link = 'Comment' },
     -- LspSaga signture help
@@ -679,10 +679,10 @@ theme.loadPlugins = function()
     LspSagaBorderTitle = { link = 'Title' },
     -- LspSaga Outline
     LSOutlinePreviewBorder = { fg = nord.nord4_gui, bg = nord.float },
-    OutlineIndentEvn = { fg = '#c955ae' },
-    OutlineIndentOdd = { fg = '#b8733e' },
-    OutlineFoldPrefix = { fg = '#bf4537' },
-    OutlineDetail = { fg = '#73797e' },
+    OutlineIndentEvn = { fg = nord.nord15_gui },
+    OutlineIndentOdd = { fg = nord.nord12_gui },
+    OutlineFoldPrefix = { fg = nord.nord11_gui },
+    OutlineDetail = { fg = nord.nord4_gui },
     -- LspSaga all floatwindow
     LspFloatWinNormal = { fg = nord.nord4_gui, bg = nord.float },
     -- Saga End
