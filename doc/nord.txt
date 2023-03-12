@@ -70,5 +70,8 @@ CONTENTS
         }~
     Just make sure to set the theme to "nord", as "nord" already
     exist built in to lualine
+    
+    If the lualine's background has become transparent, make sure that
+    lualine setup is being called after the nord theme has been applied.
 
 vim:tw=78:ts=4:ft=help:norl:
