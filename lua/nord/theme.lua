@@ -296,12 +296,12 @@ theme.loadTreeSitter = function()
 		["@text.underline"] = { fg = nord.nord4_gui, bg = nord.none, style = "underline" },
 		["@text.literal"] = { fg = nord.nord4_gui },
 		["@text.uri"] = { fg = nord.nord14_gui },
+		["@text.strike"] = { fg = nord.nord4_gui, style = "strikethrough" },
 
 		-- @todo Missing highlights
 		-- @function.call
 		-- @method.call
 		-- @type.qualifier
-		-- @text.strike
 		-- @text.math (e.g. for LaTeX math environments)
 		-- @text.environment (e.g. for text environments of markup languages)
 		-- @text.environment.name (e.g. for the name/the string indicating the type of text environment)
