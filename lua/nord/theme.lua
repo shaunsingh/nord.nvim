@@ -455,7 +455,7 @@ theme.loadPlugins = function()
 		diffAdded = { fg = nord.nord14_gui },
 		diffRemoved = { fg = nord.nord11_gui },
 		diffChanged = { fg = nord.nord15_gui },
-		diffOldFile = { fg = nord.yelow },
+		diffOldFile = { fg = nord.yellow },
 		diffNewFile = { fg = nord.nord12_gui },
 		diffFile = { fg = nord.nord7_gui },
 		diffLine = { fg = nord.nord3_gui },
