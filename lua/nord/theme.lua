@@ -297,6 +297,7 @@ theme.loadTreeSitter = function()
 		["@text.literal"] = { fg = nord.nord4_gui },
 		["@text.uri"] = { fg = nord.nord14_gui, style = "underline" },
 		["@text.strike"] = { fg = nord.nord4_gui, style = "strikethrough" },
+		["@text.math"] = { fg = nord.nord7_gui },
 
 		-- @todo Missing highlights
 		-- @function.call
