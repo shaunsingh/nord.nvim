@@ -291,11 +291,11 @@ theme.loadTreeSitter = function()
 		["@tag"] = { fg = nord.nord4_gui },
 		["@tag.delimiter"] = { fg = nord.nord15_gui },
 		["@text"] = { fg = nord.nord4_gui },
-		["@text.reference"] = { fg = nord.nord15_gui },
-		["@text.emphasis"] = { fg = nord.nord10_gui },
+		["@text.reference"] = { fg = nord.nord15_gui, style = bold },
+		["@text.emphasis"] = { fg = nord.nord10_gui, style = italic },
 		["@text.underline"] = { fg = nord.nord4_gui, bg = nord.none, style = "underline" },
 		["@text.literal"] = { fg = nord.nord4_gui },
-		["@text.uri"] = { fg = nord.nord14_gui },
+		["@text.uri"] = { fg = nord.nord14_gui, style = "underline" },
 		["@text.strike"] = { fg = nord.nord4_gui, style = "strikethrough" },
 
 		-- @todo Missing highlights
