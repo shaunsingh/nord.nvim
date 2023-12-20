@@ -35,6 +35,7 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
   + [mini.nvim](https://github.com/echasnovski/mini.nvim)
   + [aerial.nvim](https://github.com/stevearc/aerial.nvim)
   + [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim)
+  + [rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)
 
 + Ability to change background on sidebar-like windows like Nvim-Tree, Packer, terminal etc.
 

@@ -691,6 +691,15 @@ theme.loadPlugins = function()
 		rainbowcol6 = { fg = nord.nord15_gui },
 		rainbowcol7 = { fg = nord.nord13_gui },
 
+		-- rainbow-delimiters.nvim
+                RainbowDelimiterRed = { fg = nord.nord11_gui },
+                RainbowDelimiterYellow = { fg = nord.nord13_gui },
+                RainbowDelimiterBlue = { fg = nord.nord9_gui },
+                RainbowDelimiterOrange = { fg = nord.nord12_gui },
+                RainbowDelimiterGreen = { fg = nord.nord14_gui },
+                RainbowDelimiterCyan = { fg = nord.nord8_gui },
+                RainbowDelimiterViolet = { fg = nord.nord15_gui },
+
 		-- lightspeed
 		LightspeedLabel = { fg = nord.nord8_gui, style = bold },
 		LightspeedLabelOverlapped = { fg = nord.nord8_gui, style = "bold,underline" },
